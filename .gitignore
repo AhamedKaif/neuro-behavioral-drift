@@ -1,0 +1,46 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.env
+.env.local
+
+# ===== Database =====
+database/database.db
+*.db
+*.sqlite3
+
+# ===== ML Model artifacts (auto-generated — run train.py to regenerate) =====
+ml-model/behavioral_drift_dataset.csv
+ml-model/strain_classifier.joblib
+ml-model/scaler.joblib
+ml-model/model_evaluation.json
+
+# ===== Node / Frontend =====
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
