@@ -29,6 +29,12 @@ class SmartCursorWrapper:
         
     def fetchall(self):
         return self.cursor.fetchall()
+        
+    @property
+    def lastrowid(self):
+        if hasattr(self.cursor, 'lastrowid'):
+            return self.cursor.lastrowid
+        return None
 
 class SmartConnectionWrapper:
     """Wraps the database connection to provide our SmartCursorWrapper."""

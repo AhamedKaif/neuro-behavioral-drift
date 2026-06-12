@@ -44,3 +44,7 @@ frontend/.env.local
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# ===== Testing =====
+.pytest_cache/
+tests/report.html
