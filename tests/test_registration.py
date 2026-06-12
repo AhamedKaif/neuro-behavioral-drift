@@ -14,14 +14,16 @@ def test_valid_registration(browser):
         toggles[0].click()
         time.sleep(0.5)
         
-    username_input = browser.find_element("xpath", "//input[@placeholder='Enter username']")
-    password_input = browser.find_element("xpath", "//input[@placeholder='Enter password']")
-    submit_btn = browser.find_element("xpath", "//button[@type='submit']")
+    browser.find_element("xpath", "//input[@name='full_name']").send_keys("Test User")
     
     unique_username = f"testuser_{uuid.uuid4().hex[:6]}"
-    username_input.send_keys(unique_username)
-    password_input.send_keys("password123")
+    browser.find_element("xpath", "//input[@name='username']").send_keys(unique_username)
+    browser.find_element("xpath", "//input[@name='email']").send_keys(f"{unique_username}@example.com")
+    browser.find_element("xpath", "//input[@name='password']").send_keys("password123")
+    browser.find_element("xpath", "//input[@name='confirmPassword']").send_keys("password123")
+    browser.find_element("xpath", "//input[@name='privacy_consent']").click()
     
+    submit_btn = browser.find_element("xpath", "//button[@type='submit']")
     submit_btn.click()
     time.sleep(2)
     
@@ -44,13 +46,15 @@ def test_registration_existing_user(browser):
         toggles[0].click()
         time.sleep(0.5)
         
-    username_input = browser.find_element("xpath", "//input[@placeholder='Enter username']")
-    password_input = browser.find_element("xpath", "//input[@placeholder='Enter password']")
-    submit_btn = browser.find_element("xpath", "//button[@type='submit']")
-    
+    browser.find_element("xpath", "//input[@name='full_name']").send_keys("Test User")
     unique_username = f"testuser_{uuid.uuid4().hex[:6]}"
-    username_input.send_keys(unique_username)
-    password_input.send_keys("password123")
+    browser.find_element("xpath", "//input[@name='username']").send_keys(unique_username)
+    browser.find_element("xpath", "//input[@name='email']").send_keys(f"{unique_username}@example.com")
+    browser.find_element("xpath", "//input[@name='password']").send_keys("password123")
+    browser.find_element("xpath", "//input[@name='confirmPassword']").send_keys("password123")
+    browser.find_element("xpath", "//input[@name='privacy_consent']").click()
+    
+    submit_btn = browser.find_element("xpath", "//button[@type='submit']")
     submit_btn.click()
     time.sleep(2)
     
@@ -65,12 +69,14 @@ def test_registration_existing_user(browser):
         toggles[0].click()
         time.sleep(0.5)
         
-    username_input = browser.find_element("xpath", "//input[@placeholder='Enter username']")
-    password_input = browser.find_element("xpath", "//input[@placeholder='Enter password']")
-    submit_btn = browser.find_element("xpath", "//button[@type='submit']")
+    browser.find_element("xpath", "//input[@name='full_name']").send_keys("Test User")
+    browser.find_element("xpath", "//input[@name='username']").send_keys(unique_username)
+    browser.find_element("xpath", "//input[@name='email']").send_keys(f"{unique_username}2@example.com") # different email
+    browser.find_element("xpath", "//input[@name='password']").send_keys("password123")
+    browser.find_element("xpath", "//input[@name='confirmPassword']").send_keys("password123")
+    browser.find_element("xpath", "//input[@name='privacy_consent']").click()
     
-    username_input.send_keys(unique_username)
-    password_input.send_keys("password123")
+    submit_btn = browser.find_element("xpath", "//button[@type='submit']")
     submit_btn.click()
     time.sleep(2)
     
@@ -97,4 +103,4 @@ def test_registration_empty_fields(browser):
     
     # Should show error about filling fields
     error_msg = browser.find_element("xpath", "//div[contains(@class, 'text-red-400')]")
-    assert "fill in all fields" in error_msg.text.lower()
+    assert "fill in all" in error_msg.text.lower()

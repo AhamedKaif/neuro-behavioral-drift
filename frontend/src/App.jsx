@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-ro
 import Auth from './pages/Auth';
 import Dashboard from './pages/Dashboard';
 import ModelSettings from './pages/ModelSettings';
-import { Brain, LayoutDashboard, Database, User } from 'lucide-react';
+import Profile from './pages/Profile';
+import { Brain, LayoutDashboard, Database, User, Settings } from 'lucide-react';
 import axios from 'axios';
 
 export default function App() {
@@ -97,10 +98,10 @@ export default function App() {
                 </Link>
               </nav>
 
-              <div className="flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300">
+              <Link to="/profile" className="flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors">
                 <User className="h-3.5 w-3.5 text-accentBlue" />
-                <span>{user.username}</span>
-              </div>
+                <span>{user.full_name || user.username}</span>
+              </Link>
 
             </div>
           </header>
@@ -122,6 +123,11 @@ export default function App() {
             <Route 
               path="/model-telemetry" 
               element={token ? <ModelSettings token={token} /> : <Navigate to="/login" />} 
+            />
+
+            <Route 
+              path="/profile" 
+              element={token ? <Profile token={token} onLogout={handleLogout} /> : <Navigate to="/login" />} 
             />
 
             <Route 

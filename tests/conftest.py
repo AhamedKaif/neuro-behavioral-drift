@@ -60,15 +60,13 @@ def login_helper(browser):
             register_toggle.click()
             time.sleep(0.5)
 
-        username_input = browser.find_element("xpath", "//input[@placeholder='Enter username']")
-        password_input = browser.find_element("xpath", "//input[@placeholder='Enter password']")
-        submit_btn = browser.find_element("xpath", "//button[@type='submit']")
-        
-        username_input.clear()
-        username_input.send_keys(username)
-        password_input.clear()
-        password_input.send_keys(password)
-        submit_btn.click()
+        browser.find_element("xpath", "//input[@name='full_name']").send_keys("Test User")
+        browser.find_element("xpath", "//input[@name='username']").send_keys(username)
+        browser.find_element("xpath", "//input[@name='email']").send_keys(f"{username}@example.com")
+        browser.find_element("xpath", "//input[@name='password']").send_keys(password)
+        browser.find_element("xpath", "//input[@name='confirmPassword']").send_keys(password)
+        browser.find_element("xpath", "//input[@name='privacy_consent']").click()
+        browser.find_element("xpath", "//button[@type='submit']").click()
         
         time.sleep(2) # Wait for redirect
         

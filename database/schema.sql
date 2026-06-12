@@ -4,9 +4,29 @@
 -- 1. Users Table
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    full_name VARCHAR(255) NOT NULL,
     username VARCHAR(100) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 1.5 User Profiles Table
+CREATE TABLE IF NOT EXISTS user_profiles (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL UNIQUE,
+    age INTEGER,
+    gender VARCHAR(50),
+    occupation VARCHAR(100),
+    institution VARCHAR(255),
+    department VARCHAR(255),
+    academic_year VARCHAR(50),
+    working_hours REAL,
+    avg_screen_time REAL,
+    avg_sleep_hours REAL,
+    preferred_work_time VARCHAR(100),
+    stress_level INTEGER CHECK (stress_level >= 1 AND stress_level <= 10),
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );
 
 -- 2. Behavioral Metrics Table (Time-series data points)
