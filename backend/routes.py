@@ -152,6 +152,9 @@ def get_dashboard_data():
         ORDER BY timestamp DESC LIMIT 1
     """, (user_id,)).fetchone()
     
+    from datetime import datetime, timedelta
+    seven_days_ago = datetime.utcnow() - timedelta(days=7)
+    
     # 3. Weekly averages
     weekly_avg_row = conn.execute("""
         SELECT 
@@ -161,8 +164,8 @@ def get_dashboard_data():
             AVG(typing_error_rate) as avg_error_rate,
             AVG(break_frequency) as avg_break_frequency
         FROM behavioral_metrics
-        WHERE user_id = ? AND timestamp >= datetime('now', '-7 days')
-    """, (user_id,)).fetchone()
+        WHERE user_id = ? AND timestamp >= ?
+    """, (user_id, seven_days_ago)).fetchone()
     
     # 4. Timeseries data (Last 7 days of logs)
     timeseries_rows = conn.execute("""
