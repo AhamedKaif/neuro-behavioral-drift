@@ -30,5 +30,5 @@ def test_fatigue_alert_generation(browser, login_helper):
     time.sleep(3)
     
     # Verify HIGH STRAIN alert is in the feed
-    high_strain_alerts = browser.find_elements("xpath", "//span[contains(text(), 'HIGH STRAIN')]")
+    high_strain_alerts = browser.find_elements("xpath", "//span[contains(text(), 'High Cognitive Strain Detected')]")
     assert len(high_strain_alerts) > 0, "Expected a HIGH_STRAIN alert to be generated."

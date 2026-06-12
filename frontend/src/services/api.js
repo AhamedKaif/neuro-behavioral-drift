@@ -43,11 +43,13 @@ export const metricsAPI = {
   dashboard: () => api.get('/dashboard'),
 };
 
-// Alerts API
-export const alertsAPI = {
-  list: () => api.get('/alerts'),
-  markRead: (alertId) =>
-    api.post('/alerts/read', alertId ? { alert_id: alertId } : {}),
+// Notifications API
+export const notificationsAPI = {
+  list: (severity = 'ALL') => api.get(`/notifications?severity=${severity}`),
+  unreadCount: () => api.get('/notifications/unread-count'),
+  markRead: (id) => api.put(`/notifications/${id}/read`),
+  markAllRead: () => api.post('/notifications/read-all'),
+  delete: (id) => api.delete(`/notifications/${id}`)
 };
 
 // Model API

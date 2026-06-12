@@ -60,15 +60,16 @@ CREATE TABLE IF NOT EXISTS predictions (
 
 CREATE INDEX IF NOT EXISTS idx_predictions_user_time ON predictions (user_id, timestamp);
 
--- 4. System Alerts Table (Reminders and Strain Warnings)
-CREATE TABLE IF NOT EXISTS system_alerts (
+-- 4. Notifications Table (Push Notifications and Alert History)
+CREATE TABLE IF NOT EXISTS notifications (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    alert_type VARCHAR(50) NOT NULL, -- 'HIGH_STRAIN', 'LONG_SESSION', 'BREAK_REMINDER'
+    title VARCHAR(255) NOT NULL,
     message TEXT NOT NULL,
-    is_read INTEGER DEFAULT 0, -- 0 = False, 1 = True (SQLite boolean representation)
+    severity VARCHAR(20) NOT NULL, -- 'INFO', 'MEDIUM', 'HIGH'
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    is_read INTEGER DEFAULT 0, -- 0 = False, 1 = True
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );
 
-CREATE INDEX IF NOT EXISTS idx_alerts_user_time ON system_alerts (user_id, timestamp);
+CREATE INDEX IF NOT EXISTS idx_notifications_user_time ON notifications (user_id, created_at);

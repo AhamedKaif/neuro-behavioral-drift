@@ -90,34 +90,45 @@ def ingest_metrics():
     """, (user_id, drift_score, strain_label, probability))
     
     # Create notifications if conditions are met
-    alerts = []
+    notifications_list = []
     
-    # Alert 1: High Strain
+    # 1. Medium or High Strain
     if strain_label == 'High':
-        alert_msg = "High cognitive strain detected based on your interaction patterns. We highly recommend taking a 15-minute screen break."
+        title = "High Cognitive Strain Detected"
+        msg = "You may be experiencing significant cognitive fatigue. We recommend taking an immediate break and reducing prolonged screen exposure."
         cursor.execute(
-            "INSERT INTO system_alerts (user_id, alert_type, message) VALUES (?, ?, ?)",
-            (user_id, 'HIGH_STRAIN', alert_msg)
+            "INSERT INTO notifications (user_id, title, message, severity) VALUES (?, ?, ?, ?)",
+            (user_id, title, msg, 'HIGH')
         )
-        alerts.append({"type": "HIGH_STRAIN", "message": alert_msg})
+        notifications_list.append({"severity": "HIGH", "title": title, "message": msg})
+    elif strain_label == 'Medium':
+        title = "Moderate Cognitive Strain Detected"
+        msg = "Our analysis indicates increasing cognitive strain. Consider taking a short break, hydrating, or reducing continuous screen usage."
+        cursor.execute(
+            "INSERT INTO notifications (user_id, title, message, severity) VALUES (?, ?, ?, ?)",
+            (user_id, title, msg, 'MEDIUM')
+        )
+        notifications_list.append({"severity": "MEDIUM", "title": title, "message": msg})
         
-    # Alert 2: Long continuous session
+    # 2. Long continuous session
     if metrics['session_duration'] >= 90.0:
-        alert_msg = f"Continuous session has reached {int(metrics['session_duration'])} minutes. Take a step back to prevent eye strain."
+        title = "Prolonged Session Warning"
+        msg = f"Continuous session has reached {int(metrics['session_duration'])} minutes. Take a step back to prevent eye strain."
         cursor.execute(
-            "INSERT INTO system_alerts (user_id, alert_type, message) VALUES (?, ?, ?)",
-            (user_id, 'LONG_SESSION', alert_msg)
+            "INSERT INTO notifications (user_id, title, message, severity) VALUES (?, ?, ?, ?)",
+            (user_id, title, msg, 'MEDIUM')
         )
-        alerts.append({"type": "LONG_SESSION", "message": alert_msg})
+        notifications_list.append({"severity": "MEDIUM", "title": title, "message": msg})
         
-    # Alert 3: Lack of breaks
+    # 3. Lack of breaks
     if metrics['break_frequency'] < 0.5 and metrics['session_duration'] >= 60.0:
-        alert_msg = "You are taking fewer breaks than recommended. Keep hydrated and stand up for a stretch."
+        title = "Break Reminder"
+        msg = "You are taking fewer breaks than recommended. Keep hydrated and stand up for a stretch."
         cursor.execute(
-            "INSERT INTO system_alerts (user_id, alert_type, message) VALUES (?, ?, ?)",
-            (user_id, 'BREAK_REMINDER', alert_msg)
+            "INSERT INTO notifications (user_id, title, message, severity) VALUES (?, ?, ?, ?)",
+            (user_id, title, msg, 'INFO')
         )
-        alerts.append({"type": "BREAK_REMINDER", "message": alert_msg})
+        notifications_list.append({"severity": "INFO", "title": title, "message": msg})
         
     conn.commit()
     conn.close()
@@ -129,7 +140,7 @@ def ingest_metrics():
             "probability": probability,
             "drift_score": drift_score
         },
-        "alerts": alerts
+        "notifications": notifications_list
     }), 201
 
 @routes_bp.route('/dashboard', methods=['GET'])
@@ -213,36 +224,7 @@ def get_dashboard_data():
         "baseline": baseline
     }), 200
 
-@routes_bp.route('/alerts', methods=['GET'])
-@jwt_required()
-def get_alerts():
-    user_id = get_jwt_identity()
-    conn = get_db_connection()
-    alerts = conn.execute("""
-        SELECT * FROM system_alerts 
-        WHERE user_id = ? 
-        ORDER BY timestamp DESC LIMIT 20
-    """, (user_id,)).fetchall()
-    conn.close()
-    
-    return jsonify([dict(a) for a in alerts]), 200
 
-@routes_bp.route('/alerts/read', methods=['POST'])
-@jwt_required()
-def mark_alerts_read():
-    user_id = get_jwt_identity()
-    data = request.get_json() or {}
-    alert_id = data.get('alert_id')
-    
-    conn = get_db_connection()
-    if alert_id:
-        conn.execute("UPDATE system_alerts SET is_read = 1 WHERE user_id = ? AND id = ?", (user_id, alert_id))
-    else:
-        conn.execute("UPDATE system_alerts SET is_read = 1 WHERE user_id = ?", (user_id,))
-    conn.commit()
-    conn.close()
-    
-    return jsonify({"status": "success", "message": "Alerts marked as read"}), 200
 
 @routes_bp.route('/model/info', methods=['GET'])
 @jwt_required()

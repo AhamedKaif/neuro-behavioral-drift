@@ -7,6 +7,7 @@ import {
 import { 
   Brain, AlertTriangle, Play, RefreshCw, LogOut, CheckCircle, ShieldAlert, Clock, Keyboard, MousePointer, AppWindow
 } from 'lucide-react';
+import { triggerLocalPushNotification } from '../utils/pushNotifications';
 
 const DEFAULT_BASELINE = {
   screen_time: 180.0,
@@ -65,7 +66,7 @@ export default function Dashboard({ token, user, onLogout }) {
       setError('');
       const [dashRes, alertRes] = await Promise.all([
         api.get('/api/dashboard'),
-        api.get('/api/alerts')
+        api.get('/api/notifications?severity=ALL')
       ]);
       setDashboardData(dashRes.data);
       setAlerts(alertRes.data);
@@ -196,7 +197,14 @@ export default function Dashboard({ token, user, onLogout }) {
     };
 
     try {
-      await api.post('/api/metrics', payload);
+      const res = await api.post('/api/metrics', payload);
+      
+      if (res.data.notifications && res.data.notifications.length > 0) {
+        res.data.notifications.forEach(n => {
+          triggerLocalPushNotification(n.title, n.message, n.severity);
+        });
+      }
+      
       setSubmitSuccess(true);
       setTimeout(() => setSubmitSuccess(false), 3000);
       fetchDashboardData(); // reload charts/predictions
@@ -212,7 +220,7 @@ export default function Dashboard({ token, user, onLogout }) {
   // Clear Alerts
   const clearAlerts = async () => {
     try {
-      await api.post('/api/alerts/read');
+      await api.post('/api/notifications/read-all');
       fetchDashboardData();
     } catch (err) {
       console.error(err);
@@ -569,19 +577,19 @@ export default function Dashboard({ token, user, onLogout }) {
                 <div 
                   key={alert.id}
                   className={`rounded-xl border p-3.5 space-y-1 bg-slate-900/50 ${
-                    alert.alert_type === 'HIGH_STRAIN' 
+                    alert.severity === 'HIGH' 
                       ? 'border-red-500/20 hover:border-red-500/40 text-red-400' 
-                      : alert.alert_type === 'LONG_SESSION'
+                      : alert.severity === 'MEDIUM'
                       ? 'border-amber-500/20 hover:border-amber-500/40 text-amber-400'
                       : 'border-blue-500/20 hover:border-blue-500/40 text-blue-400'
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-bold uppercase tracking-wider bg-slate-950 px-2 py-0.5 rounded">
-                      {alert.alert_type.replace('_', ' ')}
+                      {alert.title}
                     </span>
                     <span className="text-[9px] text-slate-500">
-                      {new Date(alert.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                      {new Date(alert.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </span>
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed mt-1">{alert.message}</p>

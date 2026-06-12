@@ -7,6 +7,7 @@ from db import init_db
 from auth import auth_bp
 from routes import routes_bp
 from user_profile import user_profile_bp
+from notifications import notifications_bp
 
 frontend_dist = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'frontend', 'dist'))
 app = Flask(__name__, static_folder=frontend_dist, static_url_path='/')
@@ -24,6 +25,7 @@ jwt = JWTManager(app)
 # Register Blueprints
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
 app.register_blueprint(user_profile_bp, url_prefix='/api/profile')
+app.register_blueprint(notifications_bp, url_prefix='/api/notifications')
 app.register_blueprint(routes_bp, url_prefix='/api')
 
 # General Error Handlers

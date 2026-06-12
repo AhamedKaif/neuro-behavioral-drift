@@ -4,15 +4,22 @@ import Auth from './pages/Auth';
 import Dashboard from './pages/Dashboard';
 import ModelSettings from './pages/ModelSettings';
 import Profile from './pages/Profile';
-import { Brain, LayoutDashboard, Database, User, Settings } from 'lucide-react';
+import NotificationsPage from './pages/Notifications';
+import { Brain, LayoutDashboard, Database, User, Settings, Bell } from 'lucide-react';
 import axios from 'axios';
+import { notificationsAPI } from './services/api';
+import { registerServiceWorker, requestNotificationPermission } from './utils/pushNotifications';
 
 export default function App() {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [user, setUser] = useState(null);
   const [checkingAuth, setCheckingAuth] = useState(true);
+  const [unreadCount, setUnreadCount] = useState(0);
 
   useEffect(() => {
+    // Start service worker
+    registerServiceWorker();
+    
     const checkAuth = async () => {
       const storedToken = localStorage.getItem('token');
       if (storedToken) {
@@ -38,9 +45,27 @@ export default function App() {
     checkAuth();
   }, [token]);
 
+  // Fetch unread count periodically or on changes
+  useEffect(() => {
+    if (token) {
+      const fetchCount = async () => {
+        try {
+          const res = await notificationsAPI.unreadCount();
+          setUnreadCount(res.data.unread_count);
+        } catch (e) {}
+      };
+      fetchCount();
+      // Poll every 30 seconds
+      const interval = setInterval(fetchCount, 30000);
+      return () => clearInterval(interval);
+    }
+  }, [token]);
+
   const handleLoginSuccess = (newToken, newUser) => {
     setToken(newToken);
     setUser(newUser);
+    // Request notification permission immediately on first login/visit
+    setTimeout(() => requestNotificationPermission(), 1000);
   };
 
   const handleLogout = () => {
@@ -98,10 +123,21 @@ export default function App() {
                 </Link>
               </nav>
 
-              <Link to="/profile" className="flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors">
-                <User className="h-3.5 w-3.5 text-accentBlue" />
-                <span>{user.full_name || user.username}</span>
-              </Link>
+              <div className="flex items-center gap-4">
+                <Link to="/notifications" className="relative text-slate-400 hover:text-white transition-colors">
+                  <Bell className="h-5 w-5" />
+                  {unreadCount > 0 && (
+                    <span className="absolute -top-1.5 -right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[9px] font-bold text-white border-2 border-darkCard">
+                      {unreadCount}
+                    </span>
+                  )}
+                </Link>
+
+                <Link to="/profile" className="flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors">
+                  <User className="h-3.5 w-3.5 text-accentBlue" />
+                  <span>{user.full_name || user.username}</span>
+                </Link>
+              </div>
 
             </div>
           </header>
@@ -128,6 +164,11 @@ export default function App() {
             <Route 
               path="/profile" 
               element={token ? <Profile token={token} onLogout={handleLogout} /> : <Navigate to="/login" />} 
+            />
+
+            <Route 
+              path="/notifications" 
+              element={token ? <NotificationsPage /> : <Navigate to="/login" />} 
             />
 
             <Route 
