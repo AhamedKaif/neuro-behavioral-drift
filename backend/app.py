@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 import os
+from datetime import timedelta
 from db import init_db
 from auth import auth_bp
 from routes import routes_bp
@@ -12,7 +13,7 @@ app = Flask(__name__, static_folder=frontend_dist, static_url_path='/')
 
 # Config
 app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY', 'neuro-drift-jwt-secret-key-99128')
-app.config['JWT_ACCESS_TOKEN_EXPIRES'] = False # Token never expires for demo ease, or set to standard duration
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=30) # Token valid for 30 days
 
 # Enable CORS for frontend local development server (typically localhost:5173 or localhost:3000)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
