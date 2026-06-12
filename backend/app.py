@@ -6,7 +6,8 @@ from db import init_db
 from auth import auth_bp
 from routes import routes_bp
 
-app = Flask(__name__)
+frontend_dist = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'frontend', 'dist'))
+app = Flask(__name__, static_folder=frontend_dist, static_url_path='/')
 
 # Config
 app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY', 'neuro-drift-jwt-secret-key-99128')
@@ -30,6 +31,19 @@ def not_found(error):
 @app.errorhandler(500)
 def server_error(error):
     return jsonify({"error": "An internal server error occurred"}), 500
+
+# Serve React App
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    # Only serve the index.html if the path does not match a file in the static folder
+    # This prevents the frontend from intercepting API routes (since they start with /api and are registered above)
+    # and allows React Router to handle frontend routes.
+    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+        return app.send_static_file(path)
+    else:
+        return app.send_static_file('index.html')
+
 
 if __name__ == '__main__':
     # Initialize database on start
