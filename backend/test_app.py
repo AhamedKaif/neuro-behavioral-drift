@@ -40,7 +40,9 @@ def client():
 def test_auth_flow(client):
     # 1. Register a user
     resp = client.post('/api/auth/register', json={
+        'full_name': 'Test User',
         'username': 'test_user',
+        'email': 'test@example.com',
         'password': 'password123'
     })
     assert resp.status_code == 201
@@ -51,7 +53,9 @@ def test_auth_flow(client):
     
     # 2. Register same user should fail (IntegrityError/Conflict)
     resp = client.post('/api/auth/register', json={
+        'full_name': 'Test User',
         'username': 'test_user',
+        'email': 'test@example.com',
         'password': 'password123'
     })
     assert resp.status_code == 409
@@ -87,7 +91,9 @@ def test_auth_flow(client):
 def test_metrics_and_dashboard(client):
     # Register and get token
     resp = client.post('/api/auth/register', json={
+        'full_name': 'Metrics User',
         'username': 'metrics_user',
+        'email': 'metrics@example.com',
         'password': 'password123'
     })
     token = resp.get_json()['token']
@@ -121,7 +127,7 @@ def test_metrics_and_dashboard(client):
     }, headers=headers)
     assert resp.status_code == 201
     data = resp.get_json()
-    assert len(data['alerts']) > 0
+    assert len(data['notifications']) > 0
     
     # Check dashboard stats
     resp = client.get('/api/dashboard', headers=headers)
@@ -132,19 +138,21 @@ def test_metrics_and_dashboard(client):
     assert 'weekly_averages' in data
     assert len(data['timeseries']) == 2
     
-    # Check alerts retrieval
-    resp = client.get('/api/alerts', headers=headers)
+    # Check notifications retrieval
+    resp = client.get('/api/notifications', headers=headers)
     assert resp.status_code == 200
-    alerts = resp.get_json()
-    assert len(alerts) > 0
+    notifications = resp.get_json()
+    assert len(notifications) > 0
     
-    # Mark alerts as read
-    resp = client.post('/api/alerts/read', json={}, headers=headers)
+    # Mark notifications as read
+    resp = client.post('/api/notifications/read-all', json={}, headers=headers)
     assert resp.status_code == 200
 
 def test_model_info(client):
     resp = client.post('/api/auth/register', json={
+        'full_name': 'Info User',
         'username': 'info_user',
+        'email': 'info@example.com',
         'password': 'password123'
     })
     token = resp.get_json()['token']
