@@ -123,8 +123,8 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add reports/selenium_test_report.xlsx
-        git commit -m "Auto-generated selenium test report [skip ci]" || echo "No changes to commit"
+        git add reports/e2e_test_report.xlsx
+        git commit -m "Auto-generated E2E test report [skip ci]" || echo "No changes to commit"
         git pull --rebase
         git push
 

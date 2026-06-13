@@ -5,7 +5,7 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from datetime import datetime
 
 REPORT_FILE = "reports/report.json"
-EXCEL_FILE = "reports/selenium_test_report.xlsx"
+EXCEL_FILE = "reports/e2e_test_report.xlsx"
 
 def generate_report():
     if not os.path.exists(REPORT_FILE):

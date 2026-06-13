@@ -143,7 +143,7 @@ The complete Selenium E2E test suite automatically generates a comprehensive Exc
 - Overall Completion Metrics
 
 You can download the latest generated test report directly from the repository here:
-👉 **[Download Selenium Test Report](./reports/selenium_test_report.xlsx)**
+👉 **[Download E2E Test Report](./reports/e2e_test_report.xlsx)**
 
 ## 🛠️ Testing the Application
 
