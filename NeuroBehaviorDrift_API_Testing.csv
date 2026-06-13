@@ -1,0 +1,6 @@
+API Endpoint,Method,Request,Response Code,Response Time,Status
+/api/auth/login,POST,Credentials JSON,200 OK,120ms,Pass
+/api/auth/register,POST,User Profile JSON,201 Created,150ms,Pass
+/api/metrics,POST,Behavioral Data,201 Created,350ms,Pass
+/api/dashboard,GET,JWT Auth,200 OK,45ms,Pass
+/api/notifications,GET,JWT Auth,200 OK,50ms,Pass

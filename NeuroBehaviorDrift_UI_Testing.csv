@@ -1,0 +1,6 @@
+Test Case ID,Page,UI Element,Expected Behavior,Actual Behavior,Status
+UI01,Login Page,Login Form,Render properly with inputs,Rendered correctly,Pass
+UI02,Dashboard,Strain Gauge,Render correct color logic,Rendered matching state,Pass
+UI03,Dashboard,Line Chart,Render SVG points,Rendered SVG successfully,Pass
+UI04,Notification Page,Filter Dropdown,Allow selections,Selections working,Pass
+UI05,Navigation Menu,Bell Icon,Show red badge if unread > 0,Badge behaves dynamically,Pass
