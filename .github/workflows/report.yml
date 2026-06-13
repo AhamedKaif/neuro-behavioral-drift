@@ -1,0 +1,53 @@
+name: Generate Test Reports
+
+on:
+  workflow_run:
+    workflows: ["Selenium Automation Tests"]
+    types:
+      - completed
+
+jobs:
+  generate-excel-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install Dependencies
+      run: pip install openpyxl
+
+    - name: Download JSON Report
+      uses: actions/download-artifact@v3
+      with:
+        name: json-test-report
+        path: .
+      continue-on-error: true
+
+    - name: Generate Executed Selenium Tests Excel Report
+      run: |
+        if [ -f report.json ]; then
+          python generate_actual_report.py
+        else
+          echo "No report.json found, skipping actual report generator."
+        fi
+
+    - name: Generate Comprehensive Test Report
+      run: python generate_comprehensive_report.py
+
+    - name: Generate Fallback CSV Reports
+      run: python generate_csv_report.py
+
+    - name: Upload Test Reports Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: excel-and-csv-test-reports
+        path: |
+          *.xlsx
+          *.csv

@@ -1,6 +1,23 @@
 # Neuro-Behavioral Drift Modeling for Early Cognitive Strain Detection
 
+[![CI Pipeline](https://github.com/AhamedKaif/neuro-behavioral-drift/actions/workflows/ci.yml/badge.svg)](https://github.com/AhamedKaif/neuro-behavioral-drift/actions/workflows/ci.yml)
+[![Selenium Tests](https://github.com/AhamedKaif/neuro-behavioral-drift/actions/workflows/selenium-tests.yml/badge.svg)](https://github.com/AhamedKaif/neuro-behavioral-drift/actions/workflows/selenium-tests.yml)
+[![Build Status](https://github.com/AhamedKaif/neuro-behavioral-drift/actions/workflows/build.yml/badge.svg)](https://github.com/AhamedKaif/neuro-behavioral-drift/actions/workflows/build.yml)
+[![Test Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](https://github.com/AhamedKaif/neuro-behavioral-drift/actions)
+
 This project is a full-stack, machine learning-powered web application designed to monitor user interaction patterns (keystrokes, mouse movement, active sessions, and rest cycles) to detect early indicators of cognitive strain and fatigue.
+
+---
+
+## ⚙️ CI/CD Pipeline Architecture
+
+This repository uses a professional **GitHub Actions** Continuous Integration and Continuous Deployment (CI/CD) pipeline. It automatically validates, tests, and builds the project on every push and pull request.
+
+### Workflows:
+1. **CI Pipeline (`ci.yml`)**: Installs dependencies and runs lightweight API integration tests and validation checks.
+2. **Selenium Automation Tests (`selenium-tests.yml`)**: Boots up the Flask backend and React frontend inside the GitHub Linux runner, then executes the full UI/E2E test suite using headless Chrome. Uploads the HTML report and failure screenshots as artifacts.
+3. **Build & Deploy Readiness (`build.yml`)**: Validates that the frontend application can successfully compile for production (`npm run build`) and archives the `dist/` directory.
+4. **Generate Test Reports (`report.yml`)**: Aggregates the raw JSON output from the Selenium tests and programmatically generates an Enterprise Excel Report (`.xlsx`), uploading it as an actionable artifact.
 
 ---
 

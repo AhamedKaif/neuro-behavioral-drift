@@ -8,7 +8,8 @@ import os
 def browser():
     """Sets up a Chrome WebDriver instance for the entire test session."""
     options = webdriver.ChromeOptions()
-    # options.add_argument('--headless') # Uncomment to run in headless mode
+    if os.environ.get('CI') == 'true':
+        options.add_argument('--headless')
     options.add_argument('--start-maximized')
     options.add_argument('--disable-gpu')
     options.add_argument('--no-sandbox')
