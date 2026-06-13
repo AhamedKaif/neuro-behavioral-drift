@@ -129,10 +129,10 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git fetch origin
-        git pull --rebase origin master || git pull --rebase origin main
         git add reports/
         git diff --cached --quiet || git commit -m "Update Selenium test reports [skip ci]"
+        git fetch origin
+        git pull --rebase origin master || git pull --rebase origin main
         git push
 
     - name: Upload Test Reports
