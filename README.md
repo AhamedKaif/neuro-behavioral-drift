@@ -134,6 +134,17 @@ Open `http://localhost:5173` in your browser.
 
 ---
 
+## 📊 Automated Test Reporting
+
+The complete Selenium E2E test suite automatically generates a comprehensive Excel report after every push or pull request to the `master` branch. This report includes:
+- Test Case IDs, Names, and Modules
+- Execution Status (PASS/FAIL)
+- Execution Duration and Error Remarks
+- Overall Completion Metrics
+
+You can download the latest generated test report directly from the repository here:
+👉 **[Download Selenium Test Report](./reports/selenium_test_report.xlsx)**
+
 ## 🛠️ Testing the Application
 
 1. **Register/Login**: Open the page, register a new user, and log in.
