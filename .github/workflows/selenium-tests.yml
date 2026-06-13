@@ -2,9 +2,14 @@ name: Selenium Automation Tests
 
 on:
   push:
-    branches: [ "master", "main" ]
+    branches:
+      - master
+      - main
   pull_request:
-    branches: [ "master", "main" ]
+    branches:
+      - master
+      - main
+  workflow_dispatch:
 
 jobs:
   run-selenium-tests:
@@ -32,12 +37,12 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable xvfb
 
-    - name: Install Backend Dependencies
+    - name: Install Backend & Test Dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r backend/requirements.txt
         pip install -r tests/requirements.txt
-        pip install pytest-html pytest-json-report
+        pip install pytest-html pytest-json-report openpyxl
 
     - name: Setup Database
       working-directory: ./backend
@@ -46,7 +51,7 @@ jobs:
 
     - name: Install Frontend Dependencies
       working-directory: ./frontend
-      run: npm ci
+      run: npm install
 
     - name: Start Services
       run: |
@@ -62,30 +67,43 @@ jobs:
         FLASK_APP: backend/app.py
         FLASK_ENV: testing
 
-    - name: Run All Selenium Tests
+    - name: Run Selenium Tests & Generate Reports
       run: |
         echo "Running Full Selenium E2E Suite"
-        pytest tests/ -v --html=tests/report.html --self-contained-html --json-report --json-report-file=report.json
+        mkdir -p reports
+        mkdir -p screenshots
+        
+        # Capture start time
+        start_time=$(date +%s)
+        
+        # Run pytest
+        pytest tests/ -v --html=reports/report.html --self-contained-html --junitxml=reports/junit_report.xml --json-report --json-report-file=reports/report.json || true
+        
+        # Capture end time
+        end_time=$(date +%s)
+        execution_time=$((end_time - start_time))
+        
+        # Parse results from json-report
+        if [ -f reports/report.json ]; then
+          total=$(jq '.summary.total // 0' reports/report.json)
+          passed=$(jq '.summary.passed // 0' reports/report.json)
+          failed=$(jq '.summary.failed // 0' reports/report.json)
+          echo "::notice title=Workflow Output::Total Tests Executed: $total, Passed: $passed, Failed: $failed, Execution Time: ${execution_time}s"
+        fi
       env:
         CI: true
 
-    - name: Upload Test Report (HTML)
+    - name: Upload Test Reports
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: html-test-report
-        path: tests/report.html
-
-    - name: Upload JSON Report
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: json-test-report
-        path: report.json
+        name: test-reports
+        path: reports/
 
     - name: Upload Screenshots on Failure
-      if: failure()
+      if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: test-screenshots
-        path: "*.png"
+        name: failure-screenshots
+        path: screenshots/
+        if-no-files-found: ignore

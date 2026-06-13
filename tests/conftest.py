@@ -29,7 +29,8 @@ def pytest_runtest_makereport(item, call):
     if report.when == 'call' or report.when == "setup":
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            file_name = f"screenshot_{item.name}.png"
+            os.makedirs("screenshots", exist_ok=True)
+            file_name = f"screenshots/screenshot_{item.name}.png"
             if "browser" in item.funcargs:
                 driver = item.funcargs["browser"]
                 driver.save_screenshot(file_name)
