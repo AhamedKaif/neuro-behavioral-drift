@@ -28,8 +28,7 @@ jobs:
 
     - name: Setup Database
       working-directory: ./backend
-      run: |
-        python -c "from app import app, db; app.app_context().push(); db.create_all()"
+      run: python db.py
 
     - name: Run Validation Checks (Linting)
       run: |
@@ -78,8 +77,7 @@ jobs:
 
     - name: Setup Database
       working-directory: ./backend
-      run: |
-        python -c "from app import app, db; app.app_context().push(); db.create_all()"
+      run: python db.py
 
     - name: Install Frontend Dependencies
       working-directory: ./frontend
