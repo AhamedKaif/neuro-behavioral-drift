@@ -74,7 +74,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r backend/requirements.txt
-        pip install selenium webdriver-manager pytest pytest-html openpyxl pytest-json-report
+        pip install selenium webdriver-manager pytest pytest-html openpyxl pytest-json-report junitparser
 
     - name: Setup Database
       working-directory: ./backend
@@ -93,34 +93,76 @@ jobs:
         FLASK_APP: backend/app.py
         FLASK_ENV: testing
 
-    - name: Run Selenium Tests & Generate Reports
+    - name: Setup Test Environment
       run: |
-        echo "Running Full Selenium E2E Suite"
         mkdir -p reports
         mkdir -p screenshots
-        
-        start_time=$(date +%s)
-        
-        pytest tests/ -v --html=reports/report.html --self-contained-html --junitxml=reports/junit_report.xml --json-report --json-report-file=reports/report.json || true
-        
-        end_time=$(date +%s)
-        execution_time=$((end_time - start_time))
+
+    - name: ✓ Registration Workflow
+      run: pytest tests/test_registration.py -v --html=reports/report_registration.html --self-contained-html --junitxml=reports/junit_registration.xml --json-report --json-report-file=reports/report_registration.json
+      env:
+        CI: true
+
+    - name: ✓ Login Workflow
+      run: pytest tests/test_login.py -v --html=reports/report_login.html --self-contained-html --junitxml=reports/junit_login.xml --json-report --json-report-file=reports/report_login.json
+      env:
+        CI: true
+
+    - name: ✓ Dashboard Workflow
+      run: pytest tests/test_dashboard.py -v --html=reports/report_dashboard.html --self-contained-html --junitxml=reports/junit_dashboard.xml --json-report --json-report-file=reports/report_dashboard.json
+      env:
+        CI: true
+
+    - name: ✓ Analytics Workflow
+      run: pytest tests/test_prediction.py -v --html=reports/report_prediction.html --self-contained-html --junitxml=reports/junit_prediction.xml --json-report --json-report-file=reports/report_prediction.json
+      env:
+        CI: true
+
+    - name: ✓ Profile Workflow
+      run: pytest tests/test_profile.py -v --html=reports/report_profile.html --self-contained-html --junitxml=reports/junit_profile.xml --json-report --json-report-file=reports/report_profile.json
+      env:
+        CI: true
+
+    - name: ✓ Notification Workflow
+      run: pytest tests/test_notifications.py -v --html=reports/report_notifications.html --self-contained-html --junitxml=reports/junit_notifications.xml --json-report --json-report-file=reports/report_notifications.json
+      env:
+        CI: true
+
+    - name: ✓ Navigation Workflow
+      run: pytest tests/test_navigation.py -v --html=reports/report_navigation.html --self-contained-html --junitxml=reports/junit_navigation.xml --json-report --json-report-file=reports/report_navigation.json
+      env:
+        CI: true
+
+    - name: ✓ Logout Workflow
+      run: pytest tests/test_logout.py -v --html=reports/report_logout.html --self-contained-html --junitxml=reports/junit_logout.xml --json-report --json-report-file=reports/report_logout.json
+      env:
+        CI: true
+
+    - name: ✓ End-to-End Workflow
+      run: pytest tests/test_e2e.py -v --html=reports/report_e2e.html --self-contained-html --junitxml=reports/junit_e2e.xml --json-report --json-report-file=reports/report_e2e.json
+      env:
+        CI: true
+
+    - name: Aggregate Test Reports & Generate Dashboard
+      if: always()
+      run: |
+        python aggregate_test_reports.py
+        junitparser merge reports/junit_*.xml reports/junit_report.xml || echo "Failed to merge XML"
         
         if [ -f reports/report.json ]; then
           total=$(jq '.summary.total // 0' reports/report.json)
           passed=$(jq '.summary.passed // 0' reports/report.json)
           failed=$(jq '.summary.failed // 0' reports/report.json)
-          echo "::notice title=Workflow Output::Total Tests Executed: $total, Passed: $passed, Failed: $failed, Execution Time: ${execution_time}s"
+          percentage=$(( passed * 100 / total ))
+          
+          echo "::notice title=Workflow Summary::Total Workflows Executed: $total, Total Passed: $passed, Total Failed: $failed, Pass Percentage: ${percentage}%"
         fi
         
-        # Generate Excel and Markdown Reports
         python generate_selenium_report.py
         
-        # Output Markdown to GitHub Step Summary
         if [ -f reports/test_verification_dashboard.md ]; then
           cat reports/test_verification_dashboard.md >> $GITHUB_STEP_SUMMARY
         fi
-        
       env:
         CI: true
 
