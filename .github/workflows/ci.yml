@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
         cache: 'pip'
@@ -27,8 +27,9 @@ jobs:
         pip install pytest
 
     - name: Setup Database
+      working-directory: ./backend
       run: |
-        python -c "from backend.app import app, db; app.app_context().push(); db.create_all()"
+        python -c "from app import app, db; app.app_context().push(); db.create_all()"
 
     - name: Run Validation Checks (Linting)
       run: |

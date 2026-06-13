@@ -12,16 +12,16 @@ jobs:
     
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
         cache: 'pip'
 
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '18'
         cache: 'npm'
@@ -40,8 +40,9 @@ jobs:
         pip install pytest-html pytest-json-report
 
     - name: Setup Database
+      working-directory: ./backend
       run: |
-        python -c "from backend.app import app, db; app.app_context().push(); db.create_all()"
+        python -c "from app import app, db; app.app_context().push(); db.create_all()"
 
     - name: Install Frontend Dependencies
       working-directory: ./frontend
@@ -70,21 +71,21 @@ jobs:
 
     - name: Upload Test Report (HTML)
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: html-test-report
         path: tests/report.html
 
     - name: Upload JSON Report
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: json-test-report
         path: report.json
 
     - name: Upload Screenshots on Failure
       if: failure()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-screenshots
         path: "*.png"
