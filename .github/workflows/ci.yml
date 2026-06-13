@@ -23,9 +23,8 @@ jobs:
     - name: Install Backend Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r tests/requirements.txt
-        # If there's a backend specific requirements, install it. 
-        # The project has tests/requirements.txt which contains flask, etc.
+        pip install -r backend/requirements.txt
+        pip install pytest
 
     - name: Setup Database
       run: |
@@ -40,6 +39,6 @@ jobs:
       run: |
         # API Tests run without browser UI interaction
         echo "Validating API endpoints..."
-        python -m pytest tests/test_api_integration.py -v --disable-warnings
+        python -m pytest backend/test_app.py -v --disable-warnings
       env:
         CI: true
