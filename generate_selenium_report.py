@@ -5,7 +5,7 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from datetime import datetime
 
 REPORT_FILE = "reports/report.json"
-EXCEL_FILE = "reports/e2e_test_report.xlsx"
+EXCEL_FILE = "reports/selenium_test_report.xlsx"
 MD_FILE = "reports/test_verification_dashboard.md"
 
 def generate_report():
