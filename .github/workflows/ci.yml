@@ -43,3 +43,90 @@ jobs:
         python -m pytest backend/test_app.py -v --disable-warnings
       env:
         CI: true
+
+  selenium-automation-tests:
+    needs: api-and-validation-tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: 'frontend/package-lock.json'
+
+    - name: Install System Dependencies for Headless Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable xvfb
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r backend/requirements.txt
+        pip install selenium webdriver-manager pytest pytest-html openpyxl pytest-json-report
+
+    - name: Setup Database
+      working-directory: ./backend
+      run: |
+        python -c "from app import app, db; app.app_context().push(); db.create_all()"
+
+    - name: Install Frontend Dependencies
+      working-directory: ./frontend
+      run: npm install
+
+    - name: Start Services
+      run: |
+        python backend/app.py &
+        cd frontend && npm run dev &
+        sleep 10
+      env:
+        FLASK_APP: backend/app.py
+        FLASK_ENV: testing
+
+    - name: Run Selenium Tests & Generate Reports
+      run: |
+        echo "Running Full Selenium E2E Suite"
+        mkdir -p reports
+        mkdir -p screenshots
+        
+        start_time=$(date +%s)
+        
+        pytest tests/ -v --html=reports/report.html --self-contained-html --junitxml=reports/junit_report.xml --json-report --json-report-file=reports/report.json || true
+        
+        end_time=$(date +%s)
+        execution_time=$((end_time - start_time))
+        
+        if [ -f reports/report.json ]; then
+          total=$(jq '.summary.total // 0' reports/report.json)
+          passed=$(jq '.summary.passed // 0' reports/report.json)
+          failed=$(jq '.summary.failed // 0' reports/report.json)
+          echo "::notice title=Workflow Output::Total Tests Executed: $total, Passed: $passed, Failed: $failed, Execution Time: ${execution_time}s"
+        fi
+      env:
+        CI: true
+
+    - name: Upload Test Reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-reports
+        path: reports/
+
+    - name: Upload Screenshots on Failure
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: failure-screenshots
+        path: screenshots/
+        if-no-files-found: ignore
