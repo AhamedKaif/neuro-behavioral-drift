@@ -1,48 +1,63 @@
+import uuid
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time
-import pytest
 from selenium.webdriver.common.by import By
 
 def test_full_e2e_flow(browser):
-    """Complete End-to-End Workflow: Register -> Login -> Predict -> Logout"""
+    """Complete End-to-End Workflow: Register -> Predict (Sandbox) -> Logout"""
+    
+    unique_username = f"e2e_{uuid.uuid4().hex[:6]}"
     
     # 1. Registration
-    browser.get("http://localhost:5173/register")
-    browser.find_element(By.ID, "fullName").send_keys("E2E Test User")
-    browser.find_element(By.ID, "email").send_keys("e2e_user@example.com")
-    browser.find_element(By.ID, "password").send_keys("Password123")
-    browser.find_element(By.ID, "confirmPassword").send_keys("Password123")
-    browser.find_element(By.XPATH, "//button[contains(text(), 'Create Account')]").click()
-    time.sleep(2)
+    browser.get("http://127.0.0.1:5173/login")
     
-    # 2. Login
-    browser.get("http://localhost:5173/login")
-    browser.find_element(By.ID, "email").send_keys("e2e_user@example.com")
-    browser.find_element(By.ID, "password").send_keys("Password123")
-    browser.find_element(By.XPATH, "//button[contains(text(), 'Sign In')]").click()
+    # Switch to registration
+    register_toggle = WebDriverWait(browser, 5).until(
+        EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Register now')]"))
+    )
+    register_toggle.click()
+    
+    # Fill registration form
+    WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@name='full_name']"))).send_keys("E2E Test User")
+    browser.find_element(By.XPATH, "//input[@name='username']").send_keys(unique_username)
+    browser.find_element(By.XPATH, "//input[@name='email']").send_keys(f"{unique_username}@example.com")
+    browser.find_element(By.XPATH, "//input[@name='password']").send_keys("password123")
+    browser.find_element(By.XPATH, "//input[@name='confirmPassword']").send_keys("password123")
+    browser.find_element(By.XPATH, "//input[@name='privacy_consent']").click()
+    
+    browser.find_element(By.XPATH, "//button[@type='submit']").click()
+    
+    # 2. Wait for dashboard redirect (Registration auto-logs in)
     WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
     
     # 3. Model Telemetry / Prediction
-    telemetry_link = browser.find_element("xpath", "//a[contains(., 'Model Telemetry')]")
-    telemetry_link.click()
-    time.sleep(1)
+    # Force cognitive fatigue in the sandbox to generate a prediction
+    fatigue_label = WebDriverWait(browser, 10).until(
+        EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'Force Cognitive Fatigue Simulation')]"))
+    )
+    fatigue_label.click()
     
-    browser.find_element("id", "reactionTime").send_keys("300")
-    browser.find_element("id", "errorRate").send_keys("2")
-    browser.find_element("id", "focusScore").send_keys("85")
+    transmit_btn = browser.find_element(By.XPATH, "//button[contains(., 'Transmit Metrics')]")
+    transmit_btn.click()
     
-    browser.find_element("xpath", "//button[contains(., 'Transmit Metrics')]").click()
-    time.sleep(2)
-    
-    # Check if prediction rendered
-    assert len(browser.find_elements("xpath", "//*[contains(text(), 'Cognitive Strain Prediction')]")) > 0
+    # Wait for the backend to ingest successfully
+    WebDriverWait(browser, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//button[contains(., 'Ingested Successfully')]"))
+    )
     
     # 4. Logout
-    dashboard_link = browser.find_element("xpath", "//a[contains(., 'Dashboard')]")
-    dashboard_link.click()
-    time.sleep(1)
+    # Click on the user profile menu to reveal logout button
+    profile_btn = WebDriverWait(browser, 5).until(
+        EC.element_to_be_clickable((By.XPATH, "//button[contains(@class, 'rounded-full bg-slate-800')]"))
+    )
+    profile_btn.click()
     
-    disconnect_btn = browser.find_element("xpath", "//button[contains(., 'Disconnect')]")
-    disconnect_btn.click()
+    # Wait for logout button and click it
+    logout_btn = WebDriverWait(browser, 5).until(
+        EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Log out')]"))
+    )
+    logout_btn.click()
+    
+    # Verify redirected back to login page
     WebDriverWait(browser, 10).until(EC.url_contains("login"))
+
