@@ -46,17 +46,11 @@ def test_full_e2e_flow(browser):
     )
     
     # 4. Logout
-    # Click on the user profile menu to reveal logout button
-    profile_btn = WebDriverWait(browser, 5).until(
-        EC.element_to_be_clickable((By.XPATH, "//button[contains(@class, 'rounded-full bg-slate-800')]"))
+    # Click the Disconnect button on the dashboard
+    disconnect_btn = WebDriverWait(browser, 5).until(
+        EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Disconnect')]"))
     )
-    profile_btn.click()
-    
-    # Wait for logout button and click it
-    logout_btn = WebDriverWait(browser, 5).until(
-        EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Log out')]"))
-    )
-    logout_btn.click()
+    disconnect_btn.click()
     
     # Verify redirected back to login page
     WebDriverWait(browser, 10).until(EC.url_contains("login"))
