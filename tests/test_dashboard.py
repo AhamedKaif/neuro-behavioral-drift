@@ -31,6 +31,19 @@ def test_dashboard_stats_exist(browser, login_helper):
     assert any("DAILY SCREEN TIME" in label for label in labels)
     assert any("ACTIVE SESSION" in label for label in labels)
 
+def test_analytics_charts_rendering(browser, login_helper):
+    """Verify that the analytics charts (Recharts) render on the dashboard."""
+    login_helper()
+    
+    # Wait for the charts container to be visible
+    WebDriverWait(browser, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(@class, 'recharts-wrapper')]"))
+    )
+    
+    # Verify at least two charts are rendered (Strain and Session Analytics)
+    charts = browser.find_elements(By.XPATH, "//*[contains(@class, 'recharts-wrapper')]")
+    assert len(charts) >= 2
+
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 

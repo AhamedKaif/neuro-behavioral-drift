@@ -164,6 +164,27 @@ jobs:
       env:
         CI: true
 
+    - name: ✓ Settings Workflow
+      run: |
+        set -o pipefail
+        pytest tests/test_settings.py -v --html=reports/report_settings.html --self-contained-html --junitxml=reports/junit_settings.xml --json-report --json-report-file=reports/report_settings.json | tee reports/logs/settings.log
+      env:
+        CI: true
+
+    - name: ✓ Routing & Security Workflow
+      run: |
+        set -o pipefail
+        pytest tests/test_routing.py -v --html=reports/report_routing.html --self-contained-html --junitxml=reports/junit_routing.xml --json-report --json-report-file=reports/report_routing.json | tee reports/logs/routing.log
+      env:
+        CI: true
+
+    - name: ✓ Responsive Layout Workflow
+      run: |
+        set -o pipefail
+        pytest tests/test_responsive.py -v --html=reports/report_responsive.html --self-contained-html --junitxml=reports/junit_responsive.xml --json-report --json-report-file=reports/report_responsive.json | tee reports/logs/responsive.log
+      env:
+        CI: true
+
     - name: ✓ End-to-End Workflow
       run: |
         set -o pipefail

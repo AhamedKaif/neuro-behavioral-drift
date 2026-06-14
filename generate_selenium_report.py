@@ -28,7 +28,7 @@ def generate_report():
     thin_border = Border(left=Side(style='thin'), right=Side(style='thin'), top=Side(style='thin'), bottom=Side(style='thin'))
 
     # Headers
-    headers = ["Test Case ID", "Test Case Name", "Module", "Status", "Execution Time (s)", "Remarks"]
+    headers = ["Test Case ID", "Test Case Name", "Status", "Execution Time", "Remarks"]
     for col_num, header in enumerate(headers, 1):
         cell = ws.cell(row=8, column=col_num, value=header)
         cell.font = bold_font
@@ -77,9 +77,8 @@ def generate_report():
         # Write Row
         ws.cell(row=row_num, column=1, value=test_id).border = thin_border
         ws.cell(row=row_num, column=2, value=test_name).border = thin_border
-        ws.cell(row=row_num, column=3, value=module_name.title()).border = thin_border
         
-        status_cell = ws.cell(row=row_num, column=4, value=outcome)
+        status_cell = ws.cell(row=row_num, column=3, value=outcome)
         status_cell.border = thin_border
         status_cell.alignment = Alignment(horizontal="center")
         if outcome == "PASSED":
@@ -87,8 +86,8 @@ def generate_report():
         elif outcome == "FAILED":
             status_cell.fill = red_fill
             
-        ws.cell(row=row_num, column=5, value=round(exec_time, 2)).border = thin_border
-        ws.cell(row=row_num, column=6, value=remarks).border = thin_border
+        ws.cell(row=row_num, column=4, value=round(exec_time, 2)).border = thin_border
+        ws.cell(row=row_num, column=5, value=remarks).border = thin_border
         
         row_num += 1
 
