@@ -89,8 +89,8 @@ jobs:
 
     - name: Start Services
       run: |
-        python backend/app.py &
-        cd frontend && npm run dev &
+        (cd backend && python app.py &)
+        (cd frontend && npm run dev &)
         
         echo "Waiting for Backend on port 5000..."
         while ! curl -s http://localhost:5000 > /dev/null; do sleep 1; done
@@ -205,6 +205,7 @@ jobs:
         git pull --rebase origin master || git pull --rebase origin main
         git add reports/
         git diff --cached --quiet || git commit -m "Update Selenium test reports [skip ci]"
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
         git push origin HEAD:${{ github.ref_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
