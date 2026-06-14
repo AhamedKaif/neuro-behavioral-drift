@@ -93,10 +93,10 @@ jobs:
         (cd frontend && npm run dev &)
         
         echo "Waiting for Backend on port 5000..."
-        while ! curl -s http://localhost:5000 > /dev/null; do sleep 1; done
+        while ! curl -s http://127.0.0.1:5000 > /dev/null; do sleep 1; done
         
         echo "Waiting for Frontend on port 5173..."
-        while ! curl -s http://localhost:5173 > /dev/null; do sleep 1; done
+        while ! curl -s http://127.0.0.1:5173 > /dev/null; do sleep 1; done
         echo "Services started successfully!"
       env:
         FLASK_APP: backend/app.py
