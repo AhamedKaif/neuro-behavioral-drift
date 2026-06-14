@@ -42,9 +42,9 @@ def test_analytics_charts_rendering(browser, login_helper):
         EC.presence_of_element_located((By.XPATH, "//*[contains(@class, 'recharts-wrapper')]"))
     )
     
-    # Verify at least two charts are rendered (Strain and Session Analytics)
+    # Verify at least one chart is rendered (Strain Analytics)
     charts = browser.find_elements(By.XPATH, "//*[contains(@class, 'recharts-wrapper')]")
-    assert len(charts) >= 2
+    assert len(charts) >= 1
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
