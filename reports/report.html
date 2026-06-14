@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Selenium Test Report</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background-color: #f2f2f2; }
+.passed { color: green; font-weight: bold; }
+.failed { color: red; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Selenium Test Execution Report</h1>
+<p><strong>Total Tests:</strong> 3</p><p><strong>Passed:</strong> 1</p><p><strong>Failed:</strong> 2</p><p><strong>Total Time:</strong> 0.00s</p><table>
+<tr><th>Test Name</th><th>Status</th><th>Duration (s)</th><th>Error</th></tr>
+<tr><td>tests/test_registration.py::test_valid_registration</td><td class='failed'>FAILED</td><td>12.61</td><td>selenium.common.exceptions.TimeoutException: Message:</td></tr>
+<tr><td>tests/test_registration.py::test_registration_existing_user</td><td class='failed'>FAILED</td><td>12.40</td><td>selenium.common.exceptions.TimeoutException: Message:</td></tr>
+<tr><td>tests/test_registration.py::test_registration_empty_fields</td><td class='passed'>PASSED</td><td>1.79</td><td></td></tr>
+</table>
+</body>
+</html>
