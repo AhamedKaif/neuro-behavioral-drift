@@ -27,10 +27,9 @@ def test_valid_registration(browser):
     
     submit_btn = browser.find_element("xpath", "//button[@type='submit']")
     submit_btn.click()
-    time.sleep(2)
     
     # Assert successful registration redirects to dashboard
-    assert "dashboard" in browser.current_url
+    WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
     
     # Logout for next test
     browser.execute_script("window.localStorage.clear();")
@@ -58,9 +57,9 @@ def test_registration_existing_user(browser):
     
     submit_btn = browser.find_element("xpath", "//button[@type='submit']")
     submit_btn.click()
-    time.sleep(2)
     
     # Logout
+    WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
     browser.execute_script("window.localStorage.clear();")
     browser.get("http://localhost:5173/login")
     time.sleep(1)
@@ -80,11 +79,10 @@ def test_registration_existing_user(browser):
     
     submit_btn = browser.find_element("xpath", "//button[@type='submit']")
     submit_btn.click()
-    time.sleep(2)
     
     # Should stay on login page and show error
-    assert "login" in browser.current_url
-    error_msg = browser.find_element("xpath", "//div[contains(@class, 'text-red-400')]")
+    WebDriverWait(browser, 10).until(EC.url_contains("login"))
+    error_msg = WebDriverWait(browser, 5).until(EC.presence_of_element_located(("xpath", "//div[contains(@class, 'text-red-400')]")))
     assert "already exists" in error_msg.text.lower() or "error" in error_msg.text.lower()
 
 def test_registration_empty_fields(browser):
@@ -101,8 +99,7 @@ def test_registration_empty_fields(browser):
         
     submit_btn = browser.find_element("xpath", "//button[@type='submit']")
     submit_btn.click()
-    time.sleep(1)
     
     # Should show error about filling fields
-    error_msg = browser.find_element("xpath", "//div[contains(@class, 'text-red-400')]")
+    error_msg = WebDriverWait(browser, 5).until(EC.presence_of_element_located(("xpath", "//div[contains(@class, 'text-red-400')]")))
     assert "fill in all" in error_msg.text.lower()
