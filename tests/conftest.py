@@ -73,18 +73,18 @@ def login_helper(browser):
         browser.find_element("xpath", "//button[@type='submit']").click()
         
         try:
-            WebDriverWait(browser, 5).until(EC.url_contains("login"))
+            # Wait up to 5 seconds for the registration to redirect to dashboard
+            WebDriverWait(browser, 5).until(EC.url_contains("dashboard"))
         except:
             pass
             
-        # If it fails (e.g. exists), switch to login
-        if "login" in browser.current_url:
+        # If it hasn't redirected, it means registration failed (e.g. user exists), so switch to login
+        if "dashboard" not in browser.current_url:
             login_toggle = browser.find_elements("xpath", "//button[contains(text(), 'Log in')]")
             if login_toggle:
                 login_toggle[0].click()
-                time.sleep(0.5)
             
-            username_input = browser.find_element("xpath", "//input[@placeholder='Enter username']")
+            username_input = WebDriverWait(browser, 5).until(EC.presence_of_element_located(("xpath", "//input[@placeholder='Enter username']")))
             password_input = browser.find_element("xpath", "//input[@placeholder='Enter password']")
             submit_btn = browser.find_element("xpath", "//button[@type='submit']")
             
