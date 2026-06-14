@@ -1,3 +1,5 @@
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 import uuid
 
@@ -45,9 +47,7 @@ def test_valid_login(browser):
     browser.find_element("xpath", "//input[@placeholder='Enter username']").send_keys(username)
     browser.find_element("xpath", "//input[@placeholder='Enter password']").send_keys(password)
     browser.find_element("xpath", "//button[@type='submit']").click()
-    time.sleep(2)
-    
-    assert "dashboard" in browser.current_url
+    WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
     browser.execute_script("window.localStorage.clear();")
 
 def test_invalid_password(browser):
@@ -65,9 +65,7 @@ def test_invalid_password(browser):
     browser.find_element("xpath", "//input[@placeholder='Enter username']").send_keys(username)
     browser.find_element("xpath", "//input[@placeholder='Enter password']").send_keys("wrongpassword")
     browser.find_element("xpath", "//button[@type='submit']").click()
-    time.sleep(2)
-    
-    assert "login" in browser.current_url
+    WebDriverWait(browser, 10).until(EC.url_contains("login"))
     error_msg = browser.find_element("xpath", "//div[contains(@class, 'text-red-400')]")
     assert "invalid" in error_msg.text.lower() or "error" in error_msg.text.lower()
 
@@ -86,9 +84,7 @@ def test_invalid_username(browser):
     browser.find_element("xpath", "//input[@placeholder='Enter username']").send_keys(f"nonexistent_{uuid.uuid4().hex[:6]}")
     browser.find_element("xpath", "//input[@placeholder='Enter password']").send_keys("password")
     browser.find_element("xpath", "//button[@type='submit']").click()
-    time.sleep(2)
-    
-    assert "login" in browser.current_url
+    WebDriverWait(browser, 10).until(EC.url_contains("login"))
     error_msg = browser.find_element("xpath", "//div[contains(@class, 'text-red-400')]")
     assert "invalid" in error_msg.text.lower() or "error" in error_msg.text.lower()
 

@@ -1,3 +1,5 @@
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
 def test_profile_loads(browser, login_helper):
@@ -7,9 +9,7 @@ def test_profile_loads(browser, login_helper):
     # Click Profile icon in navbar
     profile_link = browser.find_element("xpath", "//a[@href='/profile']")
     profile_link.click()
-    time.sleep(1)
-    
-    assert "profile" in browser.current_url
+    WebDriverWait(browser, 10).until(EC.url_contains("profile"))
     assert "Profile Management" in browser.page_source
 
 def test_edit_profile(browser, login_helper):

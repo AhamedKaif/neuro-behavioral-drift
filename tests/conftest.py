@@ -1,6 +1,8 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
 
@@ -29,8 +31,8 @@ def pytest_runtest_makereport(item, call):
     if report.when == 'call' or report.when == "setup":
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            os.makedirs("screenshots", exist_ok=True)
-            file_name = f"screenshots/screenshot_{item.name}.png"
+            os.makedirs("reports/screenshots", exist_ok=True)
+            file_name = f"reports/screenshots/screenshot_{item.name}.png"
             if "browser" in item.funcargs:
                 driver = item.funcargs["browser"]
                 driver.save_screenshot(file_name)
@@ -57,9 +59,9 @@ def login_helper(browser):
             return
             
         # Try registering first
-        register_toggle = browser.find_element("xpath", "//button[contains(text(), 'Register now')]")
+        register_toggle = browser.find_elements("xpath", "//button[contains(text(), 'Register now')]")
         if register_toggle:
-            register_toggle.click()
+            register_toggle[0].click()
             time.sleep(0.5)
 
         browser.find_element("xpath", "//input[@name='full_name']").send_keys("Test User")
@@ -70,13 +72,16 @@ def login_helper(browser):
         browser.find_element("xpath", "//input[@name='privacy_consent']").click()
         browser.find_element("xpath", "//button[@type='submit']").click()
         
-        time.sleep(2) # Wait for redirect
-        
+        try:
+            WebDriverWait(browser, 5).until(EC.url_contains("login"))
+        except:
+            pass
+            
         # If it fails (e.g. exists), switch to login
         if "login" in browser.current_url:
-            login_toggle = browser.find_element("xpath", "//button[contains(text(), 'Log in')]")
+            login_toggle = browser.find_elements("xpath", "//button[contains(text(), 'Log in')]")
             if login_toggle:
-                login_toggle.click()
+                login_toggle[0].click()
                 time.sleep(0.5)
             
             username_input = browser.find_element("xpath", "//input[@placeholder='Enter username']")
@@ -88,7 +93,6 @@ def login_helper(browser):
             password_input.clear()
             password_input.send_keys(password)
             submit_btn.click()
-            time.sleep(2)
             
-        assert "dashboard" in browser.current_url
+        WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
     return _login

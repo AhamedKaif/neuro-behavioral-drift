@@ -1,3 +1,5 @@
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 import pytest
 from selenium.webdriver.common.by import By
@@ -19,8 +21,7 @@ def test_full_e2e_flow(browser):
     browser.find_element(By.ID, "email").send_keys("e2e_user@example.com")
     browser.find_element(By.ID, "password").send_keys("Password123")
     browser.find_element(By.XPATH, "//button[contains(text(), 'Sign In')]").click()
-    time.sleep(2)
-    assert "dashboard" in browser.current_url
+    WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
     
     # 3. Model Telemetry / Prediction
     telemetry_link = browser.find_element("xpath", "//a[contains(., 'Model Telemetry')]")
@@ -44,5 +45,4 @@ def test_full_e2e_flow(browser):
     
     disconnect_btn = browser.find_element("xpath", "//button[contains(., 'Disconnect')]")
     disconnect_btn.click()
-    time.sleep(1)
-    assert "login" in browser.current_url
+    WebDriverWait(browser, 10).until(EC.url_contains("login"))
