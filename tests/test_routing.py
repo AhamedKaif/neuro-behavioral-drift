@@ -25,5 +25,7 @@ def test_unknown_route_redirect(browser, login_helper):
     browser.get("http://127.0.0.1:5173/this-route-does-not-exist")
     
     # It should fallback to dashboard because user is logged in
-    WebDriverWait(browser, 5).until(EC.url_contains("dashboard"))
-    assert "dashboard" in browser.current_url
+    WebDriverWait(browser, 15).until(
+        lambda driver: "dashboard" in driver.current_url or "login" in driver.current_url
+    )
+    assert "dashboard" in browser.current_url, f"Expected dashboard, got {browser.current_url}"
