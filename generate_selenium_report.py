@@ -97,12 +97,13 @@ def generate_report():
     ws["A1"] = "Project: Neuro Behavioral Drift"
     ws["A2"] = "Test Framework: Selenium"
     ws["A3"] = f"Execution Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-    ws["A4"] = f"Total Tests: {total_tests}"
-    ws["A5"] = f"Passed: {passed_tests}"
-    ws["A6"] = f"Failed: {failed_tests}"
-    ws["A7"] = f"Pass Percentage: {pass_percentage:.2f}%"
+    ws["A4"] = "Contributor: Naresh-M-tech"
+    ws["A5"] = f"Total Tests: {total_tests}"
+    ws["A6"] = f"Passed: {passed_tests}"
+    ws["A7"] = f"Failed: {failed_tests}"
+    ws["A8"] = f"Pass Percentage: {pass_percentage:.2f}%"
 
-    for i in range(1, 8):
+    for i in range(1, 9):
         ws[f"A{i}"].font = bold_font
 
     # Auto-fit columns
@@ -122,6 +123,8 @@ def generate_markdown_report(data, passed_tests, failed_tests, total_tests, pass
     md_content = f"""# 🧪 HealthSense AI Unified Test Verification Dashboard
 
 This dashboard presents a unified summary of E2E tests and security scans across all major components: Website, Mobile App, and Backend.
+
+**Contributor:** Naresh-M-tech
 
 ## 📊 Unified Summary Overview
 
