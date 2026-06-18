@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
-export default function Auth({ onLoginSuccess }) {
-  const [isLogin, setIsLogin] = useState(true);
-  
+export default function Auth({ onLoginSuccess, initialMode = 'login' }) {
+  const [isLogin, setIsLogin] = useState(initialMode === 'login');
+  const navigate = useNavigate();
+
   // Login State
   const [loginUsername, setLoginUsername] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
@@ -40,9 +42,9 @@ export default function Auth({ onLoginSuccess }) {
     try {
       const response = await axios.post('/api/auth/login', { username: loginUsername, password: loginPassword });
       const { token, user } = response.data;
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', JSON.stringify(user));
+      // Persist token & user, update parent state, then navigate to dashboard.
       onLoginSuccess(token, user);
+      navigate('/dashboard', { replace: true });
     } catch (err) {
       setError(err.response?.data?.error || 'An error occurred.');
     } finally {
@@ -75,22 +77,23 @@ export default function Auth({ onLoginSuccess }) {
     setLoading(true);
 
     try {
-      // Remove confirmPassword and privacy_consent before sending
       const submitData = { ...formData };
       delete submitData.confirmPassword;
       delete submitData.privacy_consent;
 
       const response = await axios.post('/api/auth/register', submitData);
       const { token, user } = response.data;
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', JSON.stringify(user));
+      // Persist token & user, update parent state, then navigate directly to dashboard.
+      // This skips the login page entirely — sign-up = auto-login.
       onLoginSuccess(token, user);
+      navigate('/dashboard', { replace: true });
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed.');
     } finally {
       setLoading(false);
     }
   };
+
 
   return (
     <div className="flex min-h-[85vh] items-center justify-center px-4 py-8">
@@ -250,15 +253,21 @@ export default function Auth({ onLoginSuccess }) {
           <span className="text-slate-400">
             {isLogin ? "Don't have an account?" : "Already have an account?"}
           </span>{' '}
-          <button
-            onClick={() => {
-              setIsLogin(!isLogin);
-              setError('');
-            }}
-            className="font-medium text-accentBlue hover:underline ml-1"
-          >
-            {isLogin ? 'Register now' : 'Log in'}
-          </button>
+          {isLogin ? (
+            <Link
+              to="/register"
+              className="font-medium text-accentBlue hover:underline ml-1"
+            >
+              Register now
+            </Link>
+          ) : (
+            <Link
+              to="/login"
+              className="font-medium text-accentBlue hover:underline ml-1"
+            >
+              Log in
+            </Link>
+          )}
         </div>
       </div>
     </div>

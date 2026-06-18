@@ -13,7 +13,7 @@ def test_full_e2e_flow(browser):
     
     # Switch to registration
     register_toggle = WebDriverWait(browser, 5).until(
-        EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Register now')]"))
+        EC.element_to_be_clickable((By.XPATH, "//*[contains(text(), 'Register now')]"))
     )
     register_toggle.click()
     
@@ -50,7 +50,7 @@ def test_full_e2e_flow(browser):
     disconnect_btn = WebDriverWait(browser, 5).until(
         EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Disconnect')]"))
     )
-    disconnect_btn.click()
+    browser.execute_script("arguments[0].click();", disconnect_btn)
     
     # Verify redirected back to login page
     WebDriverWait(browser, 10).until(EC.url_contains("login"))

@@ -11,60 +11,79 @@ import { notificationsAPI } from './services/api';
 import { registerServiceWorker, requestNotificationPermission } from './utils/pushNotifications';
 
 export default function App() {
-  const [token, setToken] = useState(localStorage.getItem('token'));
+  const [token, setToken] = useState(null);
   const [user, setUser] = useState(null);
   const [checkingAuth, setCheckingAuth] = useState(true);
   const [unreadCount, setUnreadCount] = useState(0);
 
+  // Run ONCE on mount — restore session from localStorage and validate token with backend.
+  // We do NOT re-run this when token changes (no [token] dependency) because
+  // handleLoginSuccess already sets both token and user directly from the API response,
+  // so there is no need for a second round-trip validation after login/register.
   useEffect(() => {
-    // Start service worker
     registerServiceWorker();
-    
-    const checkAuth = async () => {
+
+    const restoreSession = async () => {
       const storedToken = localStorage.getItem('token');
+      const storedUser = (() => {
+        try { return JSON.parse(localStorage.getItem('user')); }
+        catch { return null; }
+      })();
+
       if (storedToken) {
+        // Optimistically restore from localStorage so the UI is instant on reload.
+        setToken(storedToken);
+        setUser(storedUser);
+
         try {
-          // Verify token against backend
+          // Silently re-validate the token with the backend.
           const res = await axios.get('/api/auth/me', {
             headers: { Authorization: `Bearer ${storedToken}` }
           });
-          setToken(storedToken);
+          // Update user with fresh data from server.
           setUser(res.data);
+          localStorage.setItem('user', JSON.stringify(res.data));
         } catch (err) {
-          console.error("Token validation failed", err);
-          // Clear invalid token
+          console.error('Stored token is invalid, clearing session:', err);
           localStorage.removeItem('token');
           localStorage.removeItem('user');
           setToken(null);
           setUser(null);
         }
       }
+
       setCheckingAuth(false);
     };
 
-    checkAuth();
-  }, [token]);
+    restoreSession();
+  }, []); // ← empty deps: run once on mount only
 
-  // Fetch unread count periodically or on changes
+  // Fetch unread notification count whenever the user is authenticated.
   useEffect(() => {
-    if (token) {
-      const fetchCount = async () => {
-        try {
-          const res = await notificationsAPI.unreadCount();
-          setUnreadCount(res.data.unread_count);
-        } catch (e) {}
-      };
-      fetchCount();
-      // Poll every 30 seconds
-      const interval = setInterval(fetchCount, 30000);
-      return () => clearInterval(interval);
-    }
+    if (!token) return;
+    const fetchCount = async () => {
+      try {
+        const res = await notificationsAPI.unreadCount();
+        setUnreadCount(res.data.unread_count);
+      } catch (e) {}
+    };
+    fetchCount();
+    const interval = setInterval(fetchCount, 30000);
+    return () => clearInterval(interval);
   }, [token]);
 
+  /**
+   * Called immediately after a successful login OR registration API response.
+   * The token and user come directly from the API response body — no extra
+   * round-trip is needed, so navigation to /dashboard happens instantly.
+   */
   const handleLoginSuccess = (newToken, newUser) => {
+    // Persist to localStorage first so protected routes don't flash /login.
+    localStorage.setItem('token', newToken);
+    localStorage.setItem('user', JSON.stringify(newUser));
+    // Update React state — the router will now render Dashboard.
     setToken(newToken);
     setUser(newUser);
-    // Request notification permission immediately on first login/visit
     setTimeout(() => requestNotificationPermission(), 1000);
   };
 
@@ -146,34 +165,38 @@ export default function App() {
         {/* Main Content Area */}
         <main className="flex-grow w-full">
           <Routes>
-            <Route 
-              path="/login" 
-              element={!token ? <Auth onLoginSuccess={handleLoginSuccess} /> : <Navigate to="/dashboard" />} 
+            {/* Auth routes — redirect to dashboard if already authenticated */}
+            <Route
+              path="/login"
+              element={token && user ? <Navigate to="/dashboard" replace /> : <Auth key="login" onLoginSuccess={handleLoginSuccess} initialMode="login" />}
             />
-            
-            <Route 
-              path="/dashboard" 
-              element={token ? <Dashboard token={token} user={user} onLogout={handleLogout} /> : <Navigate to="/login" />} 
-            />
-            
-            <Route 
-              path="/model-telemetry" 
-              element={token ? <ModelSettings token={token} /> : <Navigate to="/login" />} 
+            <Route
+              path="/register"
+              element={token && user ? <Navigate to="/dashboard" replace /> : <Auth key="register" onLoginSuccess={handleLoginSuccess} initialMode="register" />}
             />
 
-            <Route 
-              path="/profile" 
-              element={token ? <Profile token={token} onLogout={handleLogout} /> : <Navigate to="/login" />} 
+            {/* Protected routes — redirect to login if not authenticated */}
+            <Route
+              path="/dashboard"
+              element={token && user ? <Dashboard token={token} user={user} onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+            />
+            <Route
+              path="/model-telemetry"
+              element={token && user ? <ModelSettings token={token} /> : <Navigate to="/login" replace />}
+            />
+            <Route
+              path="/profile"
+              element={token && user ? <Profile token={token} onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+            />
+            <Route
+              path="/notifications"
+              element={token && user ? <NotificationsPage /> : <Navigate to="/login" replace />}
             />
 
-            <Route 
-              path="/notifications" 
-              element={token ? <NotificationsPage /> : <Navigate to="/login" />} 
-            />
-
-            <Route 
-              path="*" 
-              element={<Navigate to={token ? "/dashboard" : "/login"} />} 
+            {/* Catch-all */}
+            <Route
+              path="*"
+              element={<Navigate to={token && user ? "/dashboard" : "/login"} replace />}
             />
           </Routes>
         </main>

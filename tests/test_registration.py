@@ -11,7 +11,7 @@ def test_valid_registration(browser):
     time.sleep(1)
     
     # Ensure we are on registration mode
-    toggles = browser.find_elements("xpath", "//button[contains(text(), 'Register now')]")
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Register now')]")
     if toggles:
         toggles[0].click()
         time.sleep(0.5)
@@ -42,7 +42,7 @@ def test_registration_existing_user(browser):
     time.sleep(1)
     
     # Create user first
-    toggles = browser.find_elements("xpath", "//button[contains(text(), 'Register now')]")
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Register now')]")
     if toggles:
         toggles[0].click()
         time.sleep(0.5)
@@ -65,7 +65,7 @@ def test_registration_existing_user(browser):
     time.sleep(1)
     
     # Try registering again
-    toggles = browser.find_elements("xpath", "//button[contains(text(), 'Register now')]")
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Register now')]")
     if toggles:
         toggles[0].click()
         time.sleep(0.5)
@@ -80,8 +80,8 @@ def test_registration_existing_user(browser):
     submit_btn = browser.find_element("xpath", "//button[@type='submit']")
     submit_btn.click()
     
-    # Should stay on login page and show error
-    WebDriverWait(browser, 10).until(EC.url_contains("login"))
+    # Should stay on register page and show error
+    WebDriverWait(browser, 10).until(EC.url_contains("register"))
     error_msg = WebDriverWait(browser, 5).until(EC.presence_of_element_located(("xpath", "//div[contains(@class, 'text-red-400')]")))
     assert "already exists" in error_msg.text.lower() or "error" in error_msg.text.lower()
 
@@ -92,7 +92,7 @@ def test_registration_empty_fields(browser):
     browser.get("http://localhost:5173/login")
     time.sleep(1)
     
-    toggles = browser.find_elements("xpath", "//button[contains(text(), 'Register now')]")
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Register now')]")
     if toggles:
         toggles[0].click()
         time.sleep(0.5)

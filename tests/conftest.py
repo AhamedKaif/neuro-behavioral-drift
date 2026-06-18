@@ -59,7 +59,7 @@ def login_helper(browser):
             return
             
         # Try registering first
-        register_toggle = browser.find_elements("xpath", "//button[contains(text(), 'Register now')]")
+        register_toggle = browser.find_elements("xpath", "//*[contains(text(), 'Register now')]")
         if register_toggle:
             register_toggle[0].click()
             time.sleep(0.5)
@@ -80,7 +80,7 @@ def login_helper(browser):
             
         # If it hasn't redirected, it means registration failed (e.g. user exists), so switch to login
         if "dashboard" not in browser.current_url:
-            login_toggle = browser.find_elements("xpath", "//button[contains(text(), 'Log in')]")
+            login_toggle = browser.find_elements("xpath", "//*[contains(text(), 'Log in')]")
             if login_toggle:
                 login_toggle[0].click()
             

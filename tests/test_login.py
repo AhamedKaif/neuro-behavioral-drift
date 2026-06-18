@@ -13,7 +13,7 @@ def setup_user(browser):
     browser.get("http://localhost:5173/login")
     time.sleep(1)
     
-    toggles = browser.find_elements("xpath", "//button[contains(text(), 'Register now')]")
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Register now')]")
     if toggles:
         toggles[0].click()
         time.sleep(0.5)
@@ -39,7 +39,7 @@ def test_valid_login(browser):
     time.sleep(1)
     
     # Ensure login mode
-    toggles = browser.find_elements("xpath", "//button[contains(text(), 'Log in')]")
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Log in')]")
     if toggles:
         toggles[0].click()
         time.sleep(0.5)
@@ -57,7 +57,7 @@ def test_invalid_password(browser):
     browser.get("http://localhost:5173/login")
     time.sleep(1)
     
-    toggles = browser.find_elements("xpath", "//button[contains(text(), 'Log in')]")
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Log in')]")
     if toggles:
         toggles[0].click()
         time.sleep(0.5)
@@ -76,7 +76,7 @@ def test_invalid_username(browser):
     browser.get("http://localhost:5173/login")
     time.sleep(1)
     
-    toggles = browser.find_elements("xpath", "//button[contains(text(), 'Log in')]")
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Log in')]")
     if toggles:
         toggles[0].click()
         time.sleep(0.5)
@@ -95,7 +95,7 @@ def test_login_empty_fields(browser):
     browser.get("http://localhost:5173/login")
     time.sleep(1)
     
-    toggles = browser.find_elements("xpath", "//button[contains(text(), 'Log in')]")
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Log in')]")
     if toggles:
         toggles[0].click()
         time.sleep(0.5)
@@ -105,3 +105,52 @@ def test_login_empty_fields(browser):
     
     error_msg = browser.find_element("xpath", "//div[contains(@class, 'text-red-400')]")
     assert "fill in all fields" in error_msg.text.lower()
+
+
+def test_provided_credentials(browser):
+    """Test logging in with the user-provided credentials: 'web login' / 'web pass'"""
+    username = "web login"
+    password = "web pass"
+    
+    browser.get("http://localhost:5173/login")
+    time.sleep(1)
+    
+    # Try registering the user first (just in case they don't exist in the database)
+    toggles = browser.find_elements("xpath", "//*[contains(text(), 'Register now')]")
+    if toggles:
+        toggles[0].click()
+        time.sleep(0.5)
+        
+    browser.find_element("xpath", "//input[@name='full_name']").send_keys("Web User")
+    browser.find_element("xpath", "//input[@name='username']").send_keys(username)
+    browser.find_element("xpath", "//input[@name='email']").send_keys("webuser@example.com")
+    browser.find_element("xpath", "//input[@name='password']").send_keys(password)
+    browser.find_element("xpath", "//input[@name='confirmPassword']").send_keys(password)
+    browser.find_element("xpath", "//input[@name='privacy_consent']").click()
+    browser.find_element("xpath", "//button[@type='submit']").click()
+    
+    time.sleep(2)
+    
+    # If we are already on dashboard, great!
+    # If not (e.g. user already exists), switch to Login page and log in
+    if "dashboard" not in browser.current_url:
+        toggles = browser.find_elements("xpath", "//*[contains(text(), 'Log in')]")
+        if toggles:
+            toggles[0].click()
+            time.sleep(0.5)
+            
+        username_input = WebDriverWait(browser, 5).until(
+            EC.presence_of_element_located(("xpath", "//input[@placeholder='Enter username']"))
+        )
+        password_input = browser.find_element("xpath", "//input[@placeholder='Enter password']")
+        submit_btn = browser.find_element("xpath", "//button[@type='submit']")
+        
+        username_input.clear()
+        username_input.send_keys(username)
+        password_input.clear()
+        password_input.send_keys(password)
+        submit_btn.click()
+        
+    WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
+    browser.execute_script("window.localStorage.clear();")
+
