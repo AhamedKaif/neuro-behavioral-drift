@@ -1,16 +1,19 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 import time
 
 def test_transmit_metrics_success(browser, login_helper):
     """Click Transmit Metrics button and verify successful UI update."""
     login_helper()
     
-    transmit_btn = browser.find_element("xpath", "//button[contains(., 'Transmit Metrics')]")
+    transmit_btn = browser.find_element(By.XPATH, "//button[contains(., 'Transmit Metrics')]")
     browser.execute_script("arguments[0].click();", transmit_btn)
     
-    time.sleep(3)
-    success_btn = browser.find_element("xpath", "//button[contains(., 'Ingested Successfully')]")
+    WebDriverWait(browser, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//button[contains(., 'Ingested Successfully')]"))
+    )
+    success_btn = browser.find_element(By.XPATH, "//button[contains(., 'Ingested Successfully')]")
     assert success_btn.is_displayed()
 
 def test_cognitive_strain_prediction(browser, login_helper):
@@ -18,17 +21,18 @@ def test_cognitive_strain_prediction(browser, login_helper):
     login_helper()
     
     # Toggle fatigue
-    label = browser.find_element("xpath", "//span[contains(text(), 'Force Cognitive Fatigue Simulation')]")
+    label = browser.find_element(By.XPATH, "//span[contains(text(), 'Force Cognitive Fatigue Simulation')]")
     browser.execute_script("arguments[0].click();", label)
     
     # Transmit
-    transmit_btn = browser.find_element("xpath", "//button[contains(., 'Transmit Metrics')]")
+    transmit_btn = browser.find_element(By.XPATH, "//button[contains(., 'Transmit Metrics')]")
     browser.execute_script("arguments[0].click();", transmit_btn)
     
-    time.sleep(3) # Wait for backend response and state update
-    
+    WebDriverWait(browser, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//span[contains(text(), 'High')]"))
+    )
     # Check strain is high
-    strain_badge = browser.find_element("xpath", "//span[contains(text(), 'High')]")
+    strain_badge = browser.find_element(By.XPATH, "//span[contains(text(), 'High')]")
     assert strain_badge.is_displayed()
 
 def test_behavioral_drift_score(browser, login_helper):
@@ -36,18 +40,20 @@ def test_behavioral_drift_score(browser, login_helper):
     login_helper()
     
     # Read initial drift score
-    drift_score_elem = browser.find_element("xpath", "//span[contains(text(), '%')]")
+    drift_score_elem = browser.find_element(By.XPATH, "//span[contains(text(), '%')]")
     
     # Toggle fatigue
-    label = browser.find_element("xpath", "//span[contains(text(), 'Force Cognitive Fatigue Simulation')]")
+    label = browser.find_element(By.XPATH, "//span[contains(text(), 'Force Cognitive Fatigue Simulation')]")
     browser.execute_script("arguments[0].click();", label)
     
     # Transmit
-    transmit_btn = browser.find_element("xpath", "//button[contains(., 'Transmit Metrics')]")
+    transmit_btn = browser.find_element(By.XPATH, "//button[contains(., 'Transmit Metrics')]")
     browser.execute_script("arguments[0].click();", transmit_btn)
     
-    time.sleep(3)
+    WebDriverWait(browser, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//span[contains(text(), 'Critical')]"))
+    )
     
     # Drift score should be very high (Critical)
-    critical_badge = browser.find_element("xpath", "//span[contains(text(), 'Critical')]")
+    critical_badge = browser.find_element(By.XPATH, "//span[contains(text(), 'Critical')]")
     assert critical_badge.is_displayed()
