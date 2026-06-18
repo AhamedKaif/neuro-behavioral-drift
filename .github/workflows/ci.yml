@@ -146,13 +146,25 @@ jobs:
           TARGET_BRANCH="${{ github.ref_name }}"
         fi
 
+        # Backup generated reports so they aren't lost during reset/checkout
+        rm -rf ../reports_backup
+        mv reports ../reports_backup
+
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        # Reset and clean the working directory to allow a clean branch checkout
+        git reset --hard HEAD
+        git clean -fd
         
         git fetch origin "$TARGET_BRANCH"
         git checkout "$TARGET_BRANCH" || git checkout -b "$TARGET_BRANCH" "origin/$TARGET_BRANCH"
         git reset --hard "origin/$TARGET_BRANCH"
-        git clean -fd -e reports/
+        
+        # Restore the generated reports
+        rm -rf reports
+        mv ../reports_backup reports
+        
         git add reports/
         git diff --cached --quiet || git commit -m "Update Selenium test reports [skip ci]"
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
