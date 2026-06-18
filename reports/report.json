@@ -1,8 +1,8 @@
 {
     "summary": {
         "total": 58,
-        "passed": 53,
-        "failed": 5,
+        "passed": 52,
+        "failed": 6,
         "skipped": 0,
         "total_time": 0.0
     },
@@ -163,15 +163,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.3244630460000053,
+                "duration": 0.3127578319999884,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 16.525719486,
+                "duration": 16.562287986,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.0002525040000023182,
+                "duration": 0.00023331200000598074,
                 "outcome": "passed"
             }
         },
@@ -187,15 +187,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00015859499998782667,
+                "duration": 0.0002082649999977093,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 15.701306520000003,
+                "duration": 15.583840116000005,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00018488399999228022,
+                "duration": 0.00020526000000131717,
                 "outcome": "passed"
             }
         },
@@ -211,15 +211,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00018042700000364675,
+                "duration": 0.0001678130000186684,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 11.474521918999983,
+                "duration": 11.441865965000005,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00014479499998287793,
+                "duration": 0.000184098000005406,
                 "outcome": "passed"
             }
         },
@@ -235,15 +235,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00019232500000043729,
+                "duration": 0.0001528699999937544,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 12.254410722000017,
+                "duration": 12.218250590999986,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00016663700000663084,
+                "duration": 0.00018864500000859152,
                 "outcome": "passed"
             }
         },
@@ -259,15 +259,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00013927599999874474,
+                "duration": 0.00018362800000204516,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 4.166456836999998,
+                "duration": 4.109418815000026,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.07543461800000273,
+                "duration": 0.07408783599998969,
                 "outcome": "passed"
             }
         },
@@ -331,15 +331,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.27842629600002056,
+                "duration": 0.28271497200000795,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 1.8221475050000038,
+                "duration": 1.7651348929999813,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.0627702680000084,
+                "duration": 0.06198866600004749,
                 "outcome": "passed"
             }
         },
@@ -355,15 +355,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.27292018099998927,
+                "duration": 0.30442091299994445,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 0.4158350770000254,
+                "duration": 0.42186346000005415,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00030488100000525264,
+                "duration": 0.00022901500000216402,
                 "outcome": "passed"
             }
         },
@@ -379,15 +379,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.0004967959999930827,
+                "duration": 0.0002536729999746967,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 2.932914125999986,
+                "duration": 2.902077758999951,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.06470222400000125,
+                "duration": 0.06776254099997914,
                 "outcome": "passed"
             }
         },
@@ -403,15 +403,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.27517479400000866,
+                "duration": 0.2792385999999851,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 3.0587769539999954,
+                "duration": 3.11423756399995,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.062388929999997345,
+                "duration": 0.06445292400002245,
                 "outcome": "passed"
             }
         },
@@ -556,15 +556,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.30413277499999936,
+                "duration": 0.286838715000016,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 3.065747239000018,
+                "duration": 3.0135415020000096,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00026320899999632275,
+                "duration": 0.00026722399999812296,
                 "outcome": "passed"
             }
         },
@@ -580,15 +580,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00022832800001992837,
+                "duration": 0.00023633699998981683,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 1.1737935380000124,
+                "duration": 1.1661315359999946,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.0002640710000036961,
+                "duration": 0.00031297199998903125,
                 "outcome": "passed"
             }
         },
@@ -604,15 +604,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00029044999999428,
+                "duration": 0.0003623270000048251,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 1.1132350110000004,
+                "duration": 1.1107576160000008,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.0002276769999980388,
+                "duration": 0.00016645100001255742,
                 "outcome": "passed"
             }
         },
@@ -628,15 +628,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00032215699999937897,
+                "duration": 0.0002329110000118817,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 1.0951708469999915,
+                "duration": 1.0362548390000086,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00016188000000738612,
+                "duration": 0.00019867999998268715,
                 "outcome": "passed"
             }
         },
@@ -652,15 +652,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00020032599999808554,
+                "duration": 0.00023736800000051517,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 1.6777430720000268,
+                "duration": 1.6161147400000004,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.06579643099999544,
+                "duration": 0.06495900299998425,
                 "outcome": "passed"
             }
         },
@@ -715,7 +715,7 @@
         {
             "nodeid": "tests/test_profile.py::test_profile_loads",
             "lineno": 4,
-            "outcome": "passed",
+            "outcome": "failed",
             "keywords": [
                 "test_profile_loads",
                 "test_profile.py",
@@ -724,15 +724,28 @@
                 ""
             ],
             "setup": {
-                "duration": 0.297306089999978,
+                "duration": 0.2823988720000159,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 3.1076516850000075,
-                "outcome": "passed"
+                "duration": 3.024001288000022,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/tests/test_profile.py",
+                    "lineno": 13,
+                    "message": "assert 'Profile Management' in '<html lang=\"en\"><head>\\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\\ninjectIntoGlobalHook(window);\\nwindow.$RefreshReg$ = () => {};\\nwindow.$RefreshSig$ = () => (type) => type;</script>\\n\\n    <script type=\"module\" src=\"/@vite/client\"></script>\\n\\n    <meta charset=\"UTF-8\">\\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&gt;&lt;text y=%220.9em%22 font-size=%2290%22&gt;\ud83e\udde0&lt;/text&gt;&lt;/svg&gt;\">\\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\n    <title>Neuro-Behavioral Drift | Cognitive Strain Monitor</title>\\n    <!-- Google Fonts -->\\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\\n    <link href=\"https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\\n  <style type=\"text/css\" data-vite-dev-id=\"/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css\">*, ::before, ::after {\\n...\" class=\"lucide lucide-bell h-5 w-5\"><path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\"></path><path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\"></path></svg></a><a class=\"flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors\" href=\"/profile\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-user h-3.5 w-3.5 text-accentBlue\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Test User</span></a></div></div></header><main class=\"flex-grow w-full\"><div class=\"flex justify-center items-center h-64 text-slate-400\">Loading Profile...</div></main><footer class=\"border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600\"><div class=\"container mx-auto\">\u00a9 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.</div></footer></div></div>\\n    <script type=\"module\" src=\"/src/main.jsx\"></script>\\n  \\n\\n</body></html>'\n +  where '<html lang=\"en\"><head>\\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\\ninjectIntoGlobalHook(window);\\nwindow.$RefreshReg$ = () => {};\\nwindow.$RefreshSig$ = () => (type) => type;</script>\\n\\n    <script type=\"module\" src=\"/@vite/client\"></script>\\n\\n    <meta charset=\"UTF-8\">\\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&gt;&lt;text y=%220.9em%22 font-size=%2290%22&gt;\ud83e\udde0&lt;/text&gt;&lt;/svg&gt;\">\\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\n    <title>Neuro-Behavioral Drift | Cognitive Strain Monitor</title>\\n    <!-- Google Fonts -->\\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\\n    <link href=\"https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\\n  <style type=\"text/css\" data-vite-dev-id=\"/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css\">*, ::before, ::after {\\n...\" class=\"lucide lucide-bell h-5 w-5\"><path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\"></path><path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\"></path></svg></a><a class=\"flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors\" href=\"/profile\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-user h-3.5 w-3.5 text-accentBlue\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Test User</span></a></div></div></header><main class=\"flex-grow w-full\"><div class=\"flex justify-center items-center h-64 text-slate-400\">Loading Profile...</div></main><footer class=\"border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600\"><div class=\"container mx-auto\">\u00a9 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.</div></footer></div></div>\\n    <script type=\"module\" src=\"/src/main.jsx\"></script>\\n  \\n\\n</body></html>' = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"89473804dc02ff02337d94e78dd4fb18\")>.page_source"
+                },
+                "traceback": [
+                    {
+                        "path": "tests/test_profile.py",
+                        "lineno": 13,
+                        "message": "AssertionError"
+                    }
+                ],
+                "longrepr": "browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"89473804dc02ff02337d94e78dd4fb18\")>\nlogin_helper = <function login_helper.<locals>._login at 0x7f88249ecf40>\n\n    def test_profile_loads(browser, login_helper):\n        \"\"\"Test that the user can navigate to the profile page.\"\"\"\n        login_helper()\n    \n        # Click Profile icon in navbar\n        profile_link = browser.find_element(\"xpath\", \"//a[@href='/profile']\")\n        profile_link.click()\n        WebDriverWait(browser, 10).until(EC.url_contains(\"profile\"))\n>       assert \"Profile Management\" in browser.page_source\nE       assert 'Profile Management' in '<html lang=\"en\"><head>\\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\\ninjectIntoGlobalHook(window);\\nwindow.$RefreshReg$ = () => {};\\nwindow.$RefreshSig$ = () => (type) => type;</script>\\n\\n    <script type=\"module\" src=\"/@vite/client\"></script>\\n\\n    <meta charset=\"UTF-8\">\\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&gt;&lt;text y=%220.9em%22 font-size=%2290%22&gt;\ud83e\udde0&lt;/text&gt;&lt;/svg&gt;\">\\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\n    <title>Neuro-Behavioral Drift | Cognitive Strain Monitor</title>\\n    <!-- Google Fonts -->\\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\\n    <link href=\"https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\\n  <style type=\"text/css\" data-vite-dev-id=\"/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css\">*, ::before, ::after {\\n...\" class=\"lucide lucide-bell h-5 w-5\"><path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\"></path><path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\"></path></svg></a><a class=\"flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors\" href=\"/profile\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-user h-3.5 w-3.5 text-accentBlue\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Test User</span></a></div></div></header><main class=\"flex-grow w-full\"><div class=\"flex justify-center items-center h-64 text-slate-400\">Loading Profile...</div></main><footer class=\"border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600\"><div class=\"container mx-auto\">\u00a9 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.</div></footer></div></div>\\n    <script type=\"module\" src=\"/src/main.jsx\"></script>\\n  \\n\\n</body></html>'\nE        +  where '<html lang=\"en\"><head>\\n    <script type=\"module\">import { injectIntoGlobalHook } from \"/@react-refresh\";\\ninjectIntoGlobalHook(window);\\nwindow.$RefreshReg$ = () => {};\\nwindow.$RefreshSig$ = () => (type) => type;</script>\\n\\n    <script type=\"module\" src=\"/@vite/client\"></script>\\n\\n    <meta charset=\"UTF-8\">\\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&gt;&lt;text y=%220.9em%22 font-size=%2290%22&gt;\ud83e\udde0&lt;/text&gt;&lt;/svg&gt;\">\\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\n    <title>Neuro-Behavioral Drift | Cognitive Strain Monitor</title>\\n    <!-- Google Fonts -->\\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\\n    <link href=\"https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\\n  <style type=\"text/css\" data-vite-dev-id=\"/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css\">*, ::before, ::after {\\n...\" class=\"lucide lucide-bell h-5 w-5\"><path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\"></path><path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\"></path></svg></a><a class=\"flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors\" href=\"/profile\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-user h-3.5 w-3.5 text-accentBlue\"><path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle></svg><span>Test User</span></a></div></div></header><main class=\"flex-grow w-full\"><div class=\"flex justify-center items-center h-64 text-slate-400\">Loading Profile...</div></main><footer class=\"border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600\"><div class=\"container mx-auto\">\u00a9 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.</div></footer></div></div>\\n    <script type=\"module\" src=\"/src/main.jsx\"></script>\\n  \\n\\n</body></html>' = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"89473804dc02ff02337d94e78dd4fb18\")>.page_source\n\ntests/test_profile.py:13: AssertionError"
             },
             "teardown": {
-                "duration": 0.00025986500000385604,
+                "duration": 0.00025635700001203077,
                 "outcome": "passed"
             }
         },
@@ -748,15 +761,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.0002267950000032215,
+                "duration": 0.00023451399999885325,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 5.924668144000009,
+                "duration": 5.930602721000014,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.06542478199997959,
+                "duration": 0.06260660800001006,
                 "outcome": "passed"
             }
         },
@@ -772,15 +785,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.28799992700001553,
+                "duration": 0.2906534459999932,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 4.0867527450000125,
+                "duration": 4.050534274,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00023891399999342866,
+                "duration": 0.00020634199998426084,
                 "outcome": "passed"
             }
         },
@@ -796,15 +809,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00025381599999718674,
+                "duration": 0.0002290760000107639,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 4.351481250999996,
+                "duration": 4.328591662000008,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.0002200759999766433,
+                "duration": 0.0002497669999854679,
                 "outcome": "passed"
             }
         },
@@ -820,15 +833,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00031005900001446207,
+                "duration": 0.0003594520000262946,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 4.309808638000021,
+                "duration": 4.300983715000001,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.07339814499999875,
+                "duration": 0.07829612099999395,
                 "outcome": "passed"
             }
         },
@@ -844,15 +857,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.28881726299999855,
+                "duration": 0.27779349300004696,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 2.988795581000005,
+                "duration": 2.9516635659999793,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.0002368499999931828,
+                "duration": 0.00030168600000024526,
                 "outcome": "passed"
             }
         },
@@ -868,15 +881,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00023494699999559998,
+                "duration": 0.00027921200000946556,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 3.2286524270000143,
+                "duration": 3.2207601800000134,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00018203000001904002,
+                "duration": 0.00025843000003078487,
                 "outcome": "passed"
             }
         },
@@ -892,15 +905,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00021473700002161422,
+                "duration": 0.00028268700003764025,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 4.276163924000002,
+                "duration": 4.277080164999973,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.0001819189999991977,
+                "duration": 0.00015862000003608046,
                 "outcome": "passed"
             }
         },
@@ -916,15 +929,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.0002018579999969461,
+                "duration": 0.00020131399998035704,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 5.2762252099999785,
+                "duration": 5.276454359000013,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.07428734199999099,
+                "duration": 0.07072686300000441,
                 "outcome": "passed"
             }
         },
@@ -940,15 +953,15 @@
                 ""
             ],
             "setup": {
-                "duration": 2.838342836999999,
+                "duration": 1.0828337650000037,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 3.117294012000002,
+                "duration": 3.0740540630000055,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00024408199999470526,
+                "duration": 0.00022328700001139623,
                 "outcome": "passed"
             }
         },
@@ -964,15 +977,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00016268000000252414,
+                "duration": 0.00016856500002404573,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 5.202253878999997,
+                "duration": 5.378625360000001,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.00019684099999039972,
+                "duration": 0.000221554000006563,
                 "outcome": "passed"
             }
         },
@@ -988,15 +1001,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00020109699998727137,
+                "duration": 0.00019070700000156648,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 1.896867690999997,
+                "duration": 1.8635728240000162,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.06606731099999763,
+                "duration": 0.06596784800001387,
                 "outcome": "passed"
             }
         },
@@ -1012,15 +1025,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.28832258400001365,
+                "duration": 0.27811239599998316,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 3.045555338000014,
+                "duration": 3.0291118710000546,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.062129308999999466,
+                "duration": 0.06300584400003117,
                 "outcome": "passed"
             }
         },
@@ -1430,15 +1443,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.2771590760000038,
+                "duration": 0.2787077969999814,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 3.0706227619999993,
+                "duration": 3.072757720000027,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.06659945600000583,
+                "duration": 0.06347720899998421,
                 "outcome": "passed"
             }
         },
@@ -1454,15 +1467,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.27808638299998734,
+                "duration": 0.285334277000004,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 0.41451591200001303,
+                "duration": 0.39447729599999093,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.0002046429999893462,
+                "duration": 0.00019987099994978053,
                 "outcome": "passed"
             }
         },
@@ -1478,15 +1491,15 @@
                 ""
             ],
             "setup": {
-                "duration": 0.00025188300000422714,
+                "duration": 0.0002341040000146677,
                 "outcome": "passed"
             },
             "call": {
-                "duration": 2.866514553000002,
+                "duration": 2.876608269999963,
                 "outcome": "passed"
             },
             "teardown": {
-                "duration": 0.06476921300000527,
+                "duration": 0.061433460999978706,
                 "outcome": "passed"
             }
         },

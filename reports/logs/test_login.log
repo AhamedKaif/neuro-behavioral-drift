@@ -16,4 +16,4 @@ tests/test_login.py::test_provided_credentials PASSED                    [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_login.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_login.html -
-========================= 5 passed in 60.56s (0:01:00) =========================
+========================= 5 passed in 60.34s (0:01:00) =========================

@@ -12,7 +12,7 @@ th { background-color: #f2f2f2; }
 </head>
 <body>
 <h1>Selenium Test Execution Report</h1>
-<p><strong>Total Tests:</strong> 58</p><p><strong>Passed:</strong> 53</p><p><strong>Failed:</strong> 5</p><p><strong>Total Time:</strong> 0.00s</p><table>
+<p><strong>Total Tests:</strong> 58</p><p><strong>Passed:</strong> 52</p><p><strong>Failed:</strong> 6</p><p><strong>Total Time:</strong> 0.00s</p><table>
 <tr><th>Test Name</th><th>Status</th><th>Duration (s)</th><th>Error</th></tr>
 <tr><td>tests/test_navigation.py::test_unauthenticated_navigation</td><td class='passed'>PASSED</td><td>0.37</td><td></td></tr>
 <tr><td>tests/test_navigation.py::test_navigation_links</td><td class='passed'>PASSED</td><td>2.90</td><td></td></tr>
@@ -20,17 +20,17 @@ th { background-color: #f2f2f2; }
 <tr><td>tests/test_login.py::test_invalid_password</td><td class='passed'>PASSED</td><td>15.61</td><td></td></tr>
 <tr><td>tests/test_login.py::test_invalid_username</td><td class='passed'>PASSED</td><td>11.37</td><td></td></tr>
 <tr><td>tests/test_login.py::test_login_empty_fields</td><td class='passed'>PASSED</td><td>12.26</td><td></td></tr>
-<tr><td>tests/test_login.py::test_valid_login</td><td class='passed'>PASSED</td><td>16.53</td><td></td></tr>
-<tr><td>tests/test_login.py::test_invalid_password</td><td class='passed'>PASSED</td><td>15.70</td><td></td></tr>
-<tr><td>tests/test_login.py::test_invalid_username</td><td class='passed'>PASSED</td><td>11.47</td><td></td></tr>
-<tr><td>tests/test_login.py::test_login_empty_fields</td><td class='passed'>PASSED</td><td>12.25</td><td></td></tr>
-<tr><td>tests/test_login.py::test_provided_credentials</td><td class='passed'>PASSED</td><td>4.17</td><td></td></tr>
+<tr><td>tests/test_login.py::test_valid_login</td><td class='passed'>PASSED</td><td>16.56</td><td></td></tr>
+<tr><td>tests/test_login.py::test_invalid_password</td><td class='passed'>PASSED</td><td>15.58</td><td></td></tr>
+<tr><td>tests/test_login.py::test_invalid_username</td><td class='passed'>PASSED</td><td>11.44</td><td></td></tr>
+<tr><td>tests/test_login.py::test_login_empty_fields</td><td class='passed'>PASSED</td><td>12.22</td><td></td></tr>
+<tr><td>tests/test_login.py::test_provided_credentials</td><td class='passed'>PASSED</td><td>4.11</td><td></td></tr>
 <tr><td>tests/test_logout.py::test_logout</td><td class='passed'>PASSED</td><td>3.10</td><td></td></tr>
 <tr><td>tests/test_settings.py::test_model_telemetry_loads</td><td class='passed'>PASSED</td><td>3.05</td><td></td></tr>
-<tr><td>tests/test_e2e.py::test_full_e2e_flow</td><td class='passed'>PASSED</td><td>1.82</td><td></td></tr>
+<tr><td>tests/test_e2e.py::test_full_e2e_flow</td><td class='passed'>PASSED</td><td>1.77</td><td></td></tr>
 <tr><td>tests/test_navigation.py::test_unauthenticated_navigation</td><td class='passed'>PASSED</td><td>0.42</td><td></td></tr>
-<tr><td>tests/test_navigation.py::test_navigation_links</td><td class='passed'>PASSED</td><td>2.93</td><td></td></tr>
-<tr><td>tests/test_settings.py::test_model_telemetry_loads</td><td class='passed'>PASSED</td><td>3.06</td><td></td></tr>
+<tr><td>tests/test_navigation.py::test_navigation_links</td><td class='passed'>PASSED</td><td>2.90</td><td></td></tr>
+<tr><td>tests/test_settings.py::test_model_telemetry_loads</td><td class='passed'>PASSED</td><td>3.11</td><td></td></tr>
 <tr><td>tests/test_dashboard.py::test_dashboard_loads</td><td class='failed'>FAILED</td><td>13.03</td><td>selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Enter username']"}
   (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Stacktrace:
@@ -55,26 +55,27 @@ Stacktrace:
 <tr><td>tests/test_dashboard.py::test_user_profile_display</td><td class='passed'>PASSED</td><td>1.16</td><td></td></tr>
 <tr><td>tests/test_dashboard.py::test_dashboard_stats_exist</td><td class='passed'>PASSED</td><td>1.11</td><td></td></tr>
 <tr><td>tests/test_dashboard.py::test_retrain_model_button</td><td class='passed'>PASSED</td><td>1.66</td><td></td></tr>
-<tr><td>tests/test_dashboard.py::test_dashboard_loads</td><td class='passed'>PASSED</td><td>3.07</td><td></td></tr>
+<tr><td>tests/test_dashboard.py::test_dashboard_loads</td><td class='passed'>PASSED</td><td>3.01</td><td></td></tr>
 <tr><td>tests/test_dashboard.py::test_user_profile_display</td><td class='passed'>PASSED</td><td>1.17</td><td></td></tr>
 <tr><td>tests/test_dashboard.py::test_dashboard_stats_exist</td><td class='passed'>PASSED</td><td>1.11</td><td></td></tr>
-<tr><td>tests/test_dashboard.py::test_analytics_charts_rendering</td><td class='passed'>PASSED</td><td>1.10</td><td></td></tr>
-<tr><td>tests/test_dashboard.py::test_retrain_model_button</td><td class='passed'>PASSED</td><td>1.68</td><td></td></tr>
+<tr><td>tests/test_dashboard.py::test_analytics_charts_rendering</td><td class='passed'>PASSED</td><td>1.04</td><td></td></tr>
+<tr><td>tests/test_dashboard.py::test_retrain_model_button</td><td class='passed'>PASSED</td><td>1.62</td><td></td></tr>
 <tr><td>tests/test_profile.py::test_profile_loads</td><td class='passed'>PASSED</td><td>3.03</td><td></td></tr>
 <tr><td>tests/test_profile.py::test_edit_profile</td><td class='passed'>PASSED</td><td>5.91</td><td></td></tr>
-<tr><td>tests/test_profile.py::test_profile_loads</td><td class='passed'>PASSED</td><td>3.11</td><td></td></tr>
-<tr><td>tests/test_profile.py::test_edit_profile</td><td class='passed'>PASSED</td><td>5.92</td><td></td></tr>
-<tr><td>tests/test_prediction.py::test_transmit_metrics_success</td><td class='passed'>PASSED</td><td>4.09</td><td></td></tr>
-<tr><td>tests/test_prediction.py::test_cognitive_strain_prediction</td><td class='passed'>PASSED</td><td>4.35</td><td></td></tr>
-<tr><td>tests/test_prediction.py::test_behavioral_drift_score</td><td class='passed'>PASSED</td><td>4.31</td><td></td></tr>
-<tr><td>tests/test_notifications.py::test_notification_bell_presence</td><td class='passed'>PASSED</td><td>2.99</td><td></td></tr>
-<tr><td>tests/test_notifications.py::test_medium_strain_notification_generation</td><td class='passed'>PASSED</td><td>3.23</td><td></td></tr>
+<tr><td>tests/test_profile.py::test_profile_loads</td><td class='failed'>FAILED</td><td>3.02</td><td>assert 'Profile Management' in '<html lang="en"><head>\n    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;</script>\n\n    <script type="module" src="/@vite/client"></script>\n\n    <meta charset="UTF-8">\n    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&gt;&lt;text y=%220.9em%22 font-size=%2290%22&gt;🧠&lt;/text&gt;&lt;/svg&gt;">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Neuro-Behavioral Drift | Cognitive Strain Monitor</title>\n    <!-- Google Fonts -->\n    <link rel="preconnect" href="https://fonts.googleapis.com">\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">\n    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">\n  <style type="text/css" data-vite-dev-id="/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css">*, ::before, ::after {\n..." class="lucide lucide-bell h-5 w-5"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></a><a class="flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors" href="/profile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user h-3.5 w-3.5 text-accentBlue"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Test User</span></a></div></div></header><main class="flex-grow w-full"><div class="flex justify-center items-center h-64 text-slate-400">Loading Profile...</div></main><footer class="border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600"><div class="container mx-auto">© 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.</div></footer></div></div>\n    <script type="module" src="/src/main.jsx"></script>\n  \n\n</body></html>'
+ +  where '<html lang="en"><head>\n    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;</script>\n\n    <script type="module" src="/@vite/client"></script>\n\n    <meta charset="UTF-8">\n    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&gt;&lt;text y=%220.9em%22 font-size=%2290%22&gt;🧠&lt;/text&gt;&lt;/svg&gt;">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Neuro-Behavioral Drift | Cognitive Strain Monitor</title>\n    <!-- Google Fonts -->\n    <link rel="preconnect" href="https://fonts.googleapis.com">\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">\n    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">\n  <style type="text/css" data-vite-dev-id="/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css">*, ::before, ::after {\n..." class="lucide lucide-bell h-5 w-5"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></a><a class="flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors" href="/profile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user h-3.5 w-3.5 text-accentBlue"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Test User</span></a></div></div></header><main class="flex-grow w-full"><div class="flex justify-center items-center h-64 text-slate-400">Loading Profile...</div></main><footer class="border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600"><div class="container mx-auto">© 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.</div></footer></div></div>\n    <script type="module" src="/src/main.jsx"></script>\n  \n\n</body></html>' = <selenium.webdriver.chrome.webdriver.WebDriver (session="89473804dc02ff02337d94e78dd4fb18")>.page_source</td></tr>
+<tr><td>tests/test_profile.py::test_edit_profile</td><td class='passed'>PASSED</td><td>5.93</td><td></td></tr>
+<tr><td>tests/test_prediction.py::test_transmit_metrics_success</td><td class='passed'>PASSED</td><td>4.05</td><td></td></tr>
+<tr><td>tests/test_prediction.py::test_cognitive_strain_prediction</td><td class='passed'>PASSED</td><td>4.33</td><td></td></tr>
+<tr><td>tests/test_prediction.py::test_behavioral_drift_score</td><td class='passed'>PASSED</td><td>4.30</td><td></td></tr>
+<tr><td>tests/test_notifications.py::test_notification_bell_presence</td><td class='passed'>PASSED</td><td>2.95</td><td></td></tr>
+<tr><td>tests/test_notifications.py::test_medium_strain_notification_generation</td><td class='passed'>PASSED</td><td>3.22</td><td></td></tr>
 <tr><td>tests/test_notifications.py::test_notifications_history_page</td><td class='passed'>PASSED</td><td>4.28</td><td></td></tr>
 <tr><td>tests/test_notifications.py::test_delete_notification</td><td class='passed'>PASSED</td><td>5.28</td><td></td></tr>
-<tr><td>tests/test_registration.py::test_valid_registration</td><td class='passed'>PASSED</td><td>3.12</td><td></td></tr>
-<tr><td>tests/test_registration.py::test_registration_existing_user</td><td class='passed'>PASSED</td><td>5.20</td><td></td></tr>
-<tr><td>tests/test_registration.py::test_registration_empty_fields</td><td class='passed'>PASSED</td><td>1.90</td><td></td></tr>
-<tr><td>tests/test_responsive.py::test_responsive_layout</td><td class='passed'>PASSED</td><td>3.05</td><td></td></tr>
+<tr><td>tests/test_registration.py::test_valid_registration</td><td class='passed'>PASSED</td><td>3.07</td><td></td></tr>
+<tr><td>tests/test_registration.py::test_registration_existing_user</td><td class='passed'>PASSED</td><td>5.38</td><td></td></tr>
+<tr><td>tests/test_registration.py::test_registration_empty_fields</td><td class='passed'>PASSED</td><td>1.86</td><td></td></tr>
+<tr><td>tests/test_responsive.py::test_responsive_layout</td><td class='passed'>PASSED</td><td>3.03</td><td></td></tr>
 <tr><td>tests/test_routing.py::test_protected_route_redirect</td><td class='passed'>PASSED</td><td>0.39</td><td></td></tr>
 <tr><td>tests/test_routing.py::test_unknown_route_redirect</td><td class='failed'>FAILED</td><td>8.12</td><td>selenium.common.exceptions.TimeoutException: Message:</td></tr>
 <tr><td>tests/test_notifications.py::test_notification_bell_presence</td><td class='passed'>PASSED</td><td>2.95</td><td></td></tr>
@@ -109,8 +110,8 @@ Stacktrace:
 <tr><td>tests/test_registration.py::test_registration_existing_user</td><td class='failed'>FAILED</td><td>12.40</td><td>selenium.common.exceptions.TimeoutException: Message:</td></tr>
 <tr><td>tests/test_registration.py::test_registration_empty_fields</td><td class='passed'>PASSED</td><td>1.79</td><td></td></tr>
 <tr><td>tests/test_logout.py::test_logout</td><td class='passed'>PASSED</td><td>3.07</td><td></td></tr>
-<tr><td>tests/test_routing.py::test_protected_route_redirect</td><td class='passed'>PASSED</td><td>0.41</td><td></td></tr>
-<tr><td>tests/test_routing.py::test_unknown_route_redirect</td><td class='passed'>PASSED</td><td>2.87</td><td></td></tr>
+<tr><td>tests/test_routing.py::test_protected_route_redirect</td><td class='passed'>PASSED</td><td>0.39</td><td></td></tr>
+<tr><td>tests/test_routing.py::test_unknown_route_redirect</td><td class='passed'>PASSED</td><td>2.88</td><td></td></tr>
 <tr><td>tests/test_responsive.py::test_responsive_layout</td><td class='passed'>PASSED</td><td>2.98</td><td></td></tr>
 </table>
 </body>
