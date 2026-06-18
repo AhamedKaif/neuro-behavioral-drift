@@ -1,1 +1,1518 @@
-{"created": 1781365695.7489822, "duration": 157.08427047729492, "exitcode": 0, "root": "C:\\Users\\ahame\\.gemini\\antigravity\\scratch\\neuro-behavioral-drift", "environment": {}, "summary": {"passed": 23, "total": 23, "collected": 23}, "collectors": [{"nodeid": "", "outcome": "passed", "result": [{"nodeid": "tests", "type": "Dir"}]}, {"nodeid": "tests/test_dashboard.py", "outcome": "passed", "result": [{"nodeid": "tests/test_dashboard.py::test_dashboard_loads", "type": "Function", "lineno": 2}, {"nodeid": "tests/test_dashboard.py::test_user_profile_display", "type": "Function", "lineno": 14}, {"nodeid": "tests/test_dashboard.py::test_dashboard_stats_exist", "type": "Function", "lineno": 21}, {"nodeid": "tests/test_dashboard.py::test_retrain_model_button", "type": "Function", "lineno": 36}]}, {"nodeid": "tests/test_login.py", "outcome": "passed", "result": [{"nodeid": "tests/test_login.py::test_valid_login", "type": "Function", "lineno": 31}, {"nodeid": "tests/test_login.py::test_invalid_password", "type": "Function", "lineno": 52}, {"nodeid": "tests/test_login.py::test_invalid_username", "type": "Function", "lineno": 73}, {"nodeid": "tests/test_login.py::test_login_empty_fields", "type": "Function", "lineno": 94}]}, {"nodeid": "tests/test_navigation.py", "outcome": "passed", "result": [{"nodeid": "tests/test_navigation.py::test_unauthenticated_navigation", "type": "Function", "lineno": 3}, {"nodeid": "tests/test_navigation.py::test_navigation_links", "type": "Function", "lineno": 12}, {"nodeid": "tests/test_navigation.py::test_logout", "type": "Function", "lineno": 28}]}, {"nodeid": "tests/test_notifications.py", "outcome": "passed", "result": [{"nodeid": "tests/test_notifications.py::test_notification_bell_presence", "type": "Function", "lineno": 6}, {"nodeid": "tests/test_notifications.py::test_medium_strain_notification_generation", "type": "Function", "lineno": 19}, {"nodeid": "tests/test_notifications.py::test_notifications_history_page", "type": "Function", "lineno": 44}, {"nodeid": "tests/test_notifications.py::test_delete_notification", "type": "Function", "lineno": 77}]}, {"nodeid": "tests/test_prediction.py", "outcome": "passed", "result": [{"nodeid": "tests/test_prediction.py::test_transmit_metrics_success", "type": "Function", "lineno": 2}, {"nodeid": "tests/test_prediction.py::test_cognitive_strain_prediction", "type": "Function", "lineno": 13}, {"nodeid": "tests/test_prediction.py::test_behavioral_drift_score", "type": "Function", "lineno": 31}]}, {"nodeid": "tests/test_profile.py", "outcome": "passed", "result": [{"nodeid": "tests/test_profile.py::test_profile_loads", "type": "Function", "lineno": 2}, {"nodeid": "tests/test_profile.py::test_edit_profile", "type": "Function", "lineno": 14}]}, {"nodeid": "tests/test_registration.py", "outcome": "passed", "result": [{"nodeid": "tests/test_registration.py::test_valid_registration", "type": "Function", "lineno": 3}, {"nodeid": "tests/test_registration.py::test_registration_existing_user", "type": "Function", "lineno": 35}, {"nodeid": "tests/test_registration.py::test_registration_empty_fields", "type": "Function", "lineno": 87}]}, {"nodeid": "tests", "outcome": "passed", "result": [{"nodeid": "tests/test_dashboard.py", "type": "Module"}, {"nodeid": "tests/test_login.py", "type": "Module"}, {"nodeid": "tests/test_navigation.py", "type": "Module"}, {"nodeid": "tests/test_notifications.py", "type": "Module"}, {"nodeid": "tests/test_prediction.py", "type": "Module"}, {"nodeid": "tests/test_profile.py", "type": "Module"}, {"nodeid": "tests/test_registration.py", "type": "Module"}]}], "tests": [{"nodeid": "tests/test_dashboard.py::test_dashboard_loads", "lineno": 2, "outcome": "passed", "keywords": ["test_dashboard_loads", "test_dashboard.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 2.032685100013623, "outcome": "passed"}, "call": {"duration": 6.112086900015129, "outcome": "passed"}, "teardown": {"duration": 0.001136100006988272, "outcome": "passed"}}, {"nodeid": "tests/test_dashboard.py::test_user_profile_display", "lineno": 14, "outcome": "passed", "keywords": ["test_user_profile_display", "test_dashboard.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0013552000164054334, "outcome": "passed"}, "call": {"duration": 1.4049989000195637, "outcome": "passed"}, "teardown": {"duration": 0.0008318000182043761, "outcome": "passed"}}, {"nodeid": "tests/test_dashboard.py::test_dashboard_stats_exist", "lineno": 21, "outcome": "passed", "keywords": ["test_dashboard_stats_exist", "test_dashboard.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0008687000081408769, "outcome": "passed"}, "call": {"duration": 1.2827475000231061, "outcome": "passed"}, "teardown": {"duration": 0.0007387000077869743, "outcome": "passed"}}, {"nodeid": "tests/test_dashboard.py::test_retrain_model_button", "lineno": 36, "outcome": "passed", "keywords": ["test_retrain_model_button", "test_dashboard.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0008810999861452729, "outcome": "passed"}, "call": {"duration": 2.2926008999929763, "outcome": "passed"}, "teardown": {"duration": 0.0011004999978467822, "outcome": "passed"}}, {"nodeid": "tests/test_login.py::test_valid_login", "lineno": 31, "outcome": "passed", "keywords": ["test_valid_login", "test_login.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0009526999783702195, "outcome": "passed"}, "call": {"duration": 19.827019999996992, "outcome": "passed"}, "teardown": {"duration": 0.0006155000010039657, "outcome": "passed"}}, {"nodeid": "tests/test_login.py::test_invalid_password", "lineno": 52, "outcome": "passed", "keywords": ["test_invalid_password", "test_login.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0005539999983739108, "outcome": "passed"}, "call": {"duration": 19.07195519999368, "outcome": "passed"}, "teardown": {"duration": 0.0006050000083632767, "outcome": "passed"}}, {"nodeid": "tests/test_login.py::test_invalid_username", "lineno": 73, "outcome": "passed", "keywords": ["test_invalid_username", "test_login.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0004841999907512218, "outcome": "passed"}, "call": {"duration": 13.893808900000295, "outcome": "passed"}, "teardown": {"duration": 0.0007186000002548099, "outcome": "passed"}}, {"nodeid": "tests/test_login.py::test_login_empty_fields", "lineno": 94, "outcome": "passed", "keywords": ["test_login_empty_fields", "test_login.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0007876000017859042, "outcome": "passed"}, "call": {"duration": 12.585318699973868, "outcome": "passed"}, "teardown": {"duration": 0.001289699983317405, "outcome": "passed"}}, {"nodeid": "tests/test_navigation.py::test_unauthenticated_navigation", "lineno": 3, "outcome": "passed", "keywords": ["test_unauthenticated_navigation", "test_navigation.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0014614999818149954, "outcome": "passed"}, "call": {"duration": 1.3696137000224553, "outcome": "passed"}, "teardown": {"duration": 0.0005865000130143017, "outcome": "passed"}}, {"nodeid": "tests/test_navigation.py::test_navigation_links", "lineno": 12, "outcome": "passed", "keywords": ["test_navigation_links", "test_navigation.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0008037000079639256, "outcome": "passed"}, "call": {"duration": 7.73394360000384, "outcome": "passed"}, "teardown": {"duration": 0.0007396000146400183, "outcome": "passed"}}, {"nodeid": "tests/test_navigation.py::test_logout", "lineno": 28, "outcome": "passed", "keywords": ["test_logout", "test_navigation.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.001066600001649931, "outcome": "passed"}, "call": {"duration": 3.5493500999873504, "outcome": "passed"}, "teardown": {"duration": 0.001167700014775619, "outcome": "passed"}}, {"nodeid": "tests/test_notifications.py::test_notification_bell_presence", "lineno": 6, "outcome": "passed", "keywords": ["test_notification_bell_presence", "test_notifications.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0013817999861203134, "outcome": "passed"}, "call": {"duration": 5.197129700012738, "outcome": "passed"}, "teardown": {"duration": 0.000729600025806576, "outcome": "passed"}}, {"nodeid": "tests/test_notifications.py::test_medium_strain_notification_generation", "lineno": 19, "outcome": "passed", "keywords": ["test_medium_strain_notification_generation", "test_notifications.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0008305000083055347, "outcome": "passed"}, "call": {"duration": 3.426709599996684, "outcome": "passed"}, "teardown": {"duration": 0.0009089999948628247, "outcome": "passed"}}, {"nodeid": "tests/test_notifications.py::test_notifications_history_page", "lineno": 44, "outcome": "passed", "keywords": ["test_notifications_history_page", "test_notifications.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0013251000200398266, "outcome": "passed"}, "call": {"duration": 4.889098699990427, "outcome": "passed"}, "teardown": {"duration": 0.0004318999999668449, "outcome": "passed"}}, {"nodeid": "tests/test_notifications.py::test_delete_notification", "lineno": 77, "outcome": "passed", "keywords": ["test_delete_notification", "test_notifications.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0009295000054407865, "outcome": "passed"}, "call": {"duration": 5.660417899984168, "outcome": "passed"}, "teardown": {"duration": 0.0006588000105693936, "outcome": "passed"}}, {"nodeid": "tests/test_prediction.py::test_transmit_metrics_success", "lineno": 2, "outcome": "passed", "keywords": ["test_transmit_metrics_success", "test_prediction.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0006872000230941921, "outcome": "passed"}, "call": {"duration": 2.492543000000296, "outcome": "passed"}, "teardown": {"duration": 0.0008577000116929412, "outcome": "passed"}}, {"nodeid": "tests/test_prediction.py::test_cognitive_strain_prediction", "lineno": 13, "outcome": "passed", "keywords": ["test_cognitive_strain_prediction", "test_prediction.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0009126999939326197, "outcome": "passed"}, "call": {"duration": 4.744929000007687, "outcome": "passed"}, "teardown": {"duration": 0.001037600013660267, "outcome": "passed"}}, {"nodeid": "tests/test_prediction.py::test_behavioral_drift_score", "lineno": 31, "outcome": "passed", "keywords": ["test_behavioral_drift_score", "test_prediction.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0007539000071119517, "outcome": "passed"}, "call": {"duration": 4.7783281999873, "outcome": "passed"}, "teardown": {"duration": 0.0008920999825932086, "outcome": "passed"}}, {"nodeid": "tests/test_profile.py::test_profile_loads", "lineno": 2, "outcome": "passed", "keywords": ["test_profile_loads", "test_profile.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0008681000035721809, "outcome": "passed"}, "call": {"duration": 2.4829661000112537, "outcome": "passed"}, "teardown": {"duration": 0.0005127999756950885, "outcome": "passed"}}, {"nodeid": "tests/test_profile.py::test_edit_profile", "lineno": 14, "outcome": "passed", "keywords": ["test_edit_profile", "test_profile.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0007398999878205359, "outcome": "passed"}, "call": {"duration": 6.4234866999904625, "outcome": "passed"}, "teardown": {"duration": 0.0007700000132899731, "outcome": "passed"}}, {"nodeid": "tests/test_registration.py::test_valid_registration", "lineno": 3, "outcome": "passed", "keywords": ["test_valid_registration", "test_registration.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0005920999974478036, "outcome": "passed"}, "call": {"duration": 5.549844200024381, "outcome": "passed"}, "teardown": {"duration": 0.0006843999726697803, "outcome": "passed"}}, {"nodeid": "tests/test_registration.py::test_registration_existing_user", "lineno": 35, "outcome": "passed", "keywords": ["test_registration_existing_user", "test_registration.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.0005994999955873936, "outcome": "passed"}, "call": {"duration": 10.324977799988119, "outcome": "passed"}, "teardown": {"duration": 0.0008783999946899712, "outcome": "passed"}}, {"nodeid": "tests/test_registration.py::test_registration_empty_fields", "lineno": 87, "outcome": "passed", "keywords": ["test_registration_empty_fields", "test_registration.py", "tests", "neuro-behavioral-drift", ""], "setup": {"duration": 0.000817000021925196, "outcome": "passed"}, "call": {"duration": 3.231199000001652, "outcome": "passed"}, "teardown": {"duration": 2.5008515999943484, "outcome": "passed"}}]}
+{
+    "summary": {
+        "total": 58,
+        "passed": 53,
+        "failed": 5,
+        "skipped": 0,
+        "total_time": 0.0
+    },
+    "tests": [
+        {
+            "nodeid": "tests/test_navigation.py::test_unauthenticated_navigation",
+            "lineno": 5,
+            "outcome": "passed",
+            "keywords": [
+                "test_unauthenticated_navigation",
+                "test_navigation.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2868332520000081,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.37156778900001086,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00024208400000702568,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_navigation.py::test_navigation_links",
+            "lineno": 12,
+            "outcome": "passed",
+            "keywords": [
+                "test_navigation_links",
+                "test_navigation.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0014680390000023635,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 2.8973821879999946,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06199911299998462,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_login.py::test_valid_login",
+            "lineno": 33,
+            "outcome": "passed",
+            "keywords": [
+                "test_valid_login",
+                "test_login.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.32047107300002153,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 16.49794666400001,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00018164300001899392,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_login.py::test_invalid_password",
+            "lineno": 52,
+            "outcome": "passed",
+            "keywords": [
+                "test_invalid_password",
+                "test_login.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00020445699999527278,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 15.608739603999993,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00015606400000933718,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_login.py::test_invalid_username",
+            "lineno": 71,
+            "outcome": "passed",
+            "keywords": [
+                "test_invalid_username",
+                "test_login.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00019358099999067235,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 11.369914042000005,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00015406100001769119,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_login.py::test_login_empty_fields",
+            "lineno": 90,
+            "outcome": "passed",
+            "keywords": [
+                "test_login_empty_fields",
+                "test_login.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00021209900000940252,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 12.259897647000003,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.07112091700000178,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_login.py::test_valid_login",
+            "lineno": 33,
+            "outcome": "passed",
+            "keywords": [
+                "test_valid_login",
+                "test_login.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2654939720000016,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 16.370049723999998,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00018132999998954347,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_login.py::test_invalid_password",
+            "lineno": 52,
+            "outcome": "passed",
+            "keywords": [
+                "test_invalid_password",
+                "test_login.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00015905799999416104,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 15.671748289000007,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00018820200000391196,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_login.py::test_invalid_username",
+            "lineno": 71,
+            "outcome": "passed",
+            "keywords": [
+                "test_invalid_username",
+                "test_login.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00014955099999269805,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 11.343496195000014,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00014293800001041745,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_login.py::test_login_empty_fields",
+            "lineno": 90,
+            "outcome": "passed",
+            "keywords": [
+                "test_login_empty_fields",
+                "test_login.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00014725500000167813,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 12.21436205400002,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00013692699999978686,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_login.py::test_provided_credentials",
+            "lineno": 109,
+            "outcome": "passed",
+            "keywords": [
+                "test_provided_credentials",
+                "test_login.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00013811900001314825,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 4.043481240999995,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06980540800000767,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_logout.py::test_logout",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_logout",
+                "test_logout.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2763203299999759,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.096245100999994,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06274855600000251,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_settings.py::test_model_telemetry_loads",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_model_telemetry_loads",
+                "test_settings.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2379930679999802,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.046975955999983,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.05796682800001918,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_e2e.py::test_full_e2e_flow",
+            "lineno": 5,
+            "outcome": "passed",
+            "keywords": [
+                "test_full_e2e_flow",
+                "test_e2e.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.26538006500001643,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.7683415919999845,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.060461208999981864,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_navigation.py::test_unauthenticated_navigation",
+            "lineno": 5,
+            "outcome": "passed",
+            "keywords": [
+                "test_unauthenticated_navigation",
+                "test_navigation.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2659462940000026,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.3936927780000019,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00026958499998386287,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_navigation.py::test_navigation_links",
+            "lineno": 12,
+            "outcome": "passed",
+            "keywords": [
+                "test_navigation_links",
+                "test_navigation.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00034501599998293386,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 2.9647491270000046,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06334800100000848,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_settings.py::test_model_telemetry_loads",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_model_telemetry_loads",
+                "test_settings.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.272166397999996,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.044180811000018,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06155072100000325,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_dashboard.py::test_dashboard_loads",
+            "lineno": 2,
+            "outcome": "failed",
+            "keywords": [
+                "test_dashboard_loads",
+                "test_dashboard.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.27395496099998695,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 13.033254074999974,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py",
+                    "lineno": 232,
+                    "message": "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='Enter username']\"}\n  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nStacktrace:\n#0 0x5624da87380a <unknown>\n#1 0x5624da256289 <unknown>\n#2 0x5624da2aa9b4 <unknown>\n#3 0x5624da2aac01 <unknown>\n#4 0x5624da2f5874 <unknown>\n#5 0x5624da2f2a4c <unknown>\n#6 0x5624da29df7f <unknown>\n#7 0x5624da29ed61 <unknown>\n#8 0x5624da83a0f7 <unknown>\n#9 0x5624da8388bd <unknown>\n#10 0x5624da8235a6 <unknown>\n#11 0x5624da83949a <unknown>\n#12 0x5624da80b560 <unknown>\n#13 0x5624da860288 <unknown>\n#14 0x5624da860425 <unknown>\n#15 0x5624da87238e <unknown>\n#16 0x7f419d69caa4 <unknown>\n#17 0x7f419d729c6c <unknown>"
+                },
+                "traceback": [
+                    {
+                        "path": "tests/test_dashboard.py",
+                        "lineno": 5,
+                        "message": ""
+                    },
+                    {
+                        "path": "tests/conftest.py",
+                        "lineno": 87,
+                        "message": "in _login"
+                    },
+                    {
+                        "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py",
+                        "lineno": 868,
+                        "message": "in find_element"
+                    },
+                    {
+                        "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py",
+                        "lineno": 468,
+                        "message": "in execute"
+                    },
+                    {
+                        "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py",
+                        "lineno": 232,
+                        "message": "NoSuchElementException"
+                    }
+                ],
+                "longrepr": "browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"3a57061da7ea14ed873874337d9a95e3\")>\nlogin_helper = <function login_helper.<locals>._login at 0x7fca0d6a9da0>\n\n    def test_dashboard_loads(browser, login_helper):\n        \"\"\"Verify that the dashboard main elements render correctly.\"\"\"\n>       login_helper()\n\ntests/test_dashboard.py:5: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/conftest.py:87: in _login\n    username_input = browser.find_element(\"xpath\", \"//input[@placeholder='Enter username']\")\n/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:868: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\"using\": by, \"value\": value})[\"value\"]\n/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:468: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fca0d2ea090>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...\\\\n#15 0x5624da87238e \\\\u003Cunknown>\\\\n#16 0x7f419d69caa4 \\\\u003Cunknown>\\\\n#17 0x7f419d729c6c \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: dict[str, Any]) -> None:\n        \"\"\"Check that a JSON response from the WebDriver does not have an error.\n    \n        Args:\n            response: The JSON response from the WebDriver server as a dictionary\n                object.\n    \n        Raises:\n            WebDriverException: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                try:\n                    value = json.loads(value_json)\n                    if isinstance(value, dict):\n                        if len(value) == 1:\n                            value = value[\"value\"]\n                        status = value.get(\"error\", None)\n                        if not status:\n                            status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                            message = value.get(\"value\") or value.get(\"message\")\n                            if not isinstance(message, str):\n                                value = message\n                                message = message.get(\"message\") if isinstance(message, dict) else None\n                        else:\n                            message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@placeholder='Enter username']\"}\nE         (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nE       Stacktrace:\nE       #0 0x5624da87380a <unknown>\nE       #1 0x5624da256289 <unknown>\nE       #2 0x5624da2aa9b4 <unknown>\nE       #3 0x5624da2aac01 <unknown>\nE       #4 0x5624da2f5874 <unknown>\nE       #5 0x5624da2f2a4c <unknown>\nE       #6 0x5624da29df7f <unknown>\nE       #7 0x5624da29ed61 <unknown>\nE       #8 0x5624da83a0f7 <unknown>\nE       #9 0x5624da8388bd <unknown>\nE       #10 0x5624da8235a6 <unknown>\nE       #11 0x5624da83949a <unknown>\nE       #12 0x5624da80b560 <unknown>\nE       #13 0x5624da860288 <unknown>\nE       #14 0x5624da860425 <unknown>\nE       #15 0x5624da87238e <unknown>\nE       #16 0x7f419d69caa4 <unknown>\nE       #17 0x7f419d729c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException"
+            },
+            "teardown": {
+                "duration": 0.0002456690000087747,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_dashboard.py::test_user_profile_display",
+            "lineno": 14,
+            "outcome": "passed",
+            "keywords": [
+                "test_user_profile_display",
+                "test_dashboard.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0002638560000036705,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.159411917,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00018541800000093644,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_dashboard.py::test_dashboard_stats_exist",
+            "lineno": 21,
+            "outcome": "passed",
+            "keywords": [
+                "test_dashboard_stats_exist",
+                "test_dashboard.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00030376699999123957,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.1059389149999959,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0001630349999857117,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_dashboard.py::test_retrain_model_button",
+            "lineno": 36,
+            "outcome": "passed",
+            "keywords": [
+                "test_retrain_model_button",
+                "test_dashboard.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0002463099999943097,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.6562056859999927,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.07190427899999463,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_dashboard.py::test_dashboard_loads",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_dashboard_loads",
+                "test_dashboard.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.27012102399999094,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 2.993406534000002,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00017946599999163482,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_dashboard.py::test_user_profile_display",
+            "lineno": 16,
+            "outcome": "passed",
+            "keywords": [
+                "test_user_profile_display",
+                "test_dashboard.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0002191300000049523,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.1542388589999746,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0002067469999929017,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_dashboard.py::test_dashboard_stats_exist",
+            "lineno": 23,
+            "outcome": "passed",
+            "keywords": [
+                "test_dashboard_stats_exist",
+                "test_dashboard.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0002412119999917195,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.1288270990000058,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00021305900000356814,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_dashboard.py::test_analytics_charts_rendering",
+            "lineno": 35,
+            "outcome": "passed",
+            "keywords": [
+                "test_analytics_charts_rendering",
+                "test_dashboard.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00027393300001676835,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.0991319400000066,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00016576100000520455,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_dashboard.py::test_retrain_model_button",
+            "lineno": 51,
+            "outcome": "passed",
+            "keywords": [
+                "test_retrain_model_button",
+                "test_dashboard.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00020128700001009747,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.6182874080000147,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.061731702000003,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_profile.py::test_profile_loads",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_profile_loads",
+                "test_profile.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.28133385800001065,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.0320654489999868,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0002924199999938537,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_profile.py::test_edit_profile",
+            "lineno": 14,
+            "outcome": "passed",
+            "keywords": [
+                "test_edit_profile",
+                "test_profile.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0004085449999990942,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 5.914923169000019,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06225584999998546,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_profile.py::test_profile_loads",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_profile_loads",
+                "test_profile.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2668354070000021,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.086231887999986,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020014500000797852,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_profile.py::test_edit_profile",
+            "lineno": 14,
+            "outcome": "passed",
+            "keywords": [
+                "test_edit_profile",
+                "test_profile.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0002697950000083438,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 5.930295274000002,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06215935700001296,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_prediction.py::test_transmit_metrics_success",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_transmit_metrics_success",
+                "test_prediction.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2576204240000095,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 4.016352283000003,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00023516999999628752,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_prediction.py::test_cognitive_strain_prediction",
+            "lineno": 15,
+            "outcome": "passed",
+            "keywords": [
+                "test_cognitive_strain_prediction",
+                "test_prediction.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0002240899999890189,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 4.328562037000012,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00016312499997184204,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_prediction.py::test_behavioral_drift_score",
+            "lineno": 33,
+            "outcome": "passed",
+            "keywords": [
+                "test_behavioral_drift_score",
+                "test_prediction.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00020932200001766432,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 4.300988353999998,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.07337638900000343,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_notifications.py::test_notification_bell_presence",
+            "lineno": 6,
+            "outcome": "passed",
+            "keywords": [
+                "test_notification_bell_presence",
+                "test_notifications.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2586453320000146,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 2.9437757190000013,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0001838539999994282,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_notifications.py::test_medium_strain_notification_generation",
+            "lineno": 19,
+            "outcome": "passed",
+            "keywords": [
+                "test_medium_strain_notification_generation",
+                "test_notifications.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00024404600000593746,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.213335480999973,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00017300400000408445,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_notifications.py::test_notifications_history_page",
+            "lineno": 44,
+            "outcome": "passed",
+            "keywords": [
+                "test_notifications_history_page",
+                "test_notifications.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00021217700000875084,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 4.248178767000013,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0001558319999901414,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_notifications.py::test_delete_notification",
+            "lineno": 77,
+            "outcome": "passed",
+            "keywords": [
+                "test_delete_notification",
+                "test_notifications.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0001989020000223718,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 5.248328815000008,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.07339948599999957,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_registration.py::test_valid_registration",
+            "lineno": 5,
+            "outcome": "passed",
+            "keywords": [
+                "test_valid_registration",
+                "test_registration.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 2.0540486360000045,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.091609790999996,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0001601700000009032,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_registration.py::test_registration_existing_user",
+            "lineno": 36,
+            "outcome": "passed",
+            "keywords": [
+                "test_registration_existing_user",
+                "test_registration.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00015987899999458932,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 5.018976408,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0001616330000047128,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_registration.py::test_registration_empty_fields",
+            "lineno": 87,
+            "outcome": "passed",
+            "keywords": [
+                "test_registration_empty_fields",
+                "test_registration.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0001599900000002208,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.8058264149999985,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06498570700000528,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_responsive.py::test_responsive_layout",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_responsive_layout",
+                "test_responsive.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2642124870000089,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.0360988440000085,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.061794333000023016,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_routing.py::test_protected_route_redirect",
+            "lineno": 5,
+            "outcome": "passed",
+            "keywords": [
+                "test_protected_route_redirect",
+                "test_routing.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2419624259999864,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.3868242989999544,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00029123400003072675,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_routing.py::test_unknown_route_redirect",
+            "lineno": 19,
+            "outcome": "failed",
+            "keywords": [
+                "test_unknown_route_redirect",
+                "test_routing.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0003505109999650813,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 8.118707208999979,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py",
+                    "lineno": 121,
+                    "message": "selenium.common.exceptions.TimeoutException: Message:"
+                },
+                "traceback": [
+                    {
+                        "path": "tests/test_routing.py",
+                        "lineno": 28,
+                        "message": ""
+                    },
+                    {
+                        "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py",
+                        "lineno": 121,
+                        "message": "TimeoutException"
+                    }
+                ],
+                "longrepr": "browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"db3db84e4b5da9f8d09e81abf2c9a7ef\")>\nlogin_helper = <function login_helper.<locals>._login at 0x7f7754a88680>\n\n    def test_unknown_route_redirect(browser, login_helper):\n        \"\"\"Verify that an unknown route handles fallback.\"\"\"\n        login_helper()\n    \n        # Go to an invalid route\n        browser.get(\"http://127.0.0.1:5173/this-route-does-not-exist\")\n    \n        # It should fallback to dashboard because user is logged in\n>       WebDriverWait(browser, 5).until(EC.url_contains(\"dashboard\"))\n\ntests/test_routing.py:28: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"db3db84e4b5da9f8d09e81abf2c9a7ef\")>\nmethod = <function url_contains.<locals>._predicate at 0x7f7754ac0ae0>\nmessage = ''\n\n    def until(self, method: Callable[[D], Literal[False] | T], message: str = \"\") -> T:\n        \"\"\"Wait until the method returns a value that is not False.\n    \n        Calls the method provided with the driver as an argument until the\n        return value does not evaluate to ``False``.\n    \n        Args:\n            method: A callable object that takes a WebDriver instance as an\n                argument.\n            message: Optional message for TimeoutException.\n    \n        Returns:\n            The result of the last call to `method`.\n    \n        Raises:\n            TimeoutException: If 'method' does not return a truthy value within\n                the WebDriverWait object's timeout.\n    \n        Example:\n            >>> from selenium.webdriver.common.by import By\n            >>> from selenium.webdriver.support.ui import WebDriverWait\n            >>> from selenium.webdriver.support import expected_conditions as EC\n            >>>\n            >>> # Wait until an element is visible on the page\n            >>> wait = WebDriverWait(driver, 10)\n            >>> element = wait.until(EC.visibility_of_element_located((By.ID, \"exampleId\")))\n            >>> print(element.text)\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException"
+            },
+            "teardown": {
+                "duration": 0.05919984600001271,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_notifications.py::test_notification_bell_presence",
+            "lineno": 6,
+            "outcome": "passed",
+            "keywords": [
+                "test_notification_bell_presence",
+                "test_notifications.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.27660075000000006,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 2.9543874459999984,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.000300232000000733,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_notifications.py::test_medium_strain_notification_generation",
+            "lineno": 19,
+            "outcome": "passed",
+            "keywords": [
+                "test_medium_strain_notification_generation",
+                "test_notifications.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00028251499998077634,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.214708658999996,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0002086140000017167,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_notifications.py::test_notifications_history_page",
+            "lineno": 44,
+            "outcome": "passed",
+            "keywords": [
+                "test_notifications_history_page",
+                "test_notifications.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00027917099998830963,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 4.24801768399999,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00015992100000516984,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_notifications.py::test_delete_notification",
+            "lineno": 77,
+            "outcome": "passed",
+            "keywords": [
+                "test_delete_notification",
+                "test_notifications.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0002416030000063074,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 5.284392095000015,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.07037165500000242,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_prediction.py::test_transmit_metrics_success",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_transmit_metrics_success",
+                "test_prediction.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2810115949999954,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.9852549889999977,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020796299997982715,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_prediction.py::test_cognitive_strain_prediction",
+            "lineno": 15,
+            "outcome": "passed",
+            "keywords": [
+                "test_cognitive_strain_prediction",
+                "test_prediction.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0002585590000023785,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 4.316806554999999,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0002489539999999124,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_prediction.py::test_behavioral_drift_score",
+            "lineno": 33,
+            "outcome": "passed",
+            "keywords": [
+                "test_behavioral_drift_score",
+                "test_prediction.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00030952599999523045,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 4.289741312999979,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.07120009799999139,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_e2e.py::test_full_e2e_flow",
+            "lineno": 6,
+            "outcome": "failed",
+            "keywords": [
+                "test_full_e2e_flow",
+                "test_e2e.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.2816574159999732,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 10.304589434999997,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py",
+                    "lineno": 232,
+                    "message": "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[id=\"fullName\"]\"}\n  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nStacktrace:\n#0 0x55b2bc18480a <unknown>\n#1 0x55b2bbb67289 <unknown>\n#2 0x55b2bbbbb9b4 <unknown>\n#3 0x55b2bbbbbc01 <unknown>\n#4 0x55b2bbc06874 <unknown>\n#5 0x55b2bbc03a4c <unknown>\n#6 0x55b2bbbaef7f <unknown>\n#7 0x55b2bbbafd61 <unknown>\n#8 0x55b2bc14b0f7 <unknown>\n#9 0x55b2bc1498bd <unknown>\n#10 0x55b2bc1345a6 <unknown>\n#11 0x55b2bc14a49a <unknown>\n#12 0x55b2bc11c560 <unknown>\n#13 0x55b2bc171288 <unknown>\n#14 0x55b2bc171425 <unknown>\n#15 0x55b2bc18338e <unknown>\n#16 0x7f4c8a69caa4 <unknown>\n#17 0x7f4c8a729c6c <unknown>"
+                },
+                "traceback": [
+                    {
+                        "path": "tests/test_e2e.py",
+                        "lineno": 12,
+                        "message": ""
+                    },
+                    {
+                        "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py",
+                        "lineno": 868,
+                        "message": "in find_element"
+                    },
+                    {
+                        "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py",
+                        "lineno": 468,
+                        "message": "in execute"
+                    },
+                    {
+                        "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py",
+                        "lineno": 232,
+                        "message": "NoSuchElementException"
+                    }
+                ],
+                "longrepr": "browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"693b2af0f14ad314e3417c4c683a7997\")>\n\n    def test_full_e2e_flow(browser):\n        \"\"\"Complete End-to-End Workflow: Register -> Login -> Predict -> Logout\"\"\"\n    \n        # 1. Registration\n        browser.get(\"http://localhost:5173/register\")\n>       browser.find_element(By.ID, \"fullName\").send_keys(\"E2E Test User\")\n\ntests/test_e2e.py:12: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:868: in find_element\n    return self.execute(Command.FIND_ELEMENT, {\"using\": by, \"value\": value})[\"value\"]\n/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:468: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f3b9f6483d0>\nresponse = {'status': 404, 'value': '{\"value\":{\"error\":\"no such element\",\"message\":\"no such element: Unable to locate element: {\\...\\\\n#15 0x55b2bc18338e \\\\u003Cunknown>\\\\n#16 0x7f4c8a69caa4 \\\\u003Cunknown>\\\\n#17 0x7f4c8a729c6c \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: dict[str, Any]) -> None:\n        \"\"\"Check that a JSON response from the WebDriver does not have an error.\n    \n        Args:\n            response: The JSON response from the WebDriver server as a dictionary\n                object.\n    \n        Raises:\n            WebDriverException: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                try:\n                    value = json.loads(value_json)\n                    if isinstance(value, dict):\n                        if len(value) == 1:\n                            value = value[\"value\"]\n                        status = value.get(\"error\", None)\n                        if not status:\n                            status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                            message = value.get(\"value\") or value.get(\"message\")\n                            if not isinstance(message, str):\n                                value = message\n                                message = message.get(\"message\") if isinstance(message, dict) else None\n                        else:\n                            message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[id=\"fullName\"]\"}\nE         (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nE       Stacktrace:\nE       #0 0x55b2bc18480a <unknown>\nE       #1 0x55b2bbb67289 <unknown>\nE       #2 0x55b2bbbbb9b4 <unknown>\nE       #3 0x55b2bbbbbc01 <unknown>\nE       #4 0x55b2bbc06874 <unknown>\nE       #5 0x55b2bbc03a4c <unknown>\nE       #6 0x55b2bbbaef7f <unknown>\nE       #7 0x55b2bbbafd61 <unknown>\nE       #8 0x55b2bc14b0f7 <unknown>\nE       #9 0x55b2bc1498bd <unknown>\nE       #10 0x55b2bc1345a6 <unknown>\nE       #11 0x55b2bc14a49a <unknown>\nE       #12 0x55b2bc11c560 <unknown>\nE       #13 0x55b2bc171288 <unknown>\nE       #14 0x55b2bc171425 <unknown>\nE       #15 0x55b2bc18338e <unknown>\nE       #16 0x7f4c8a69caa4 <unknown>\nE       #17 0x7f4c8a729c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException"
+            },
+            "teardown": {
+                "duration": 0.0642124889999991,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_registration.py::test_valid_registration",
+            "lineno": 5,
+            "outcome": "failed",
+            "keywords": [
+                "test_valid_registration",
+                "test_registration.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 2.290833959000011,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 12.614852130000003,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py",
+                    "lineno": 121,
+                    "message": "selenium.common.exceptions.TimeoutException: Message:"
+                },
+                "traceback": [
+                    {
+                        "path": "tests/test_registration.py",
+                        "lineno": 32,
+                        "message": ""
+                    },
+                    {
+                        "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py",
+                        "lineno": 121,
+                        "message": "TimeoutException"
+                    }
+                ],
+                "longrepr": "browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"55a49bfd5023d6801f60f4795f2567d9\")>\n\n    def test_valid_registration(browser):\n        \"\"\"Test registering a new user.\"\"\"\n        browser.get(\"http://localhost:5173/\")\n        browser.execute_script(\"window.localStorage.clear();\")\n        browser.get(\"http://localhost:5173/login\")\n        time.sleep(1)\n    \n        # Ensure we are on registration mode\n        toggles = browser.find_elements(\"xpath\", \"//button[contains(text(), 'Register now')]\")\n        if toggles:\n            toggles[0].click()\n            time.sleep(0.5)\n    \n        browser.find_element(\"xpath\", \"//input[@name='full_name']\").send_keys(\"Test User\")\n    \n        unique_username = f\"testuser_{uuid.uuid4().hex[:6]}\"\n        browser.find_element(\"xpath\", \"//input[@name='username']\").send_keys(unique_username)\n        browser.find_element(\"xpath\", \"//input[@name='email']\").send_keys(f\"{unique_username}@example.com\")\n        browser.find_element(\"xpath\", \"//input[@name='password']\").send_keys(\"password123\")\n        browser.find_element(\"xpath\", \"//input[@name='confirmPassword']\").send_keys(\"password123\")\n        browser.find_element(\"xpath\", \"//input[@name='privacy_consent']\").click()\n    \n        submit_btn = browser.find_element(\"xpath\", \"//button[@type='submit']\")\n        submit_btn.click()\n    \n        # Assert successful registration redirects to dashboard\n>       WebDriverWait(browser, 10).until(EC.url_contains(\"dashboard\"))\n\ntests/test_registration.py:32: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"55a49bfd5023d6801f60f4795f2567d9\")>\nmethod = <function url_contains.<locals>._predicate at 0x7f64e9206660>\nmessage = ''\n\n    def until(self, method: Callable[[D], Literal[False] | T], message: str = \"\") -> T:\n        \"\"\"Wait until the method returns a value that is not False.\n    \n        Calls the method provided with the driver as an argument until the\n        return value does not evaluate to ``False``.\n    \n        Args:\n            method: A callable object that takes a WebDriver instance as an\n                argument.\n            message: Optional message for TimeoutException.\n    \n        Returns:\n            The result of the last call to `method`.\n    \n        Raises:\n            TimeoutException: If 'method' does not return a truthy value within\n                the WebDriverWait object's timeout.\n    \n        Example:\n            >>> from selenium.webdriver.common.by import By\n            >>> from selenium.webdriver.support.ui import WebDriverWait\n            >>> from selenium.webdriver.support import expected_conditions as EC\n            >>>\n            >>> # Wait until an element is visible on the page\n            >>> wait = WebDriverWait(driver, 10)\n            >>> element = wait.until(EC.visibility_of_element_located((By.ID, \"exampleId\")))\n            >>> print(element.text)\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException"
+            },
+            "teardown": {
+                "duration": 0.00025107999999818276,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_registration.py::test_registration_existing_user",
+            "lineno": 36,
+            "outcome": "failed",
+            "keywords": [
+                "test_registration_existing_user",
+                "test_registration.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00026107899999772144,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 12.403910897999992,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py",
+                    "lineno": 121,
+                    "message": "selenium.common.exceptions.TimeoutException: Message:"
+                },
+                "traceback": [
+                    {
+                        "path": "tests/test_registration.py",
+                        "lineno": 62,
+                        "message": ""
+                    },
+                    {
+                        "path": "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py",
+                        "lineno": 121,
+                        "message": "TimeoutException"
+                    }
+                ],
+                "longrepr": "browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"55a49bfd5023d6801f60f4795f2567d9\")>\n\n    def test_registration_existing_user(browser):\n        \"\"\"Test registering with an already existing username.\"\"\"\n        browser.get(\"http://localhost:5173/\")\n        browser.execute_script(\"window.localStorage.clear();\")\n        browser.get(\"http://localhost:5173/login\")\n        time.sleep(1)\n    \n        # Create user first\n        toggles = browser.find_elements(\"xpath\", \"//button[contains(text(), 'Register now')]\")\n        if toggles:\n            toggles[0].click()\n            time.sleep(0.5)\n    \n        browser.find_element(\"xpath\", \"//input[@name='full_name']\").send_keys(\"Test User\")\n        unique_username = f\"testuser_{uuid.uuid4().hex[:6]}\"\n        browser.find_element(\"xpath\", \"//input[@name='username']\").send_keys(unique_username)\n        browser.find_element(\"xpath\", \"//input[@name='email']\").send_keys(f\"{unique_username}@example.com\")\n        browser.find_element(\"xpath\", \"//input[@name='password']\").send_keys(\"password123\")\n        browser.find_element(\"xpath\", \"//input[@name='confirmPassword']\").send_keys(\"password123\")\n        browser.find_element(\"xpath\", \"//input[@name='privacy_consent']\").click()\n    \n        submit_btn = browser.find_element(\"xpath\", \"//button[@type='submit']\")\n        submit_btn.click()\n    \n        # Logout\n>       WebDriverWait(browser, 10).until(EC.url_contains(\"dashboard\"))\n\ntests/test_registration.py:62: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"55a49bfd5023d6801f60f4795f2567d9\")>\nmethod = <function url_contains.<locals>._predicate at 0x7f64e8cb7740>\nmessage = ''\n\n    def until(self, method: Callable[[D], Literal[False] | T], message: str = \"\") -> T:\n        \"\"\"Wait until the method returns a value that is not False.\n    \n        Calls the method provided with the driver as an argument until the\n        return value does not evaluate to ``False``.\n    \n        Args:\n            method: A callable object that takes a WebDriver instance as an\n                argument.\n            message: Optional message for TimeoutException.\n    \n        Returns:\n            The result of the last call to `method`.\n    \n        Raises:\n            TimeoutException: If 'method' does not return a truthy value within\n                the WebDriverWait object's timeout.\n    \n        Example:\n            >>> from selenium.webdriver.common.by import By\n            >>> from selenium.webdriver.support.ui import WebDriverWait\n            >>> from selenium.webdriver.support import expected_conditions as EC\n            >>>\n            >>> # Wait until an element is visible on the page\n            >>> wait = WebDriverWait(driver, 10)\n            >>> element = wait.until(EC.visibility_of_element_located((By.ID, \"exampleId\")))\n            >>> print(element.text)\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            if time.monotonic() > end_time:\n                break\n            time.sleep(self._poll)\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException"
+            },
+            "teardown": {
+                "duration": 0.0001930810000061456,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_registration.py::test_registration_empty_fields",
+            "lineno": 87,
+            "outcome": "passed",
+            "keywords": [
+                "test_registration_empty_fields",
+                "test_registration.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0002003350000023829,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 1.788458392999999,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0690535079999961,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_logout.py::test_logout",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_logout",
+                "test_logout.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.26705721299998686,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.0879039099999943,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06227295900001195,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_routing.py::test_protected_route_redirect",
+            "lineno": 5,
+            "outcome": "passed",
+            "keywords": [
+                "test_protected_route_redirect",
+                "test_routing.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.25780887199999825,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.3843904119999877,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0002674510000133523,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_routing.py::test_unknown_route_redirect",
+            "lineno": 19,
+            "outcome": "passed",
+            "keywords": [
+                "test_unknown_route_redirect",
+                "test_routing.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.00031848700001546604,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 2.8205064489999927,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06191082600000186,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "tests/test_responsive.py::test_responsive_layout",
+            "lineno": 4,
+            "outcome": "passed",
+            "keywords": [
+                "test_responsive_layout",
+                "test_responsive.py",
+                "tests",
+                "neuro-behavioral-drift",
+                ""
+            ],
+            "setup": {
+                "duration": 0.283970394999983,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 2.976704158000018,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.06431076399996982,
+                "outcome": "passed"
+            }
+        }
+    ]
+}

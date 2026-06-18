@@ -1,0 +1,15 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.2.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'Linux-6.17.0-1018-azure-x86_64-with-glibc2.39', 'Packages': {'pytest': '8.2.2', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'metadata': '3.1.1', 'html': '4.2.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-17-jdk-amd64'}
+rootdir: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift
+plugins: json-report-1.5.0, metadata-3.1.1, html-4.2.0
+collecting ... collected 1 item
+
+tests/test_logout.py::test_logout PASSED                                 [100%]
+
+- generated xml file: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/junit_test_logout.xml -
+--------------------------------- JSON report ----------------------------------
+report saved to: reports/report_test_logout.json
+- Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_logout.html -
+============================== 1 passed in 3.44s ===============================

@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.2.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'Linux-6.17.0-1018-azure-x86_64-with-glibc2.39', 'Packages': {'pytest': '8.2.2', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'metadata': '3.1.1', 'html': '4.2.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-17-jdk-amd64'}
+rootdir: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift
+plugins: json-report-1.5.0, metadata-3.1.1, html-4.2.0
+collecting ... collected 5 items
+
+tests/test_dashboard.py::test_dashboard_loads PASSED                     [ 20%]
+tests/test_dashboard.py::test_user_profile_display PASSED                [ 40%]
+tests/test_dashboard.py::test_dashboard_stats_exist PASSED               [ 60%]
+tests/test_dashboard.py::test_analytics_charts_rendering PASSED          [ 80%]
+tests/test_dashboard.py::test_retrain_model_button PASSED                [100%]
+
+- generated xml file: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/junit_test_dashboard.xml -
+--------------------------------- JSON report ----------------------------------
+report saved to: reports/report_test_dashboard.json
+- Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_dashboard.html -
+============================== 5 passed in 8.36s ===============================
