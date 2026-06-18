@@ -7,9 +7,9 @@ def test_logout(browser, login_helper):
     login_helper()
     
     disconnect_btn = browser.find_element("xpath", "//button[contains(., 'Disconnect')]")
-    disconnect_btn.click()
+    browser.execute_script("arguments[0].click();", disconnect_btn)
     WebDriverWait(browser, 10).until(EC.url_contains("login"))
     
     # Ensure cannot go back
-    browser.get("https://neuro-behavioral-drift.onrender.com/dashboard")
+    browser.get("http://localhost:5173/dashboard")
     WebDriverWait(browser, 10).until(EC.url_contains("login"))

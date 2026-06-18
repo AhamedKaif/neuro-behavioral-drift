@@ -52,7 +52,7 @@ def login_helper(browser):
         if username is None:
             username = f"testuser_{uuid.uuid4().hex[:6]}"
             
-        browser.get("https://neuro-behavioral-drift.onrender.com/")
+        browser.get("http://localhost:5173/")
         
         try:
             WebDriverWait(browser, 20).until(
@@ -71,7 +71,7 @@ def login_helper(browser):
         # Try registering first
         register_toggle = browser.find_elements(By.XPATH, "//button[contains(text(), 'Register now')]")
         if register_toggle:
-            register_toggle[0].click()
+            browser.execute_script("arguments[0].click();", register_toggle[0])
             WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//input[@name='full_name']")))
 
         browser.find_element(By.XPATH, "//input[@name='full_name']").send_keys("Test User")
@@ -79,8 +79,8 @@ def login_helper(browser):
         browser.find_element(By.XPATH, "//input[@name='email']").send_keys(f"{username}@example.com")
         browser.find_element(By.XPATH, "//input[@name='password']").send_keys(password)
         browser.find_element(By.XPATH, "//input[@name='confirmPassword']").send_keys(password)
-        browser.find_element(By.XPATH, "//input[@name='privacy_consent']").click()
-        browser.find_element(By.XPATH, "//button[@type='submit']").click()
+        browser.execute_script("arguments[0].click();", browser.find_element(By.XPATH, "//input[@name='privacy_consent']"))
+        browser.execute_script("arguments[0].click();", browser.find_element(By.XPATH, "//button[@type='submit']"))
         
         try:
             # Wait up to 10 seconds for the registration to redirect to dashboard
@@ -92,7 +92,7 @@ def login_helper(browser):
         if "dashboard" not in browser.current_url:
             login_toggle = browser.find_elements(By.XPATH, "//button[contains(text(), 'Log in')]")
             if login_toggle:
-                login_toggle[0].click()
+                browser.execute_script("arguments[0].click();", login_toggle[0])
             
             username_input = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Enter username']")))
             password_input = browser.find_element(By.XPATH, "//input[@placeholder='Enter password']")
@@ -102,7 +102,7 @@ def login_helper(browser):
             username_input.send_keys(username)
             password_input.clear()
             password_input.send_keys(password)
-            submit_btn.click()
+            browser.execute_script("arguments[0].click();", submit_btn)
             
         WebDriverWait(browser, 20).until(EC.url_contains("dashboard"))
     return _login

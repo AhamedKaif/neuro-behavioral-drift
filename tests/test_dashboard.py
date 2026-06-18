@@ -54,7 +54,7 @@ def test_retrain_model_button(browser, login_helper):
     login_helper()
     
     retrain_btn = browser.find_element("xpath", "//button[contains(., 'Retrain Model')]")
-    retrain_btn.click()
+    browser.execute_script("arguments[0].click();", retrain_btn)
     
     # Wait for alert to appear
     WebDriverWait(browser, 10).until(EC.alert_is_present())

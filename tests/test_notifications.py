@@ -90,7 +90,7 @@ def test_delete_notification(browser, login_helper):
     time.sleep(5)
     
     # Navigate
-    browser.get("https://neuro-behavioral-drift.onrender.com/notifications")
+    browser.get("http://localhost:5173/notifications")
     time.sleep(3)
     
     # Delete first notification

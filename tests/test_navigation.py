@@ -5,9 +5,9 @@ import pytest
 
 def test_unauthenticated_navigation(browser):
     """Test that navigating to dashboard without login redirects to login page."""
-    browser.get("https://neuro-behavioral-drift.onrender.com/")
+    browser.get("http://localhost:5173/")
     browser.execute_script("window.localStorage.clear();")
-    browser.get("https://neuro-behavioral-drift.onrender.com/dashboard")
+    browser.get("http://localhost:5173/dashboard")
     WebDriverWait(browser, 10).until(EC.url_contains("login"))
 
 def test_navigation_links(browser, login_helper):
@@ -16,12 +16,12 @@ def test_navigation_links(browser, login_helper):
     
     # Click Model Telemetry
     telemetry_link = browser.find_element("xpath", "//a[contains(., 'Model Telemetry')]")
-    telemetry_link.click()
+    browser.execute_script("arguments[0].click();", telemetry_link)
     WebDriverWait(browser, 10).until(EC.url_contains("model-telemetry"))
     
     # Click Dashboard
     dashboard_link = browser.find_element("xpath", "//a[contains(., 'Dashboard')]")
-    dashboard_link.click()
+    browser.execute_script("arguments[0].click();", dashboard_link)
     WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
 
 

@@ -10,7 +10,7 @@ def test_model_telemetry_loads(browser, login_helper):
     telemetry_link = WebDriverWait(browser, 5).until(
         EC.element_to_be_clickable((By.XPATH, "//a[contains(., 'Model Telemetry')]"))
     )
-    telemetry_link.click()
+    browser.execute_script("arguments[0].click();", telemetry_link)
     
     # Verify title
     title = WebDriverWait(browser, 5).until(

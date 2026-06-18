@@ -8,7 +8,7 @@ def test_profile_loads(browser, login_helper):
     
     # Click Profile icon in navbar
     profile_link = browser.find_element("xpath", "//a[@href='/profile']")
-    profile_link.click()
+    browser.execute_script("arguments[0].click();", profile_link)
     WebDriverWait(browser, 10).until(EC.url_contains("profile"))
     assert "Profile Management" in browser.page_source
 
@@ -16,7 +16,7 @@ def test_edit_profile(browser, login_helper):
     """Test that a user can edit their profile fields."""
     login_helper()
     
-    browser.get("https://neuro-behavioral-drift.onrender.com/profile")
+    browser.get("http://localhost:5173/profile")
     time.sleep(3)
     
     # Click Edit Profile

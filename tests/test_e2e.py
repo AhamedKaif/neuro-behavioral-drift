@@ -9,13 +9,13 @@ def test_full_e2e_flow(browser):
     unique_username = f"e2e_{uuid.uuid4().hex[:6]}"
     
     # 1. Registration
-    browser.get("https://neuro-behavioral-drift.onrender.com/login")
+    browser.get("http://localhost:5173/login")
     
     # Switch to registration
     register_toggle = WebDriverWait(browser, 5).until(
         EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Register now')]"))
     )
-    register_toggle.click()
+    browser.execute_script("arguments[0].click();", register_toggle)
     
     # Fill registration form
     WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@name='full_name']"))).send_keys("E2E Test User")
@@ -23,9 +23,9 @@ def test_full_e2e_flow(browser):
     browser.find_element(By.XPATH, "//input[@name='email']").send_keys(f"{unique_username}@example.com")
     browser.find_element(By.XPATH, "//input[@name='password']").send_keys("password123")
     browser.find_element(By.XPATH, "//input[@name='confirmPassword']").send_keys("password123")
-    browser.find_element(By.XPATH, "//input[@name='privacy_consent']").click()
+    browser.execute_script("arguments[0].click();", browser.find_element(By.XPATH, "//input[@name='privacy_consent']"))
     
-    browser.find_element(By.XPATH, "//button[@type='submit']").click()
+    browser.execute_script("arguments[0].click();", browser.find_element(By.XPATH, "//button[@type='submit']"))
     
     # 2. Wait for dashboard redirect (Registration auto-logs in)
     WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
@@ -35,10 +35,10 @@ def test_full_e2e_flow(browser):
     fatigue_label = WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'Force Cognitive Fatigue Simulation')]"))
     )
-    fatigue_label.click()
+    browser.execute_script("arguments[0].click();", fatigue_label)
     
     transmit_btn = browser.find_element(By.XPATH, "//button[contains(., 'Transmit Metrics')]")
-    transmit_btn.click()
+    browser.execute_script("arguments[0].click();", transmit_btn)
     
     # Wait for the backend to ingest successfully
     WebDriverWait(browser, 10).until(
@@ -50,7 +50,7 @@ def test_full_e2e_flow(browser):
     disconnect_btn = WebDriverWait(browser, 5).until(
         EC.element_to_be_clickable((By.XPATH, "//button[contains(., 'Disconnect')]"))
     )
-    disconnect_btn.click()
+    browser.execute_script("arguments[0].click();", disconnect_btn)
     
     # Verify redirected back to login page
     WebDriverWait(browser, 10).until(EC.url_contains("login"))

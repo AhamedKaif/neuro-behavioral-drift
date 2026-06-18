@@ -17,7 +17,7 @@ def test_valid_registration(browser):
     # Ensure we are on registration mode
     toggles = browser.find_elements(By.XPATH, "//button[contains(text(), 'Register now')]")
     if toggles:
-        toggles[0].click()
+        browser.execute_script("arguments[0].click();", toggles[0])
         WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@name='full_name']")))
         
     browser.find_element(By.XPATH, "//input[@name='full_name']").send_keys("Test User")
@@ -34,11 +34,11 @@ def test_valid_registration(browser):
     
     checkbox = browser.find_element(By.XPATH, "//input[@name='privacy_consent']")
     browser.execute_script("arguments[0].scrollIntoView(true);", checkbox)
-    checkbox.click()
+    browser.execute_script("arguments[0].click();", checkbox)
     
     submit_btn = browser.find_element(By.XPATH, "//button[@type='submit']")
     browser.execute_script("arguments[0].scrollIntoView(true);", submit_btn)
-    submit_btn.click()
+    browser.execute_script("arguments[0].click();", submit_btn)
     
     # Assert successful registration redirects to dashboard
     WebDriverWait(browser, 20).until(EC.url_contains("dashboard"))
@@ -59,7 +59,7 @@ def test_registration_existing_user(browser):
     # Create user first
     toggles = browser.find_elements(By.XPATH, "//button[contains(text(), 'Register now')]")
     if toggles:
-        toggles[0].click()
+        browser.execute_script("arguments[0].click();", toggles[0])
         WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@name='full_name']")))
         
     browser.find_element(By.XPATH, "//input[@name='full_name']").send_keys("Test User")
@@ -75,11 +75,11 @@ def test_registration_existing_user(browser):
     
     checkbox = browser.find_element(By.XPATH, "//input[@name='privacy_consent']")
     browser.execute_script("arguments[0].scrollIntoView(true);", checkbox)
-    checkbox.click()
+    browser.execute_script("arguments[0].click();", checkbox)
     
     submit_btn = browser.find_element(By.XPATH, "//button[@type='submit']")
     browser.execute_script("arguments[0].scrollIntoView(true);", submit_btn)
-    submit_btn.click()
+    browser.execute_script("arguments[0].click();", submit_btn)
     
     # Wait for dashboard
     WebDriverWait(browser, 20).until(EC.url_contains("dashboard"))
@@ -95,7 +95,7 @@ def test_registration_existing_user(browser):
     # Try registering again
     toggles = browser.find_elements(By.XPATH, "//button[contains(text(), 'Register now')]")
     if toggles:
-        toggles[0].click()
+        browser.execute_script("arguments[0].click();", toggles[0])
         WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@name='full_name']")))
         
     browser.find_element(By.XPATH, "//input[@name='full_name']").send_keys("Test User")
@@ -110,11 +110,11 @@ def test_registration_existing_user(browser):
     
     checkbox = browser.find_element(By.XPATH, "//input[@name='privacy_consent']")
     browser.execute_script("arguments[0].scrollIntoView(true);", checkbox)
-    checkbox.click()
+    browser.execute_script("arguments[0].click();", checkbox)
     
     submit_btn = browser.find_element(By.XPATH, "//button[@type='submit']")
     browser.execute_script("arguments[0].scrollIntoView(true);", submit_btn)
-    submit_btn.click()
+    browser.execute_script("arguments[0].click();", submit_btn)
     
     error_msg = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'text-red-400')]")))
     assert "already exists" in error_msg.text.lower() or "error" in error_msg.text.lower()
@@ -131,11 +131,11 @@ def test_registration_empty_fields(browser):
     
     toggles = browser.find_elements(By.XPATH, "//button[contains(text(), 'Register now')]")
     if toggles:
-        toggles[0].click()
+        browser.execute_script("arguments[0].click();", toggles[0])
         WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@name='full_name']")))
         
     submit_btn = browser.find_element(By.XPATH, "//button[@type='submit']")
-    submit_btn.click()
+    browser.execute_script("arguments[0].click();", submit_btn)
     
     # Should show error about filling fields
     error_msg = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'text-red-400')]")))

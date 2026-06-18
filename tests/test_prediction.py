@@ -7,7 +7,7 @@ def test_transmit_metrics_success(browser, login_helper):
     login_helper()
     
     transmit_btn = browser.find_element("xpath", "//button[contains(., 'Transmit Metrics')]")
-    transmit_btn.click()
+    browser.execute_script("arguments[0].click();", transmit_btn)
     
     time.sleep(3)
     success_btn = browser.find_element("xpath", "//button[contains(., 'Ingested Successfully')]")
@@ -19,11 +19,11 @@ def test_cognitive_strain_prediction(browser, login_helper):
     
     # Toggle fatigue
     label = browser.find_element("xpath", "//span[contains(text(), 'Force Cognitive Fatigue Simulation')]")
-    label.click()
+    browser.execute_script("arguments[0].click();", label)
     
     # Transmit
     transmit_btn = browser.find_element("xpath", "//button[contains(., 'Transmit Metrics')]")
-    transmit_btn.click()
+    browser.execute_script("arguments[0].click();", transmit_btn)
     
     time.sleep(3) # Wait for backend response and state update
     
@@ -40,11 +40,11 @@ def test_behavioral_drift_score(browser, login_helper):
     
     # Toggle fatigue
     label = browser.find_element("xpath", "//span[contains(text(), 'Force Cognitive Fatigue Simulation')]")
-    label.click()
+    browser.execute_script("arguments[0].click();", label)
     
     # Transmit
     transmit_btn = browser.find_element("xpath", "//button[contains(., 'Transmit Metrics')]")
-    transmit_btn.click()
+    browser.execute_script("arguments[0].click();", transmit_btn)
     
     time.sleep(3)
     

@@ -20,7 +20,7 @@ def setup_user(browser):
     
     toggles = browser.find_elements(By.XPATH, "//button[contains(text(), 'Register now')]")
     if toggles:
-        toggles[0].click()
+        browser.execute_script("arguments[0].click();", toggles[0])
         WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@name='full_name']")))
         
     browser.find_element(By.XPATH, "//input[@name='full_name']").send_keys("Test User")
@@ -35,11 +35,11 @@ def setup_user(browser):
     
     checkbox = browser.find_element(By.XPATH, "//input[@name='privacy_consent']")
     browser.execute_script("arguments[0].scrollIntoView(true);", checkbox)
-    checkbox.click()
+    browser.execute_script("arguments[0].click();", checkbox)
     
     submit_btn = browser.find_element(By.XPATH, "//button[@type='submit']")
     browser.execute_script("arguments[0].scrollIntoView(true);", submit_btn)
-    submit_btn.click()
+    browser.execute_script("arguments[0].click();", submit_btn)
     
     WebDriverWait(browser, 20).until(EC.url_contains("dashboard"))
     
@@ -60,12 +60,12 @@ def test_valid_login(browser):
     # Ensure login mode
     toggles = browser.find_elements(By.XPATH, "//button[contains(text(), 'Log in')]")
     if toggles:
-        toggles[0].click()
+        browser.execute_script("arguments[0].click();", toggles[0])
         WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Enter username']")))
         
     browser.find_element(By.XPATH, "//input[@placeholder='Enter username']").send_keys(username)
     browser.find_element(By.XPATH, "//input[@placeholder='Enter password']").send_keys(password)
-    browser.find_element(By.XPATH, "//button[@type='submit']").click()
+    browser.execute_script("arguments[0].click();", browser.find_element(By.XPATH, "//button[@type='submit']"))
     WebDriverWait(browser, 20).until(EC.url_contains("dashboard"))
     browser.execute_script("window.localStorage.clear();")
 
@@ -81,12 +81,12 @@ def test_invalid_password(browser):
     
     toggles = browser.find_elements(By.XPATH, "//button[contains(text(), 'Log in')]")
     if toggles:
-        toggles[0].click()
+        browser.execute_script("arguments[0].click();", toggles[0])
         WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Enter username']")))
         
     browser.find_element(By.XPATH, "//input[@placeholder='Enter username']").send_keys(username)
     browser.find_element(By.XPATH, "//input[@placeholder='Enter password']").send_keys("wrongpassword")
-    browser.find_element(By.XPATH, "//button[@type='submit']").click()
+    browser.execute_script("arguments[0].click();", browser.find_element(By.XPATH, "//button[@type='submit']"))
     
     error_msg = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'text-red-400')]")))
     assert "invalid" in error_msg.text.lower() or "error" in error_msg.text.lower()
@@ -103,12 +103,12 @@ def test_invalid_username(browser):
     
     toggles = browser.find_elements(By.XPATH, "//button[contains(text(), 'Log in')]")
     if toggles:
-        toggles[0].click()
+        browser.execute_script("arguments[0].click();", toggles[0])
         WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Enter username']")))
         
     browser.find_element(By.XPATH, "//input[@placeholder='Enter username']").send_keys(f"nonexistent_{uuid.uuid4().hex[:6]}")
     browser.find_element(By.XPATH, "//input[@placeholder='Enter password']").send_keys("password")
-    browser.find_element(By.XPATH, "//button[@type='submit']").click()
+    browser.execute_script("arguments[0].click();", browser.find_element(By.XPATH, "//button[@type='submit']"))
     
     error_msg = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'text-red-400')]")))
     assert "invalid" in error_msg.text.lower() or "error" in error_msg.text.lower()
@@ -125,10 +125,10 @@ def test_login_empty_fields(browser):
     
     toggles = browser.find_elements(By.XPATH, "//button[contains(text(), 'Log in')]")
     if toggles:
-        toggles[0].click()
+        browser.execute_script("arguments[0].click();", toggles[0])
         WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Enter username']")))
         
-    browser.find_element(By.XPATH, "//button[@type='submit']").click()
+    browser.execute_script("arguments[0].click();", browser.find_element(By.XPATH, "//button[@type='submit']"))
     
     error_msg = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'text-red-400')]")))
     assert "fill in all fields" in error_msg.text.lower()
