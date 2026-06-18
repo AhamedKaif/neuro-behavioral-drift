@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="2.210" timestamp="2026-06-18T15:13:16.430643" hostname="runnervm1li68"><testcase classname="tests.test_e2e" name="test_full_e2e_flow" time="2.183" /></testsuite></testsuites>
