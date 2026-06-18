@@ -1,0 +1,174 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.2.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'Linux-6.17.0-1018-azure-x86_64-with-glibc2.39', 'Packages': {'pytest': '8.2.2', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'metadata': '3.1.1', 'html': '4.2.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-17-jdk-amd64'}
+rootdir: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift
+plugins: json-report-1.5.0, metadata-3.1.1, html-4.2.0
+collecting ... collected 4 items
+
+tests/test_dashboard.py::test_dashboard_loads FAILED                     [ 25%]
+tests/test_dashboard.py::test_user_profile_display PASSED                [ 50%]
+tests/test_dashboard.py::test_dashboard_stats_exist PASSED               [ 75%]
+tests/test_dashboard.py::test_retrain_model_button PASSED                [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_dashboard_loads _____________________________
+
+browser = <selenium.webdriver.chrome.webdriver.WebDriver (session="3a57061da7ea14ed873874337d9a95e3")>
+login_helper = <function login_helper.<locals>._login at 0x7fca0d6a9da0>
+
+    def test_dashboard_loads(browser, login_helper):
+        """Verify that the dashboard main elements render correctly."""
+>       login_helper()
+
+tests/test_dashboard.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:87: in _login
+    username_input = browser.find_element("xpath", "//input[@placeholder='Enter username']")
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:868: in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:468: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fca0d2ea090>
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...\\n#15 0x5624da87238e \\u003Cunknown>\\n#16 0x7f419d69caa4 \\u003Cunknown>\\n#17 0x7f419d729c6c \\u003Cunknown>\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -> None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Enter username']"}
+E         (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+E       Stacktrace:
+E       #0 0x5624da87380a <unknown>
+E       #1 0x5624da256289 <unknown>
+E       #2 0x5624da2aa9b4 <unknown>
+E       #3 0x5624da2aac01 <unknown>
+E       #4 0x5624da2f5874 <unknown>
+E       #5 0x5624da2f2a4c <unknown>
+E       #6 0x5624da29df7f <unknown>
+E       #7 0x5624da29ed61 <unknown>
+E       #8 0x5624da83a0f7 <unknown>
+E       #9 0x5624da8388bd <unknown>
+E       #10 0x5624da8235a6 <unknown>
+E       #11 0x5624da83949a <unknown>
+E       #12 0x5624da80b560 <unknown>
+E       #13 0x5624da860288 <unknown>
+E       #14 0x5624da860425 <unknown>
+E       #15 0x5624da87238e <unknown>
+E       #16 0x7f419d69caa4 <unknown>
+E       #17 0x7f419d729c6c <unknown>
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException
+- generated xml file: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/junit_dashboard.xml -
+--------------------------------- JSON report ----------------------------------
+report saved to: reports/report_dashboard.json
+- Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_dashboard.html -
+=========================== short test summary info ============================
+FAILED tests/test_dashboard.py::test_dashboard_loads - selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Enter username']"}
+  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+#0 0x5624da87380a <unknown>
+#1 0x5624da256289 <unknown>
+#2 0x5624da2aa9b4 <unknown>
+#3 0x5624da2aac01 <unknown>
+#4 0x5624da2f5874 <unknown>
+#5 0x5624da2f2a4c <unknown>
+#6 0x5624da29df7f <unknown>
+#7 0x5624da29ed61 <unknown>
+#8 0x5624da83a0f7 <unknown>
+#9 0x5624da8388bd <unknown>
+#10 0x5624da8235a6 <unknown>
+#11 0x5624da83949a <unknown>
+#12 0x5624da80b560 <unknown>
+#13 0x5624da860288 <unknown>
+#14 0x5624da860425 <unknown>
+#15 0x5624da87238e <unknown>
+#16 0x7f419d69caa4 <unknown>
+#17 0x7f419d729c6c <unknown>
+========================= 1 failed, 3 passed in 17.56s =========================

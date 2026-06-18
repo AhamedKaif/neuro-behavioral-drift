@@ -1,0 +1,46 @@
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+
+def test_profile_loads(browser, login_helper):
+    """Test that the user can navigate to the profile page."""
+    login_helper()
+    
+    # Click Profile icon in navbar
+    profile_link = browser.find_element("xpath", "//a[@href='/profile']")
+    profile_link.click()
+    WebDriverWait(browser, 10).until(EC.url_contains("profile"))
+    assert "Profile Management" in browser.page_source
+
+def test_edit_profile(browser, login_helper):
+    """Test that a user can edit their profile fields."""
+    login_helper()
+    
+    browser.get("https://neuro-behavioral-drift.onrender.com/profile")
+    time.sleep(3)
+    
+    # Click Edit Profile
+    edit_btn = browser.find_element("xpath", "//button[contains(text(), 'Edit Profile')]")
+    browser.execute_script("arguments[0].click();", edit_btn)
+    time.sleep(5)
+    
+    # Change stress level
+    stress_input = browser.find_element("xpath", "//input[@name='stress_level']")
+    # Move slider or send keys (for range it might be tricky, let's just send keys to another field)
+    # Let's change institution
+    institution_input = browser.find_element("xpath", "//input[@name='institution']")
+    institution_input.clear()
+    institution_input.send_keys("Automated Test University")
+    
+    # Save
+    save_btn = browser.find_element("xpath", "//button[contains(text(), 'Save Changes')]")
+    browser.execute_script("arguments[0].click();", save_btn)
+    
+    # Wait for save (success message or Edit Profile button reappears)
+    time.sleep(5)
+    
+    # Verify the value persists after refresh
+    browser.refresh()
+    time.sleep(3)
+    
+    assert "Automated Test University" in browser.page_source

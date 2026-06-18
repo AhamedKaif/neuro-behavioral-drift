@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.2.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'Linux-6.17.0-1018-azure-x86_64-with-glibc2.39', 'Packages': {'pytest': '8.2.2', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'metadata': '3.1.1', 'html': '4.2.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-17-jdk-amd64'}
+rootdir: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift
+plugins: json-report-1.5.0, metadata-3.1.1, html-4.2.0
+collecting ... collected 4 items
+
+tests/test_notifications.py::test_notification_bell_presence PASSED      [ 25%]
+tests/test_notifications.py::test_medium_strain_notification_generation PASSED [ 50%]
+tests/test_notifications.py::test_notifications_history_page PASSED      [ 75%]
+tests/test_notifications.py::test_delete_notification PASSED             [100%]
+
+- generated xml file: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/junit_notifications.xml -
+--------------------------------- JSON report ----------------------------------
+report saved to: reports/report_notifications.json
+- Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_notifications.html -
+============================== 4 passed in 16.08s ==============================

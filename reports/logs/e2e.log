@@ -1,0 +1,171 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.2.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'Linux-6.17.0-1018-azure-x86_64-with-glibc2.39', 'Packages': {'pytest': '8.2.2', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'metadata': '3.1.1', 'html': '4.2.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-17-jdk-amd64'}
+rootdir: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift
+plugins: json-report-1.5.0, metadata-3.1.1, html-4.2.0
+collecting ... collected 1 item
+
+tests/test_e2e.py::test_full_e2e_flow FAILED                             [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_full_e2e_flow ______________________________
+
+browser = <selenium.webdriver.chrome.webdriver.WebDriver (session="693b2af0f14ad314e3417c4c683a7997")>
+
+    def test_full_e2e_flow(browser):
+        """Complete End-to-End Workflow: Register -> Login -> Predict -> Logout"""
+    
+        # 1. Registration
+        browser.get("http://localhost:5173/register")
+>       browser.find_element(By.ID, "fullName").send_keys("E2E Test User")
+
+tests/test_e2e.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:868: in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:468: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f3b9f6483d0>
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...\\n#15 0x55b2bc18338e \\u003Cunknown>\\n#16 0x7f4c8a69caa4 \\u003Cunknown>\\n#17 0x7f4c8a729c6c \\u003Cunknown>\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -> None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="fullName"]"}
+E         (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+E       Stacktrace:
+E       #0 0x55b2bc18480a <unknown>
+E       #1 0x55b2bbb67289 <unknown>
+E       #2 0x55b2bbbbb9b4 <unknown>
+E       #3 0x55b2bbbbbc01 <unknown>
+E       #4 0x55b2bbc06874 <unknown>
+E       #5 0x55b2bbc03a4c <unknown>
+E       #6 0x55b2bbbaef7f <unknown>
+E       #7 0x55b2bbbafd61 <unknown>
+E       #8 0x55b2bc14b0f7 <unknown>
+E       #9 0x55b2bc1498bd <unknown>
+E       #10 0x55b2bc1345a6 <unknown>
+E       #11 0x55b2bc14a49a <unknown>
+E       #12 0x55b2bc11c560 <unknown>
+E       #13 0x55b2bc171288 <unknown>
+E       #14 0x55b2bc171425 <unknown>
+E       #15 0x55b2bc18338e <unknown>
+E       #16 0x7f4c8a69caa4 <unknown>
+E       #17 0x7f4c8a729c6c <unknown>
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException
+- generated xml file: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/junit_e2e.xml -
+--------------------------------- JSON report ----------------------------------
+report saved to: reports/report_e2e.json
+- Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_e2e.html -
+=========================== short test summary info ============================
+FAILED tests/test_e2e.py::test_full_e2e_flow - selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="fullName"]"}
+  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+#0 0x55b2bc18480a <unknown>
+#1 0x55b2bbb67289 <unknown>
+#2 0x55b2bbbbb9b4 <unknown>
+#3 0x55b2bbbbbc01 <unknown>
+#4 0x55b2bbc06874 <unknown>
+#5 0x55b2bbc03a4c <unknown>
+#6 0x55b2bbbaef7f <unknown>
+#7 0x55b2bbbafd61 <unknown>
+#8 0x55b2bc14b0f7 <unknown>
+#9 0x55b2bc1498bd <unknown>
+#10 0x55b2bc1345a6 <unknown>
+#11 0x55b2bc14a49a <unknown>
+#12 0x55b2bc11c560 <unknown>
+#13 0x55b2bc171288 <unknown>
+#14 0x55b2bc171425 <unknown>
+#15 0x55b2bc18338e <unknown>
+#16 0x7f4c8a69caa4 <unknown>
+#17 0x7f4c8a729c6c <unknown>
+============================== 1 failed in 10.84s ==============================
