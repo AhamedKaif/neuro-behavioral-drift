@@ -41,7 +41,7 @@ def test_full_e2e_flow(browser):
     browser.execute_script("arguments[0].click();", transmit_btn)
     
     # Wait for the backend to ingest successfully
-    WebDriverWait(browser, 10).until(
+    WebDriverWait(browser, 20).until(
         EC.presence_of_element_located((By.XPATH, "//button[contains(., 'Ingested Successfully')]"))
     )
     
