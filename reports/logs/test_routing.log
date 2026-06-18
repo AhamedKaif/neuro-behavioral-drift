@@ -13,4 +13,4 @@ tests/test_routing.py::test_unknown_route_redirect PASSED                [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_routing.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_routing.html -
-============================== 2 passed in 3.71s ===============================
+============================== 2 passed in 3.61s ===============================

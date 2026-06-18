@@ -12,4 +12,4 @@ tests/test_responsive.py::test_responsive_layout PASSED                  [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_responsive.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_responsive.html -
-============================== 1 passed in 3.44s ===============================
+============================== 1 passed in 3.39s ===============================

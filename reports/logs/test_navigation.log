@@ -13,4 +13,4 @@ tests/test_navigation.py::test_navigation_links PASSED                   [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_navigation.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_navigation.html -
-============================== 2 passed in 3.84s ===============================
+============================== 2 passed in 3.67s ===============================
