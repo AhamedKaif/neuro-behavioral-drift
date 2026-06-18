@@ -14,4 +14,4 @@ tests/test_prediction.py::test_behavioral_drift_score PASSED             [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_prediction.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_prediction.html -
-============================== 3 passed in 13.05s ==============================
+============================== 3 passed in 13.14s ==============================

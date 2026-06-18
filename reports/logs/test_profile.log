@@ -13,4 +13,4 @@ tests/test_profile.py::test_edit_profile PASSED                          [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_profile.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_profile.html -
-============================== 2 passed in 9.34s ===============================
+============================== 2 passed in 9.42s ===============================
