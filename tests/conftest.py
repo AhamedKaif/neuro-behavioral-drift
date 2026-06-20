@@ -35,13 +35,16 @@ def pytest_runtest_makereport(item, call):
             file_name = f"reports/screenshots/screenshot_{item.name}.png"
             if "browser" in item.funcargs:
                 driver = item.funcargs["browser"]
-                driver.save_screenshot(file_name)
-                # Attach to HTML report
-                if hasattr(item.config, '_html') and item.config._html:
-                    pytest_html = item.config.pluginmanager.getplugin('html')
-                    extra = getattr(report, 'extra', [])
-                    extra.append(pytest_html.extras.image(file_name))
-                    report.extra = extra
+                try:
+                    driver.save_screenshot(file_name)
+                    # Attach to HTML report
+                    if hasattr(item.config, '_html') and item.config._html:
+                        pytest_html = item.config.pluginmanager.getplugin('html')
+                        extra = getattr(report, 'extra', [])
+                        extra.append(pytest_html.extras.image(file_name))
+                        report.extra = extra
+                except Exception as e:
+                    print(f"Failed to capture screenshot: {e}")
 
 @pytest.fixture
 def login_helper(browser):
@@ -58,33 +61,11 @@ def login_helper(browser):
         if "dashboard" in browser.current_url:
             return
             
-        # Try registering first
-        register_toggle = browser.find_elements("xpath", "//*[contains(text(), 'Register now')]")
-        if register_toggle:
-            register_toggle[0].click()
-            time.sleep(0.5)
-
-        browser.find_element("xpath", "//input[@name='full_name']").send_keys("Test User")
-        browser.find_element("xpath", "//input[@name='username']").send_keys(username)
-        browser.find_element("xpath", "//input[@name='email']").send_keys(f"{username}@example.com")
-        browser.find_element("xpath", "//input[@name='password']").send_keys(password)
-        browser.find_element("xpath", "//input[@name='confirmPassword']").send_keys(password)
-        browser.find_element("xpath", "//input[@name='privacy_consent']").click()
-        browser.find_element("xpath", "//button[@type='submit']").click()
-        
+        # 1. Try logging in first
         try:
-            # Wait up to 5 seconds for the registration to redirect to dashboard
-            WebDriverWait(browser, 5).until(EC.url_contains("dashboard"))
-        except:
-            pass
-            
-        # If it hasn't redirected, it means registration failed (e.g. user exists), so switch to login
-        if "dashboard" not in browser.current_url:
-            login_toggle = browser.find_elements("xpath", "//*[contains(text(), 'Log in')]")
-            if login_toggle:
-                login_toggle[0].click()
-            
-            username_input = WebDriverWait(browser, 5).until(EC.presence_of_element_located(("xpath", "//input[@placeholder='Enter username']")))
+            username_input = WebDriverWait(browser, 3).until(
+                EC.presence_of_element_located(("xpath", "//input[@placeholder='Enter username']"))
+            )
             password_input = browser.find_element("xpath", "//input[@placeholder='Enter password']")
             submit_btn = browser.find_element("xpath", "//button[@type='submit']")
             
@@ -94,5 +75,26 @@ def login_helper(browser):
             password_input.send_keys(password)
             submit_btn.click()
             
-        WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
+            # Wait up to 3 seconds for dashboard to confirm successful login
+            WebDriverWait(browser, 3).until(EC.url_contains("dashboard"))
+        except Exception:
+            # Login failed (probably user doesn't exist), so try registering
+            if "dashboard" not in browser.current_url:
+                register_toggle = browser.find_elements("xpath", "//*[contains(text(), 'Register now')]")
+                if register_toggle:
+                    register_toggle[0].click()
+                    time.sleep(0.5)
+                
+                browser.find_element("xpath", "//input[@name='full_name']").send_keys("Test User")
+                browser.find_element("xpath", "//input[@name='username']").send_keys(username)
+                browser.find_element("xpath", "//input[@name='email']").send_keys(f"{username}@example.com")
+                browser.find_element("xpath", "//input[@name='password']").send_keys(password)
+                browser.find_element("xpath", "//input[@name='confirmPassword']").send_keys(password)
+                consent = browser.find_element("xpath", "//input[@name='privacy_consent']")
+                if not consent.is_selected():
+                    consent.click()
+                browser.find_element("xpath", "//button[@type='submit']").click()
+                
+                # Wait for registration redirect
+                WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
     return _login

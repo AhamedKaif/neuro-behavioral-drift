@@ -58,7 +58,10 @@ export default function Profile({ token, onLogout }) {
         setSaveStatus('');
       }, 1500);
     } catch (err) {
-      setSaveStatus('Failed to save.');
+      const errMsg = err.response && err.response.data && err.response.data.error 
+        ? err.response.data.error 
+        : 'Failed to save.';
+      setSaveStatus(errMsg);
     }
   };
 

@@ -67,6 +67,52 @@ def update_profile():
     conn = get_db_connection()
     cursor = conn.cursor()
     
+    # Input validation
+    if 'age' in data and data['age'] is not None and data['age'] != "":
+        try:
+            age = int(data['age'])
+            if age <= 0 or age > 150:
+                conn.close()
+                return jsonify({"error": "Age must be between 1 and 150"}), 400
+        except (ValueError, TypeError):
+            conn.close()
+            return jsonify({"error": "Age must be a valid integer"}), 400
+            
+    if 'working_hours' in data and data['working_hours'] is not None and data['working_hours'] != "":
+        try:
+            wh = float(data['working_hours'])
+            if wh < 0.0 or wh > 24.0:
+                conn.close()
+                return jsonify({"error": "Working hours must be between 0 and 24"}), 400
+        except (ValueError, TypeError):
+            conn.close()
+            return jsonify({"error": "Working hours must be a number"}), 400
+
+    if 'avg_sleep_hours' in data and data['avg_sleep_hours'] is not None and data['avg_sleep_hours'] != "":
+        try:
+            sh = float(data['avg_sleep_hours'])
+            if sh < 0.0 or sh > 24.0:
+                conn.close()
+                return jsonify({"error": "Sleep hours must be between 0 and 24"}), 400
+        except (ValueError, TypeError):
+            conn.close()
+            return jsonify({"error": "Sleep hours must be a number"}), 400
+
+    if 'stress_level' in data and data['stress_level'] is not None and data['stress_level'] != "":
+        try:
+            sl = int(data['stress_level'])
+            if sl < 1 or sl > 10:
+                conn.close()
+                return jsonify({"error": "Stress level must be between 1 and 10"}), 400
+        except (ValueError, TypeError):
+            conn.close()
+            return jsonify({"error": "Stress level must be a valid integer"}), 400
+
+    if 'occupation' in data and data['occupation'] is not None:
+        if len(str(data['occupation'])) > 100:
+            conn.close()
+            return jsonify({"error": "Occupation description error: too long"}), 400
+            
     try:
         # Update full name if provided
         if 'full_name' in data:

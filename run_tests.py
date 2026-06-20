@@ -9,18 +9,7 @@ from aggregate_test_reports import aggregate_reports
 from generate_selenium_report import generate_report
 
 test_files = [
-    "tests/test_registration.py",
-    "tests/test_login.py",
-    "tests/test_dashboard.py",
-    "tests/test_prediction.py",
-    "tests/test_profile.py",
-    "tests/test_notifications.py",
-    "tests/test_navigation.py",
-    "tests/test_logout.py",
-    "tests/test_settings.py",
-    "tests/test_routing.py",
-    "tests/test_responsive.py",
-    "tests/test_e2e.py"
+    "tests/test_comprehensive.py"
 ]
 
 def run_tests():

@@ -68,6 +68,13 @@ def ingest_metrics():
     except ValueError:
         return jsonify({"error": "All metric values must be numeric"}), 400
         
+    for k, v in metrics.items():
+        if v < 0:
+            return jsonify({"error": f"{k} cannot be negative"}), 400
+            
+    if metrics['typing_error_rate'] > 1.0:
+        return jsonify({"error": "typing_error_rate cannot exceed 1.0"}), 400
+        
     # Get user baseline and run prediction
     baseline = get_user_baseline(user_id)
     drift_score = predictor.calculate_drift_score(metrics, baseline)
