@@ -1,0 +1,440 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.2.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'Linux-6.17.0-1018-azure-x86_64-with-glibc2.39', 'Packages': {'pytest': '8.2.2', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'metadata': '3.1.1', 'html': '4.2.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-17-jdk-amd64'}
+rootdir: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift
+plugins: json-report-1.5.0, metadata-3.1.1, html-4.2.0
+collecting ... collected 340 items
+
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-001] PASSED [  0%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-002] PASSED [  0%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-003] PASSED [  0%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-004] PASSED [  1%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-005] PASSED [  1%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-006] PASSED [  1%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-007] PASSED [  2%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-008] PASSED [  2%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-009] PASSED [  2%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-010] FAILED [  2%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-011] PASSED [  3%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-012] PASSED [  3%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-013] PASSED [  3%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-014] PASSED [  4%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-015] PASSED [  4%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-016] PASSED [  4%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-017] PASSED [  5%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-018] PASSED [  5%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-019] PASSED [  5%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-020] PASSED [  5%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-021] PASSED [  6%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-022] PASSED [  6%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-023] PASSED [  6%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-024] PASSED [  7%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-025] PASSED [  7%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-026] PASSED [  7%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-027] PASSED [  7%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-028] PASSED [  8%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-029] PASSED [  8%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-030] PASSED [  8%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-031] PASSED [  9%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-032] PASSED [  9%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-033] PASSED [  9%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-034] PASSED [ 10%]
+tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-035] PASSED [ 10%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-001] PASSED      [ 10%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-002] PASSED      [ 10%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-003] PASSED      [ 11%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-004] PASSED      [ 11%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-005] PASSED      [ 11%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-006] PASSED      [ 12%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-007] PASSED      [ 12%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-008] PASSED      [ 12%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-009] PASSED      [ 12%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-010] PASSED      [ 13%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-011] PASSED      [ 13%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-012] PASSED      [ 13%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-013] PASSED      [ 14%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-014] PASSED      [ 14%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-015] PASSED      [ 14%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-016] PASSED      [ 15%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-017] PASSED      [ 15%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-018] PASSED      [ 15%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-019] PASSED      [ 15%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-020] PASSED      [ 16%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-021] PASSED      [ 16%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-022] PASSED      [ 16%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-023] PASSED      [ 17%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-024] PASSED      [ 17%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-025] PASSED      [ 17%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-026] PASSED      [ 17%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-027] PASSED      [ 18%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-028] PASSED      [ 18%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-029] PASSED      [ 18%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-030] PASSED      [ 19%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-031] PASSED      [ 19%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-032] PASSED      [ 19%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-033] PASSED      [ 20%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-034] PASSED      [ 20%]
+tests/test_comprehensive.py::test_profile_cases[TC-PROF-035] PASSED      [ 20%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-001] PASSED [ 20%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-002] PASSED [ 21%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-003] PASSED [ 21%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-004] PASSED [ 21%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-005] PASSED [ 22%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-006] PASSED [ 22%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-007] PASSED [ 22%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-008] PASSED [ 22%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-009] PASSED [ 23%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-010] PASSED [ 23%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-011] PASSED [ 23%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-012] PASSED [ 24%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-013] PASSED [ 24%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-014] PASSED [ 24%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-015] PASSED [ 25%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-016] PASSED [ 25%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-017] PASSED [ 25%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-018] PASSED [ 25%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-019] PASSED [ 26%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-020] PASSED [ 26%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-021] PASSED [ 26%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-022] PASSED [ 27%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-023] PASSED [ 27%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-024] PASSED [ 27%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-025] PASSED [ 27%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-026] PASSED [ 28%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-027] PASSED [ 28%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-028] PASSED [ 28%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-029] PASSED [ 29%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-030] PASSED [ 29%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-031] PASSED [ 29%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-032] PASSED [ 30%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-033] PASSED [ 30%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-034] PASSED [ 30%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-035] PASSED [ 30%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-036] PASSED [ 31%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-037] PASSED [ 31%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-038] PASSED [ 31%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-039] PASSED [ 32%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-040] PASSED [ 32%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-041] PASSED [ 32%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-042] PASSED [ 32%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-043] PASSED [ 33%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-044] PASSED [ 33%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-045] PASSED [ 33%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-046] PASSED [ 34%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-047] PASSED [ 34%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-048] PASSED [ 34%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-049] PASSED [ 35%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-050] PASSED [ 35%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-051] PASSED [ 35%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-052] PASSED [ 35%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-053] PASSED [ 36%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-054] PASSED [ 36%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-055] PASSED [ 36%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-056] PASSED [ 37%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-057] PASSED [ 37%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-058] PASSED [ 37%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-059] PASSED [ 37%]
+tests/test_comprehensive.py::test_form_validation_cases[TC-FORM-060] PASSED [ 38%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-001] PASSED    [ 38%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-002] PASSED    [ 38%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-003] PASSED    [ 39%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-004] PASSED    [ 39%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-005] PASSED    [ 39%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-006] PASSED    [ 40%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-007] PASSED    [ 40%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-008] PASSED    [ 40%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-009] PASSED    [ 40%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-010] PASSED    [ 41%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-011] PASSED    [ 41%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-012] PASSED    [ 41%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-013] PASSED    [ 42%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-014] PASSED    [ 42%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-015] PASSED    [ 42%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-016] PASSED    [ 42%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-017] PASSED    [ 43%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-018] PASSED    [ 43%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-019] PASSED    [ 43%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-020] PASSED    [ 44%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-021] PASSED    [ 44%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-022] PASSED    [ 44%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-023] PASSED    [ 45%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-024] PASSED    [ 45%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-025] PASSED    [ 45%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-026] PASSED    [ 45%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-027] PASSED    [ 46%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-028] PASSED    [ 46%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-029] PASSED    [ 46%]
+tests/test_comprehensive.py::test_navigation_cases[TC-NAV-030] PASSED    [ 47%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-001] PASSED    [ 47%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-002] PASSED    [ 47%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-003] PASSED    [ 47%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-004] PASSED    [ 48%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-005] PASSED    [ 48%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-006] PASSED    [ 48%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-007] PASSED    [ 49%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-008] PASSED    [ 49%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-009] PASSED    [ 49%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-010] PASSED    [ 50%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-011] PASSED    [ 50%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-012] PASSED    [ 50%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-013] PASSED    [ 50%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-014] PASSED    [ 51%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-015] PASSED    [ 51%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-016] PASSED    [ 51%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-017] PASSED    [ 52%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-018] PASSED    [ 52%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-019] PASSED    [ 52%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-020] PASSED    [ 52%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-021] PASSED    [ 53%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-022] PASSED    [ 53%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-023] PASSED    [ 53%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-024] PASSED    [ 54%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-025] PASSED    [ 54%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-026] PASSED    [ 54%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-027] PASSED    [ 55%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-028] PASSED    [ 55%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-029] PASSED    [ 55%]
+tests/test_comprehensive.py::test_dashboard_cases[TC-DASH-030] PASSED    [ 55%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-001] PASSED         [ 56%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-002] PASSED         [ 56%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-003] PASSED         [ 56%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-004] PASSED         [ 57%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-005] PASSED         [ 57%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-006] PASSED         [ 57%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-007] PASSED         [ 57%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-008] PASSED         [ 58%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-009] PASSED         [ 58%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-010] PASSED         [ 58%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-011] PASSED         [ 59%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-012] PASSED         [ 59%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-013] PASSED         [ 59%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-014] PASSED         [ 60%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-015] PASSED         [ 60%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-016] PASSED         [ 60%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-017] PASSED         [ 60%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-018] PASSED         [ 61%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-019] PASSED         [ 61%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-020] PASSED         [ 61%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-021] PASSED         [ 62%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-022] PASSED         [ 62%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-023] PASSED         [ 62%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-024] PASSED         [ 62%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-025] PASSED         [ 63%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-026] PASSED         [ 63%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-027] PASSED         [ 63%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-028] PASSED         [ 64%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-029] PASSED         [ 64%]
+tests/test_comprehensive.py::test_crud_cases[TC-CRUD-030] PASSED         [ 64%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-001] PASSED       [ 65%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-002] PASSED       [ 65%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-003] PASSED       [ 65%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-004] PASSED       [ 65%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-005] PASSED       [ 66%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-006] PASSED       [ 66%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-007] PASSED       [ 66%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-008] PASSED       [ 67%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-009] PASSED       [ 67%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-010] PASSED       [ 67%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-011] PASSED       [ 67%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-012] PASSED       [ 68%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-013] PASSED       [ 68%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-014] PASSED       [ 68%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-015] PASSED       [ 69%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-016] PASSED       [ 69%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-017] PASSED       [ 69%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-018] PASSED       [ 70%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-019] PASSED       [ 70%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-020] PASSED       [ 70%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-021] PASSED       [ 70%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-022] PASSED       [ 71%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-023] PASSED       [ 71%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-024] PASSED       [ 71%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-025] PASSED       [ 72%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-026] PASSED       [ 72%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-027] PASSED       [ 72%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-028] PASSED       [ 72%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-029] PASSED       [ 73%]
+tests/test_comprehensive.py::test_search_cases[TC-SRCH-030] PASSED       [ 73%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-001] PASSED        [ 73%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-002] PASSED        [ 74%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-003] PASSED        [ 74%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-004] PASSED        [ 74%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-005] PASSED        [ 75%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-006] PASSED        [ 75%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-007] PASSED        [ 75%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-008] PASSED        [ 75%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-009] PASSED        [ 76%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-010] PASSED        [ 76%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-011] PASSED        [ 76%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-012] PASSED        [ 77%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-013] PASSED        [ 77%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-014] PASSED        [ 77%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-015] PASSED        [ 77%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-016] PASSED        [ 78%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-017] PASSED        [ 78%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-018] PASSED        [ 78%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-019] PASSED        [ 79%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-020] PASSED        [ 79%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-021] PASSED        [ 79%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-022] PASSED        [ 80%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-023] PASSED        [ 80%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-024] PASSED        [ 80%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-025] PASSED        [ 80%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-026] PASSED        [ 81%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-027] PASSED        [ 81%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-028] PASSED        [ 81%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-029] PASSED        [ 82%]
+tests/test_comprehensive.py::test_ui_ux_cases[TC-UIUX-030] PASSED        [ 82%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-001] PASSED      [ 82%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-002] PASSED      [ 82%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-003] PASSED      [ 83%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-004] PASSED      [ 83%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-005] PASSED      [ 83%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-006] PASSED      [ 84%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-007] PASSED      [ 84%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-008] PASSED      [ 84%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-009] PASSED      [ 85%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-010] PASSED      [ 85%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-011] PASSED      [ 85%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-012] PASSED      [ 85%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-013] PASSED      [ 86%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-014] PASSED      [ 86%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-015] PASSED      [ 86%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-016] PASSED      [ 87%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-017] PASSED      [ 87%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-018] PASSED      [ 87%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-019] PASSED      [ 87%]
+tests/test_comprehensive.py::test_security_cases[TC-SEC-020] PASSED      [ 88%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-001] PASSED [ 88%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-002] PASSED [ 88%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-003] PASSED [ 89%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-004] PASSED [ 89%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-005] PASSED [ 89%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-006] PASSED [ 90%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-007] PASSED [ 90%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-008] PASSED [ 90%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-009] PASSED [ 90%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-010] PASSED [ 91%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-011] PASSED [ 91%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-012] PASSED [ 91%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-013] PASSED [ 92%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-014] PASSED [ 92%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-015] PASSED [ 92%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-016] PASSED [ 92%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-017] PASSED [ 93%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-018] PASSED [ 93%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-019] PASSED [ 93%]
+tests/test_comprehensive.py::test_error_handling_cases[TC-ERR-020] PASSED [ 94%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-001] PASSED  [ 94%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-002] PASSED  [ 94%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-003] PASSED  [ 95%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-004] PASSED  [ 95%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-005] PASSED  [ 95%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-006] PASSED  [ 95%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-007] PASSED  [ 96%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-008] PASSED  [ 96%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-009] PASSED  [ 96%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-010] PASSED  [ 97%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-011] PASSED  [ 97%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-012] PASSED  [ 97%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-013] PASSED  [ 97%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-014] PASSED  [ 98%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-015] PASSED  [ 98%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-016] PASSED  [ 98%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-017] PASSED  [ 99%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-018] PASSED  [ 99%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-019] PASSED  [ 99%]
+tests/test_comprehensive.py::test_performance_cases[TC-PERF-020] PASSED  [100%]
+
+=================================== FAILURES ===================================
+____________________ test_authentication_cases[TC-AUTH-010] ____________________
+
+browser = <selenium.webdriver.chrome.webdriver.WebDriver (session="719c0b0fece128163bd108f2f58f2998")>
+login_helper = <function login_helper.<locals>._login at 0x7fad8df41260>
+tc_id = 'TC-AUTH-010'
+
+    @pytest.mark.parametrize("tc_id", [f"TC-AUTH-{i:03d}" for i in range(1, 36)])
+    def test_authentication_cases(browser, login_helper, tc_id):
+        meta = get_metadata(tc_id)
+        inputs = meta["inputs"]
+    
+        if inputs["action"] == "login":
+            ensure_logged_out(browser)
+            browser.get("http://localhost:5173/login")
+    
+            username_field = browser.find_element(By.XPATH, "//input[@placeholder='Enter username']")
+            password_field = browser.find_element(By.XPATH, "//input[@placeholder='Enter password']")
+    
+            username_field.clear()
+            username_field.send_keys(inputs["username"])
+            password_field.clear()
+            password_field.send_keys(inputs["password"])
+    
+            submit_btn = browser.find_element(By.XPATH, "//button[@type='submit']")
+            submit_btn.click()
+    
+            if inputs["expected"] == "SUCCESS":
+>               WebDriverWait(browser, 5).until(EC.url_contains("dashboard"))
+
+tests/test_comprehensive.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="719c0b0fece128163bd108f2f58f2998")>
+method = <function url_contains.<locals>._predicate at 0x7fad8df414e0>
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -> T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            >>> from selenium.webdriver.common.by import By
+            >>> from selenium.webdriver.support.ui import WebDriverWait
+            >>> from selenium.webdriver.support import expected_conditions as EC
+            >>>
+            >>> # Wait until an element is visible on the page
+            >>> wait = WebDriverWait(driver, 10)
+            >>> element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            >>> print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() > end_time:
+                break
+            time.sleep(self._poll)
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException
+- generated xml file: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/junit_test_comprehensive.xml -
+--------------------------------- JSON report ----------------------------------
+report saved to: reports/report_test_comprehensive.json
+- Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_comprehensive.html -
+=========================== short test summary info ============================
+FAILED tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-010] - selenium.common.exceptions.TimeoutException: Message:
+================== 1 failed, 339 passed in 111.01s (0:01:51) ===================
