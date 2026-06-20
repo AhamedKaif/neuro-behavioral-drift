@@ -16,4 +16,4 @@ tests/test_dashboard.py::test_retrain_model_button PASSED                [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_dashboard.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_dashboard.html -
-============================== 5 passed in 8.38s ===============================
+============================== 5 passed in 8.33s ===============================

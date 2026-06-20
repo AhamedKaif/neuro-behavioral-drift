@@ -15,4 +15,4 @@ tests/test_notifications.py::test_delete_notification PASSED             [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_notifications.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_notifications.html -
-============================== 4 passed in 16.13s ==============================
+============================== 4 passed in 16.10s ==============================

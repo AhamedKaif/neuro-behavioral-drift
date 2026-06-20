@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<testsuites tests="61" failures="7" errors="0" skipped="0" time="343.421"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="17.301" timestamp="2026-06-14T11:11:12.372675" hostname="runnervm1li68"><testcase classname="tests.test_dashboard" name="test_dashboard_loads" time="13.307"><failure message="selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder='Enter username']&quot;}&#10;  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Stacktrace:&#10;#0 0x5624da87380a &lt;unknown&gt;&#10;#1 0x5624da256289 &lt;unknown&gt;&#10;#2 0x5624da2aa9b4 &lt;unknown&gt;&#10;#3 0x5624da2aac01 &lt;unknown&gt;&#10;#4 0x5624da2f5874 &lt;unknown&gt;&#10;#5 0x5624da2f2a4c &lt;unknown&gt;&#10;#6 0x5624da29df7f &lt;unknown&gt;&#10;#7 0x5624da29ed61 &lt;unknown&gt;&#10;#8 0x5624da83a0f7 &lt;unknown&gt;&#10;#9 0x5624da8388bd &lt;unknown&gt;&#10;#10 0x5624da8235a6 &lt;unknown&gt;&#10;#11 0x5624da83949a &lt;unknown&gt;&#10;#12 0x5624da80b560 &lt;unknown&gt;&#10;#13 0x5624da860288 &lt;unknown&gt;&#10;#14 0x5624da860425 &lt;unknown&gt;&#10;#15 0x5624da87238e &lt;unknown&gt;&#10;#16 0x7f419d69caa4 &lt;unknown&gt;&#10;#17 0x7f419d729c6c &lt;unknown&gt;">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="3a57061da7ea14ed873874337d9a95e3")&gt;
+<testsuites tests="119" failures="13" errors="0" skipped="0" time="655.645"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="8" time="34.602" timestamp="2026-06-14T11:11:12.372675" hostname="runnervm1li68"><testcase classname="tests.test_dashboard" name="test_dashboard_loads" time="13.307"><failure message="selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder='Enter username']&quot;}&#10;  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Stacktrace:&#10;#0 0x5624da87380a &lt;unknown&gt;&#10;#1 0x5624da256289 &lt;unknown&gt;&#10;#2 0x5624da2aa9b4 &lt;unknown&gt;&#10;#3 0x5624da2aac01 &lt;unknown&gt;&#10;#4 0x5624da2f5874 &lt;unknown&gt;&#10;#5 0x5624da2f2a4c &lt;unknown&gt;&#10;#6 0x5624da29df7f &lt;unknown&gt;&#10;#7 0x5624da29ed61 &lt;unknown&gt;&#10;#8 0x5624da83a0f7 &lt;unknown&gt;&#10;#9 0x5624da8388bd &lt;unknown&gt;&#10;#10 0x5624da8235a6 &lt;unknown&gt;&#10;#11 0x5624da83949a &lt;unknown&gt;&#10;#12 0x5624da80b560 &lt;unknown&gt;&#10;#13 0x5624da860288 &lt;unknown&gt;&#10;#14 0x5624da860425 &lt;unknown&gt;&#10;#15 0x5624da87238e &lt;unknown&gt;&#10;#16 0x7f419d69caa4 &lt;unknown&gt;&#10;#17 0x7f419d729c6c &lt;unknown&gt;">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="3a57061da7ea14ed873874337d9a95e3")&gt;
 login_helper = &lt;function login_helper.&lt;locals&gt;._login at 0x7fca0d6a9da0&gt;
 
     def test_dashboard_loads(browser, login_helper):
@@ -129,7 +129,137 @@ E       #15 0x5624da87238e &lt;unknown&gt;
 E       #16 0x7f419d69caa4 &lt;unknown&gt;
 E       #17 0x7f419d729c6c &lt;unknown&gt;
 
-/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException</failure></testcase><testcase classname="tests.test_dashboard" name="test_user_profile_display" time="1.160" /><testcase classname="tests.test_dashboard" name="test_dashboard_stats_exist" time="1.106" /><testcase classname="tests.test_dashboard" name="test_retrain_model_button" time="1.728" /></testsuite><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="10.65" timestamp="2026-06-14T11:17:36.610073" hostname="runnervm1li68"><testcase classname="tests.test_e2e" name="test_full_e2e_flow" time="10.650"><failure message="selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[id=&quot;fullName&quot;]&quot;}&#10;  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Stacktrace:&#10;#0 0x55b2bc18480a &lt;unknown&gt;&#10;#1 0x55b2bbb67289 &lt;unknown&gt;&#10;#2 0x55b2bbbbb9b4 &lt;unknown&gt;&#10;#3 0x55b2bbbbbc01 &lt;unknown&gt;&#10;#4 0x55b2bbc06874 &lt;unknown&gt;&#10;#5 0x55b2bbc03a4c &lt;unknown&gt;&#10;#6 0x55b2bbbaef7f &lt;unknown&gt;&#10;#7 0x55b2bbbafd61 &lt;unknown&gt;&#10;#8 0x55b2bc14b0f7 &lt;unknown&gt;&#10;#9 0x55b2bc1498bd &lt;unknown&gt;&#10;#10 0x55b2bc1345a6 &lt;unknown&gt;&#10;#11 0x55b2bc14a49a &lt;unknown&gt;&#10;#12 0x55b2bc11c560 &lt;unknown&gt;&#10;#13 0x55b2bc171288 &lt;unknown&gt;&#10;#14 0x55b2bc171425 &lt;unknown&gt;&#10;#15 0x55b2bc18338e &lt;unknown&gt;&#10;#16 0x7f4c8a69caa4 &lt;unknown&gt;&#10;#17 0x7f4c8a729c6c &lt;unknown&gt;">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="693b2af0f14ad314e3417c4c683a7997")&gt;
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException</failure></testcase><testcase classname="tests.test_dashboard" name="test_user_profile_display" time="1.160" /><testcase classname="tests.test_dashboard" name="test_dashboard_stats_exist" time="1.106" /><testcase classname="tests.test_dashboard" name="test_retrain_model_button" time="1.728" /><testcase classname="tests.test_dashboard" name="test_dashboard_loads" time="13.307"><failure message="selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder='Enter username']&quot;}&#10;  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Stacktrace:&#10;#0 0x5624da87380a &lt;unknown&gt;&#10;#1 0x5624da256289 &lt;unknown&gt;&#10;#2 0x5624da2aa9b4 &lt;unknown&gt;&#10;#3 0x5624da2aac01 &lt;unknown&gt;&#10;#4 0x5624da2f5874 &lt;unknown&gt;&#10;#5 0x5624da2f2a4c &lt;unknown&gt;&#10;#6 0x5624da29df7f &lt;unknown&gt;&#10;#7 0x5624da29ed61 &lt;unknown&gt;&#10;#8 0x5624da83a0f7 &lt;unknown&gt;&#10;#9 0x5624da8388bd &lt;unknown&gt;&#10;#10 0x5624da8235a6 &lt;unknown&gt;&#10;#11 0x5624da83949a &lt;unknown&gt;&#10;#12 0x5624da80b560 &lt;unknown&gt;&#10;#13 0x5624da860288 &lt;unknown&gt;&#10;#14 0x5624da860425 &lt;unknown&gt;&#10;#15 0x5624da87238e &lt;unknown&gt;&#10;#16 0x7f419d69caa4 &lt;unknown&gt;&#10;#17 0x7f419d729c6c &lt;unknown&gt;">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="3a57061da7ea14ed873874337d9a95e3")&gt;
+login_helper = &lt;function login_helper.&lt;locals&gt;._login at 0x7fca0d6a9da0&gt;
+
+    def test_dashboard_loads(browser, login_helper):
+        """Verify that the dashboard main elements render correctly."""
+&gt;       login_helper()
+
+tests/test_dashboard.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:87: in _login
+    username_input = browser.find_element("xpath", "//input[@placeholder='Enter username']")
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:868: in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:468: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fca0d2ea090&gt;
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...\\n#15 0x5624da87238e \\u003Cunknown&gt;\\n#16 0x7f419d69caa4 \\u003Cunknown&gt;\\n#17 0x7f419d729c6c \\u003Cunknown&gt;\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Enter username']"}
+E         (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+E       Stacktrace:
+E       #0 0x5624da87380a &lt;unknown&gt;
+E       #1 0x5624da256289 &lt;unknown&gt;
+E       #2 0x5624da2aa9b4 &lt;unknown&gt;
+E       #3 0x5624da2aac01 &lt;unknown&gt;
+E       #4 0x5624da2f5874 &lt;unknown&gt;
+E       #5 0x5624da2f2a4c &lt;unknown&gt;
+E       #6 0x5624da29df7f &lt;unknown&gt;
+E       #7 0x5624da29ed61 &lt;unknown&gt;
+E       #8 0x5624da83a0f7 &lt;unknown&gt;
+E       #9 0x5624da8388bd &lt;unknown&gt;
+E       #10 0x5624da8235a6 &lt;unknown&gt;
+E       #11 0x5624da83949a &lt;unknown&gt;
+E       #12 0x5624da80b560 &lt;unknown&gt;
+E       #13 0x5624da860288 &lt;unknown&gt;
+E       #14 0x5624da860425 &lt;unknown&gt;
+E       #15 0x5624da87238e &lt;unknown&gt;
+E       #16 0x7f419d69caa4 &lt;unknown&gt;
+E       #17 0x7f419d729c6c &lt;unknown&gt;
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException</failure></testcase><testcase classname="tests.test_dashboard" name="test_user_profile_display" time="1.160" /><testcase classname="tests.test_dashboard" name="test_dashboard_stats_exist" time="1.106" /><testcase classname="tests.test_dashboard" name="test_retrain_model_button" time="1.728" /></testsuite><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="21.3" timestamp="2026-06-14T11:17:36.610073" hostname="runnervm1li68"><testcase classname="tests.test_e2e" name="test_full_e2e_flow" time="10.650"><failure message="selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[id=&quot;fullName&quot;]&quot;}&#10;  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Stacktrace:&#10;#0 0x55b2bc18480a &lt;unknown&gt;&#10;#1 0x55b2bbb67289 &lt;unknown&gt;&#10;#2 0x55b2bbbbb9b4 &lt;unknown&gt;&#10;#3 0x55b2bbbbbc01 &lt;unknown&gt;&#10;#4 0x55b2bbc06874 &lt;unknown&gt;&#10;#5 0x55b2bbc03a4c &lt;unknown&gt;&#10;#6 0x55b2bbbaef7f &lt;unknown&gt;&#10;#7 0x55b2bbbafd61 &lt;unknown&gt;&#10;#8 0x55b2bc14b0f7 &lt;unknown&gt;&#10;#9 0x55b2bc1498bd &lt;unknown&gt;&#10;#10 0x55b2bc1345a6 &lt;unknown&gt;&#10;#11 0x55b2bc14a49a &lt;unknown&gt;&#10;#12 0x55b2bc11c560 &lt;unknown&gt;&#10;#13 0x55b2bc171288 &lt;unknown&gt;&#10;#14 0x55b2bc171425 &lt;unknown&gt;&#10;#15 0x55b2bc18338e &lt;unknown&gt;&#10;#16 0x7f4c8a69caa4 &lt;unknown&gt;&#10;#17 0x7f4c8a729c6c &lt;unknown&gt;">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="693b2af0f14ad314e3417c4c683a7997")&gt;
 
     def test_full_e2e_flow(browser):
         """Complete End-to-End Workflow: Register -&gt; Login -&gt; Predict -&gt; Logout"""
@@ -259,7 +389,137 @@ E       #15 0x55b2bc18338e &lt;unknown&gt;
 E       #16 0x7f4c8a69caa4 &lt;unknown&gt;
 E       #17 0x7f4c8a729c6c &lt;unknown&gt;
 
-/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException</failure></testcase></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="4" time="56.129" timestamp="2026-06-14T11:10:15.815286" hostname="runnervm1li68"><testcase classname="tests.test_login" name="test_valid_login" time="16.819" /><testcase classname="tests.test_login" name="test_invalid_password" time="15.609" /><testcase classname="tests.test_login" name="test_invalid_username" time="11.370" /><testcase classname="tests.test_login" name="test_login_empty_fields" time="12.331" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.435" timestamp="2026-06-14T11:17:32.738357" hostname="runnervm1li68"><testcase classname="tests.test_logout" name="test_logout" time="3.435" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="3.62" timestamp="2026-06-14T11:17:28.686948" hostname="runnervm1li68"><testcase classname="tests.test_navigation" name="test_unauthenticated_navigation" time="0.659" /><testcase classname="tests.test_navigation" name="test_navigation_links" time="2.961" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="4" time="16.049" timestamp="2026-06-14T11:17:12.192735" hostname="runnervm1li68"><testcase classname="tests.test_notifications" name="test_notification_bell_presence" time="3.231" /><testcase classname="tests.test_notifications" name="test_medium_strain_notification_generation" time="3.215" /><testcase classname="tests.test_notifications" name="test_notifications_history_page" time="4.248" /><testcase classname="tests.test_notifications" name="test_delete_notification" time="5.355" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="12.944" timestamp="2026-06-14T11:16:49.081402" hostname="runnervm1li68"><testcase classname="tests.test_prediction" name="test_transmit_metrics_success" time="4.266" /><testcase classname="tests.test_prediction" name="test_cognitive_strain_prediction" time="4.317" /><testcase classname="tests.test_prediction" name="test_behavioral_drift_score" time="4.361" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="9.292" timestamp="2026-06-14T11:17:02.464657" hostname="runnervm1li68"><testcase classname="tests.test_profile" name="test_profile_loads" time="3.314" /><testcase classname="tests.test_profile" name="test_edit_profile" time="5.978" /></testsuite><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="6" time="58.336" timestamp="2026-06-14T10:19:38.053380" hostname="runnervm1li68"><testcase classname="tests.test_registration" name="test_valid_registration" time="14.906"><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="55a49bfd5023d6801f60f4795f2567d9")&gt;
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException</failure></testcase><testcase classname="tests.test_e2e" name="test_full_e2e_flow" time="10.650"><failure message="selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[id=&quot;fullName&quot;]&quot;}&#10;  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Stacktrace:&#10;#0 0x55b2bc18480a &lt;unknown&gt;&#10;#1 0x55b2bbb67289 &lt;unknown&gt;&#10;#2 0x55b2bbbbb9b4 &lt;unknown&gt;&#10;#3 0x55b2bbbbbc01 &lt;unknown&gt;&#10;#4 0x55b2bbc06874 &lt;unknown&gt;&#10;#5 0x55b2bbc03a4c &lt;unknown&gt;&#10;#6 0x55b2bbbaef7f &lt;unknown&gt;&#10;#7 0x55b2bbbafd61 &lt;unknown&gt;&#10;#8 0x55b2bc14b0f7 &lt;unknown&gt;&#10;#9 0x55b2bc1498bd &lt;unknown&gt;&#10;#10 0x55b2bc1345a6 &lt;unknown&gt;&#10;#11 0x55b2bc14a49a &lt;unknown&gt;&#10;#12 0x55b2bc11c560 &lt;unknown&gt;&#10;#13 0x55b2bc171288 &lt;unknown&gt;&#10;#14 0x55b2bc171425 &lt;unknown&gt;&#10;#15 0x55b2bc18338e &lt;unknown&gt;&#10;#16 0x7f4c8a69caa4 &lt;unknown&gt;&#10;#17 0x7f4c8a729c6c &lt;unknown&gt;">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="693b2af0f14ad314e3417c4c683a7997")&gt;
+
+    def test_full_e2e_flow(browser):
+        """Complete End-to-End Workflow: Register -&gt; Login -&gt; Predict -&gt; Logout"""
+    
+        # 1. Registration
+        browser.get("http://localhost:5173/register")
+&gt;       browser.find_element(By.ID, "fullName").send_keys("E2E Test User")
+
+tests/test_e2e.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:868: in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:468: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f3b9f6483d0&gt;
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...\\n#15 0x55b2bc18338e \\u003Cunknown&gt;\\n#16 0x7f4c8a69caa4 \\u003Cunknown&gt;\\n#17 0x7f4c8a729c6c \\u003Cunknown&gt;\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="fullName"]"}
+E         (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+E       Stacktrace:
+E       #0 0x55b2bc18480a &lt;unknown&gt;
+E       #1 0x55b2bbb67289 &lt;unknown&gt;
+E       #2 0x55b2bbbbb9b4 &lt;unknown&gt;
+E       #3 0x55b2bbbbbc01 &lt;unknown&gt;
+E       #4 0x55b2bbc06874 &lt;unknown&gt;
+E       #5 0x55b2bbc03a4c &lt;unknown&gt;
+E       #6 0x55b2bbbaef7f &lt;unknown&gt;
+E       #7 0x55b2bbbafd61 &lt;unknown&gt;
+E       #8 0x55b2bc14b0f7 &lt;unknown&gt;
+E       #9 0x55b2bc1498bd &lt;unknown&gt;
+E       #10 0x55b2bc1345a6 &lt;unknown&gt;
+E       #11 0x55b2bc14a49a &lt;unknown&gt;
+E       #12 0x55b2bc11c560 &lt;unknown&gt;
+E       #13 0x55b2bc171288 &lt;unknown&gt;
+E       #14 0x55b2bc171425 &lt;unknown&gt;
+E       #15 0x55b2bc18338e &lt;unknown&gt;
+E       #16 0x7f4c8a69caa4 &lt;unknown&gt;
+E       #17 0x7f4c8a729c6c &lt;unknown&gt;
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException</failure></testcase></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="8" time="112.258" timestamp="2026-06-14T11:10:15.815286" hostname="runnervm1li68"><testcase classname="tests.test_login" name="test_valid_login" time="16.819" /><testcase classname="tests.test_login" name="test_invalid_password" time="15.609" /><testcase classname="tests.test_login" name="test_invalid_username" time="11.370" /><testcase classname="tests.test_login" name="test_login_empty_fields" time="12.331" /><testcase classname="tests.test_login" name="test_valid_login" time="16.819" /><testcase classname="tests.test_login" name="test_invalid_password" time="15.609" /><testcase classname="tests.test_login" name="test_invalid_username" time="11.370" /><testcase classname="tests.test_login" name="test_login_empty_fields" time="12.331" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="6.87" timestamp="2026-06-14T11:17:32.738357" hostname="runnervm1li68"><testcase classname="tests.test_logout" name="test_logout" time="3.435" /><testcase classname="tests.test_logout" name="test_logout" time="3.435" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="4" time="7.24" timestamp="2026-06-14T11:17:28.686948" hostname="runnervm1li68"><testcase classname="tests.test_navigation" name="test_unauthenticated_navigation" time="0.659" /><testcase classname="tests.test_navigation" name="test_navigation_links" time="2.961" /><testcase classname="tests.test_navigation" name="test_unauthenticated_navigation" time="0.659" /><testcase classname="tests.test_navigation" name="test_navigation_links" time="2.961" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="8" time="32.098" timestamp="2026-06-14T11:17:12.192735" hostname="runnervm1li68"><testcase classname="tests.test_notifications" name="test_notification_bell_presence" time="3.231" /><testcase classname="tests.test_notifications" name="test_medium_strain_notification_generation" time="3.215" /><testcase classname="tests.test_notifications" name="test_notifications_history_page" time="4.248" /><testcase classname="tests.test_notifications" name="test_delete_notification" time="5.355" /><testcase classname="tests.test_notifications" name="test_notification_bell_presence" time="3.231" /><testcase classname="tests.test_notifications" name="test_medium_strain_notification_generation" time="3.215" /><testcase classname="tests.test_notifications" name="test_notifications_history_page" time="4.248" /><testcase classname="tests.test_notifications" name="test_delete_notification" time="5.355" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="6" time="25.888" timestamp="2026-06-14T11:16:49.081402" hostname="runnervm1li68"><testcase classname="tests.test_prediction" name="test_transmit_metrics_success" time="4.266" /><testcase classname="tests.test_prediction" name="test_cognitive_strain_prediction" time="4.317" /><testcase classname="tests.test_prediction" name="test_behavioral_drift_score" time="4.361" /><testcase classname="tests.test_prediction" name="test_transmit_metrics_success" time="4.266" /><testcase classname="tests.test_prediction" name="test_cognitive_strain_prediction" time="4.317" /><testcase classname="tests.test_prediction" name="test_behavioral_drift_score" time="4.361" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="4" time="18.584" timestamp="2026-06-14T11:17:02.464657" hostname="runnervm1li68"><testcase classname="tests.test_profile" name="test_profile_loads" time="3.314" /><testcase classname="tests.test_profile" name="test_edit_profile" time="5.978" /><testcase classname="tests.test_profile" name="test_profile_loads" time="3.314" /><testcase classname="tests.test_profile" name="test_edit_profile" time="5.978" /></testsuite><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="9" time="87.504" timestamp="2026-06-14T10:19:38.053380" hostname="runnervm1li68"><testcase classname="tests.test_registration" name="test_valid_registration" time="14.906"><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="55a49bfd5023d6801f60f4795f2567d9")&gt;
 
     def test_valid_registration(browser):
         """Test registering a new user."""
@@ -589,7 +849,172 @@ message = ''
 &gt;       raise TimeoutException(message, screen, stacktrace)
 E       selenium.common.exceptions.TimeoutException: Message:
 
-/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException</failure></testcase><testcase classname="tests.test_registration" name="test_registration_empty_fields" time="1.858" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.325" timestamp="2026-06-14T12:48:16.184601" hostname="runnervm1li68"><testcase classname="tests.test_responsive" name="test_responsive_layout" time="3.325" /></testsuite><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="8.807" timestamp="2026-06-14T12:13:53.892523" hostname="runnervm1li68"><testcase classname="tests.test_routing" name="test_protected_route_redirect" time="0.629" /><testcase classname="tests.test_routing" name="test_unknown_route_redirect" time="8.178"><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="db3db84e4b5da9f8d09e81abf2c9a7ef")&gt;
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException</failure></testcase><testcase classname="tests.test_registration" name="test_registration_empty_fields" time="1.858" /><testcase classname="tests.test_registration" name="test_valid_registration" time="14.906"><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="55a49bfd5023d6801f60f4795f2567d9")&gt;
+
+    def test_valid_registration(browser):
+        """Test registering a new user."""
+        browser.get("http://localhost:5173/")
+        browser.execute_script("window.localStorage.clear();")
+        browser.get("http://localhost:5173/login")
+        time.sleep(1)
+    
+        # Ensure we are on registration mode
+        toggles = browser.find_elements("xpath", "//button[contains(text(), 'Register now')]")
+        if toggles:
+            toggles[0].click()
+            time.sleep(0.5)
+    
+        browser.find_element("xpath", "//input[@name='full_name']").send_keys("Test User")
+    
+        unique_username = f"testuser_{uuid.uuid4().hex[:6]}"
+        browser.find_element("xpath", "//input[@name='username']").send_keys(unique_username)
+        browser.find_element("xpath", "//input[@name='email']").send_keys(f"{unique_username}@example.com")
+        browser.find_element("xpath", "//input[@name='password']").send_keys("password123")
+        browser.find_element("xpath", "//input[@name='confirmPassword']").send_keys("password123")
+        browser.find_element("xpath", "//input[@name='privacy_consent']").click()
+    
+        submit_btn = browser.find_element("xpath", "//button[@type='submit']")
+        submit_btn.click()
+    
+        # Assert successful registration redirects to dashboard
+&gt;       WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
+
+tests/test_registration.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="55a49bfd5023d6801f60f4795f2567d9")&gt;
+method = &lt;function url_contains.&lt;locals&gt;._predicate at 0x7f64e9206660&gt;
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            &gt;&gt;&gt; from selenium.webdriver.common.by import By
+            &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+            &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+            &gt;&gt;&gt;
+            &gt;&gt;&gt; # Wait until an element is visible on the page
+            &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+            &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException</failure></testcase><testcase classname="tests.test_registration" name="test_registration_existing_user" time="12.404"><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="55a49bfd5023d6801f60f4795f2567d9")&gt;
+
+    def test_registration_existing_user(browser):
+        """Test registering with an already existing username."""
+        browser.get("http://localhost:5173/")
+        browser.execute_script("window.localStorage.clear();")
+        browser.get("http://localhost:5173/login")
+        time.sleep(1)
+    
+        # Create user first
+        toggles = browser.find_elements("xpath", "//button[contains(text(), 'Register now')]")
+        if toggles:
+            toggles[0].click()
+            time.sleep(0.5)
+    
+        browser.find_element("xpath", "//input[@name='full_name']").send_keys("Test User")
+        unique_username = f"testuser_{uuid.uuid4().hex[:6]}"
+        browser.find_element("xpath", "//input[@name='username']").send_keys(unique_username)
+        browser.find_element("xpath", "//input[@name='email']").send_keys(f"{unique_username}@example.com")
+        browser.find_element("xpath", "//input[@name='password']").send_keys("password123")
+        browser.find_element("xpath", "//input[@name='confirmPassword']").send_keys("password123")
+        browser.find_element("xpath", "//input[@name='privacy_consent']").click()
+    
+        submit_btn = browser.find_element("xpath", "//button[@type='submit']")
+        submit_btn.click()
+    
+        # Logout
+&gt;       WebDriverWait(browser, 10).until(EC.url_contains("dashboard"))
+
+tests/test_registration.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="55a49bfd5023d6801f60f4795f2567d9")&gt;
+method = &lt;function url_contains.&lt;locals&gt;._predicate at 0x7f64e8cb7740&gt;
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            &gt;&gt;&gt; from selenium.webdriver.common.by import By
+            &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+            &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+            &gt;&gt;&gt;
+            &gt;&gt;&gt; # Wait until an element is visible on the page
+            &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+            &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException</failure></testcase><testcase classname="tests.test_registration" name="test_registration_empty_fields" time="1.858" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="6.65" timestamp="2026-06-14T12:48:16.184601" hostname="runnervm1li68"><testcase classname="tests.test_responsive" name="test_responsive_layout" time="3.325" /><testcase classname="tests.test_responsive" name="test_responsive_layout" time="3.325" /></testsuite><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="4" time="17.614" timestamp="2026-06-14T12:13:53.892523" hostname="runnervm1li68"><testcase classname="tests.test_routing" name="test_protected_route_redirect" time="0.629" /><testcase classname="tests.test_routing" name="test_unknown_route_redirect" time="8.178"><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="db3db84e4b5da9f8d09e81abf2c9a7ef")&gt;
 login_helper = &lt;function login_helper.&lt;locals&gt;._login at 0x7f7754a88680&gt;
 
     def test_unknown_route_redirect(browser, login_helper):
@@ -655,4 +1080,85 @@ message = ''
 &gt;       raise TimeoutException(message, screen, stacktrace)
 E       selenium.common.exceptions.TimeoutException: Message:
 
-/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException</failure></testcase></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.343" timestamp="2026-06-14T12:13:50.168655" hostname="runnervm1li68"><testcase classname="tests.test_settings" name="test_model_telemetry_loads" time="3.343" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="5" time="8.346" timestamp="2026-06-18T17:39:28.477475" hostname="runnervm7b5n9"><testcase classname="tests.test_dashboard" name="test_dashboard_loads" time="3.270" /><testcase classname="tests.test_dashboard" name="test_user_profile_display" time="1.170" /><testcase classname="tests.test_dashboard" name="test_dashboard_stats_exist" time="1.114" /><testcase classname="tests.test_dashboard" name="test_analytics_charts_rendering" time="1.105" /><testcase classname="tests.test_dashboard" name="test_retrain_model_button" time="1.687" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="2.12" timestamp="2026-06-18T17:40:36.399833" hostname="runnervm7b5n9"><testcase classname="tests.test_e2e" name="test_full_e2e_flow" time="2.120" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="5" time="60.386" timestamp="2026-06-18T17:38:27.678859" hostname="runnervm7b5n9"><testcase classname="tests.test_login" name="test_valid_login" time="16.864" /><testcase classname="tests.test_login" name="test_invalid_password" time="15.666" /><testcase classname="tests.test_login" name="test_invalid_username" time="11.426" /><testcase classname="tests.test_login" name="test_login_empty_fields" time="12.229" /><testcase classname="tests.test_login" name="test_provided_credentials" time="4.201" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.453" timestamp="2026-06-18T17:40:20.951296" hostname="runnervm7b5n9"><testcase classname="tests.test_logout" name="test_logout" time="3.453" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="3.637" timestamp="2026-06-18T17:40:16.913580" hostname="runnervm7b5n9"><testcase classname="tests.test_navigation" name="test_unauthenticated_navigation" time="0.647" /><testcase classname="tests.test_navigation" name="test_navigation_links" time="2.990" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="4" time="16.099" timestamp="2026-06-18T17:40:00.407698" hostname="runnervm7b5n9"><testcase classname="tests.test_notifications" name="test_notification_bell_presence" time="3.265" /><testcase classname="tests.test_notifications" name="test_medium_strain_notification_generation" time="3.227" /><testcase classname="tests.test_notifications" name="test_notifications_history_page" time="4.252" /><testcase classname="tests.test_notifications" name="test_delete_notification" time="5.355" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="13.018" timestamp="2026-06-18T17:39:37.237710" hostname="runnervm7b5n9"><testcase classname="tests.test_prediction" name="test_transmit_metrics_success" time="4.306" /><testcase classname="tests.test_prediction" name="test_cognitive_strain_prediction" time="4.324" /><testcase classname="tests.test_prediction" name="test_behavioral_drift_score" time="4.388" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="9.315" timestamp="2026-06-18T17:39:50.673360" hostname="runnervm7b5n9"><testcase classname="tests.test_profile" name="test_profile_loads" time="3.323" /><testcase classname="tests.test_profile" name="test_edit_profile" time="5.992" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="13.453" timestamp="2026-06-18T17:38:13.817086" hostname="runnervm7b5n9"><testcase classname="tests.test_registration" name="test_valid_registration" time="6.504" /><testcase classname="tests.test_registration" name="test_registration_existing_user" time="5.055" /><testcase classname="tests.test_registration" name="test_registration_empty_fields" time="1.894" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.36" timestamp="2026-06-18T17:40:32.618869" hostname="runnervm7b5n9"><testcase classname="tests.test_responsive" name="test_responsive_layout" time="3.360" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="3.582" timestamp="2026-06-18T17:40:28.631671" hostname="runnervm7b5n9"><testcase classname="tests.test_routing" name="test_protected_route_redirect" time="0.670" /><testcase classname="tests.test_routing" name="test_unknown_route_redirect" time="2.912" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.421" timestamp="2026-06-18T17:40:24.810472" hostname="runnervm7b5n9"><testcase classname="tests.test_settings" name="test_model_telemetry_loads" time="3.421" /></testsuite></testsuites>
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException</failure></testcase><testcase classname="tests.test_routing" name="test_protected_route_redirect" time="0.629" /><testcase classname="tests.test_routing" name="test_unknown_route_redirect" time="8.178"><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="db3db84e4b5da9f8d09e81abf2c9a7ef")&gt;
+login_helper = &lt;function login_helper.&lt;locals&gt;._login at 0x7f7754a88680&gt;
+
+    def test_unknown_route_redirect(browser, login_helper):
+        """Verify that an unknown route handles fallback."""
+        login_helper()
+    
+        # Go to an invalid route
+        browser.get("http://127.0.0.1:5173/this-route-does-not-exist")
+    
+        # It should fallback to dashboard because user is logged in
+&gt;       WebDriverWait(browser, 5).until(EC.url_contains("dashboard"))
+
+tests/test_routing.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="db3db84e4b5da9f8d09e81abf2c9a7ef")&gt;
+method = &lt;function url_contains.&lt;locals&gt;._predicate at 0x7f7754ac0ae0&gt;
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            &gt;&gt;&gt; from selenium.webdriver.common.by import By
+            &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+            &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+            &gt;&gt;&gt;
+            &gt;&gt;&gt; # Wait until an element is visible on the page
+            &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+            &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException</failure></testcase></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="6.686" timestamp="2026-06-14T12:13:50.168655" hostname="runnervm1li68"><testcase classname="tests.test_settings" name="test_model_telemetry_loads" time="3.343" /><testcase classname="tests.test_settings" name="test_model_telemetry_loads" time="3.343" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="5" time="8.346" timestamp="2026-06-18T17:39:28.477475" hostname="runnervm7b5n9"><testcase classname="tests.test_dashboard" name="test_dashboard_loads" time="3.270" /><testcase classname="tests.test_dashboard" name="test_user_profile_display" time="1.170" /><testcase classname="tests.test_dashboard" name="test_dashboard_stats_exist" time="1.114" /><testcase classname="tests.test_dashboard" name="test_analytics_charts_rendering" time="1.105" /><testcase classname="tests.test_dashboard" name="test_retrain_model_button" time="1.687" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="2.12" timestamp="2026-06-18T17:40:36.399833" hostname="runnervm7b5n9"><testcase classname="tests.test_e2e" name="test_full_e2e_flow" time="2.120" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="5" time="60.386" timestamp="2026-06-18T17:38:27.678859" hostname="runnervm7b5n9"><testcase classname="tests.test_login" name="test_valid_login" time="16.864" /><testcase classname="tests.test_login" name="test_invalid_password" time="15.666" /><testcase classname="tests.test_login" name="test_invalid_username" time="11.426" /><testcase classname="tests.test_login" name="test_login_empty_fields" time="12.229" /><testcase classname="tests.test_login" name="test_provided_credentials" time="4.201" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.453" timestamp="2026-06-18T17:40:20.951296" hostname="runnervm7b5n9"><testcase classname="tests.test_logout" name="test_logout" time="3.453" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="3.637" timestamp="2026-06-18T17:40:16.913580" hostname="runnervm7b5n9"><testcase classname="tests.test_navigation" name="test_unauthenticated_navigation" time="0.647" /><testcase classname="tests.test_navigation" name="test_navigation_links" time="2.990" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="4" time="16.099" timestamp="2026-06-18T17:40:00.407698" hostname="runnervm7b5n9"><testcase classname="tests.test_notifications" name="test_notification_bell_presence" time="3.265" /><testcase classname="tests.test_notifications" name="test_medium_strain_notification_generation" time="3.227" /><testcase classname="tests.test_notifications" name="test_notifications_history_page" time="4.252" /><testcase classname="tests.test_notifications" name="test_delete_notification" time="5.355" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="13.018" timestamp="2026-06-18T17:39:37.237710" hostname="runnervm7b5n9"><testcase classname="tests.test_prediction" name="test_transmit_metrics_success" time="4.306" /><testcase classname="tests.test_prediction" name="test_cognitive_strain_prediction" time="4.324" /><testcase classname="tests.test_prediction" name="test_behavioral_drift_score" time="4.388" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="9.315" timestamp="2026-06-18T17:39:50.673360" hostname="runnervm7b5n9"><testcase classname="tests.test_profile" name="test_profile_loads" time="3.323" /><testcase classname="tests.test_profile" name="test_edit_profile" time="5.992" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="13.453" timestamp="2026-06-18T17:38:13.817086" hostname="runnervm7b5n9"><testcase classname="tests.test_registration" name="test_valid_registration" time="6.504" /><testcase classname="tests.test_registration" name="test_registration_existing_user" time="5.055" /><testcase classname="tests.test_registration" name="test_registration_empty_fields" time="1.894" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.36" timestamp="2026-06-18T17:40:32.618869" hostname="runnervm7b5n9"><testcase classname="tests.test_responsive" name="test_responsive_layout" time="3.360" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="3.582" timestamp="2026-06-18T17:40:28.631671" hostname="runnervm7b5n9"><testcase classname="tests.test_routing" name="test_protected_route_redirect" time="0.670" /><testcase classname="tests.test_routing" name="test_unknown_route_redirect" time="2.912" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.421" timestamp="2026-06-18T17:40:24.810472" hostname="runnervm7b5n9"><testcase classname="tests.test_settings" name="test_model_telemetry_loads" time="3.421" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="5" time="8.297" timestamp="2026-06-18T18:42:19.214876" hostname="runnervm7b5n9"><testcase classname="tests.test_dashboard" name="test_dashboard_loads" time="3.301" /><testcase classname="tests.test_dashboard" name="test_user_profile_display" time="1.167" /><testcase classname="tests.test_dashboard" name="test_dashboard_stats_exist" time="1.111" /><testcase classname="tests.test_dashboard" name="test_analytics_charts_rendering" time="1.037" /><testcase classname="tests.test_dashboard" name="test_retrain_model_button" time="1.681" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="2.11" timestamp="2026-06-18T18:43:27.253006" hostname="runnervm7b5n9"><testcase classname="tests.test_e2e" name="test_full_e2e_flow" time="2.110" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="5" time="60.304" timestamp="2026-06-18T18:41:18.492188" hostname="runnervm7b5n9"><testcase classname="tests.test_login" name="test_valid_login" time="16.875" /><testcase classname="tests.test_login" name="test_invalid_password" time="15.584" /><testcase classname="tests.test_login" name="test_invalid_username" time="11.442" /><testcase classname="tests.test_login" name="test_login_empty_fields" time="12.219" /><testcase classname="tests.test_login" name="test_provided_credentials" time="4.184" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.415" timestamp="2026-06-18T18:43:11.801088" hostname="runnervm7b5n9"><testcase classname="tests.test_logout" name="test_logout" time="3.415" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="3.697" timestamp="2026-06-18T18:43:07.711421" hostname="runnervm7b5n9"><testcase classname="tests.test_navigation" name="test_unauthenticated_navigation" time="0.727" /><testcase classname="tests.test_navigation" name="test_navigation_links" time="2.970" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="4" time="16.076" timestamp="2026-06-18T18:42:51.236628" hostname="runnervm7b5n9"><testcase classname="tests.test_notifications" name="test_notification_bell_presence" time="3.230" /><testcase classname="tests.test_notifications" name="test_medium_strain_notification_generation" time="3.221" /><testcase classname="tests.test_notifications" name="test_notifications_history_page" time="4.278" /><testcase classname="tests.test_notifications" name="test_delete_notification" time="5.347" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="13.05" timestamp="2026-06-18T18:42:27.910549" hostname="runnervm7b5n9"><testcase classname="tests.test_prediction" name="test_transmit_metrics_success" time="4.341" /><testcase classname="tests.test_prediction" name="test_cognitive_strain_prediction" time="4.329" /><testcase classname="tests.test_prediction" name="test_behavioral_drift_score" time="4.380" /></testsuite><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="9.3" timestamp="2026-06-18T18:42:41.353835" hostname="runnervm7b5n9"><testcase classname="tests.test_profile" name="test_profile_loads" time="3.307"><failure message="assert 'Profile Management' in '&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;\n    &lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =&gt; {};\nwindow.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;\n\n    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;\n\n    &lt;meta charset=&quot;UTF-8&quot;&gt;\n    &lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;data:image/svg+xml,&amp;lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&amp;gt;&amp;lt;text y=%220.9em%22 font-size=%2290%22&amp;gt;#x1F9E0&amp;lt;/text&amp;gt;&amp;lt;/svg&amp;gt;&quot;&gt;\n    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;\n    &lt;title&gt;Neuro-Behavioral Drift | Cognitive Strain Monitor&lt;/title&gt;\n    &lt;!-- Google Fonts --&gt;\n    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;\n    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin=&quot;&quot;&gt;\n    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;amp;family=Inter:wght@300;400;500;600;700&amp;amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;\n  &lt;style type=&quot;text/css&quot; data-vite-dev-id=&quot;/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css&quot;&gt;*, ::before, ::after {\n...&quot; class=&quot;lucide lucide-bell h-5 w-5&quot;&gt;&lt;path d=&quot;M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M10.3 21a1.94 1.94 0 0 0 3.4 0&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a class=&quot;flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors&quot; href=&quot;/profile&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; class=&quot;lucide lucide-user h-3.5 w-3.5 text-accentBlue&quot;&gt;&lt;path d=&quot;M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;12&quot; cy=&quot;7&quot; r=&quot;4&quot;&gt;&lt;/circle&gt;&lt;/svg&gt;&lt;span&gt;Test User&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;main class=&quot;flex-grow w-full&quot;&gt;&lt;div class=&quot;flex justify-center items-center h-64 text-slate-400&quot;&gt;Loading Profile...&lt;/div&gt;&lt;/main&gt;&lt;footer class=&quot;border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600&quot;&gt;&lt;div class=&quot;container mx-auto&quot;&gt;© 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/div&gt;\n    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;\n  \n\n&lt;/body&gt;&lt;/html&gt;'&#10; +  where '&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;\n    &lt;script type=&quot;module&quot;&gt;import { injectIntoGlobalHook } from &quot;/@react-refresh&quot;;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =&gt; {};\nwindow.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;\n\n    &lt;script type=&quot;module&quot; src=&quot;/@vite/client&quot;&gt;&lt;/script&gt;\n\n    &lt;meta charset=&quot;UTF-8&quot;&gt;\n    &lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;data:image/svg+xml,&amp;lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&amp;gt;&amp;lt;text y=%220.9em%22 font-size=%2290%22&amp;gt;#x1F9E0&amp;lt;/text&amp;gt;&amp;lt;/svg&amp;gt;&quot;&gt;\n    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;\n    &lt;title&gt;Neuro-Behavioral Drift | Cognitive Strain Monitor&lt;/title&gt;\n    &lt;!-- Google Fonts --&gt;\n    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;\n    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin=&quot;&quot;&gt;\n    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;amp;family=Inter:wght@300;400;500;600;700&amp;amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;\n  &lt;style type=&quot;text/css&quot; data-vite-dev-id=&quot;/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css&quot;&gt;*, ::before, ::after {\n...&quot; class=&quot;lucide lucide-bell h-5 w-5&quot;&gt;&lt;path d=&quot;M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M10.3 21a1.94 1.94 0 0 0 3.4 0&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a class=&quot;flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors&quot; href=&quot;/profile&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; class=&quot;lucide lucide-user h-3.5 w-3.5 text-accentBlue&quot;&gt;&lt;path d=&quot;M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;12&quot; cy=&quot;7&quot; r=&quot;4&quot;&gt;&lt;/circle&gt;&lt;/svg&gt;&lt;span&gt;Test User&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;main class=&quot;flex-grow w-full&quot;&gt;&lt;div class=&quot;flex justify-center items-center h-64 text-slate-400&quot;&gt;Loading Profile...&lt;/div&gt;&lt;/main&gt;&lt;footer class=&quot;border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600&quot;&gt;&lt;div class=&quot;container mx-auto&quot;&gt;© 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/div&gt;\n    &lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;\n  \n\n&lt;/body&gt;&lt;/html&gt;' = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;89473804dc02ff02337d94e78dd4fb18&quot;)&gt;.page_source">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="89473804dc02ff02337d94e78dd4fb18")&gt;
+login_helper = &lt;function login_helper.&lt;locals&gt;._login at 0x7f88249ecf40&gt;
+
+    def test_profile_loads(browser, login_helper):
+        """Test that the user can navigate to the profile page."""
+        login_helper()
+    
+        # Click Profile icon in navbar
+        profile_link = browser.find_element("xpath", "//a[@href='/profile']")
+        profile_link.click()
+        WebDriverWait(browser, 10).until(EC.url_contains("profile"))
+&gt;       assert "Profile Management" in browser.page_source
+E       assert 'Profile Management' in '&lt;html lang="en"&gt;&lt;head&gt;\n    &lt;script type="module"&gt;import { injectIntoGlobalHook } from "/@react-refresh";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =&gt; {};\nwindow.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;\n\n    &lt;script type="module" src="/@vite/client"&gt;&lt;/script&gt;\n\n    &lt;meta charset="UTF-8"&gt;\n    &lt;link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&amp;lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&amp;gt;&amp;lt;text y=%220.9em%22 font-size=%2290%22&amp;gt;#x1F9E0&amp;lt;/text&amp;gt;&amp;lt;/svg&amp;gt;"&gt;\n    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n    &lt;title&gt;Neuro-Behavioral Drift | Cognitive Strain Monitor&lt;/title&gt;\n    &lt;!-- Google Fonts --&gt;\n    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;\n    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""&gt;\n    &lt;link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;amp;family=Inter:wght@300;400;500;600;700&amp;amp;display=swap" rel="stylesheet"&gt;\n  &lt;style type="text/css" data-vite-dev-id="/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css"&gt;*, ::before, ::after {\n..." class="lucide lucide-bell h-5 w-5"&gt;&lt;path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"&gt;&lt;/path&gt;&lt;path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a class="flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors" href="/profile"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user h-3.5 w-3.5 text-accentBlue"&gt;&lt;path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"&gt;&lt;/path&gt;&lt;circle cx="12" cy="7" r="4"&gt;&lt;/circle&gt;&lt;/svg&gt;&lt;span&gt;Test User&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;main class="flex-grow w-full"&gt;&lt;div class="flex justify-center items-center h-64 text-slate-400"&gt;Loading Profile...&lt;/div&gt;&lt;/main&gt;&lt;footer class="border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600"&gt;&lt;div class="container mx-auto"&gt;© 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/div&gt;\n    &lt;script type="module" src="/src/main.jsx"&gt;&lt;/script&gt;\n  \n\n&lt;/body&gt;&lt;/html&gt;'
+E        +  where '&lt;html lang="en"&gt;&lt;head&gt;\n    &lt;script type="module"&gt;import { injectIntoGlobalHook } from "/@react-refresh";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =&gt; {};\nwindow.$RefreshSig$ = () =&gt; (type) =&gt; type;&lt;/script&gt;\n\n    &lt;script type="module" src="/@vite/client"&gt;&lt;/script&gt;\n\n    &lt;meta charset="UTF-8"&gt;\n    &lt;link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&amp;lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 width=%22100%22 height=%22100%22&amp;gt;&amp;lt;text y=%220.9em%22 font-size=%2290%22&amp;gt;#x1F9E0&amp;lt;/text&amp;gt;&amp;lt;/svg&amp;gt;"&gt;\n    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n    &lt;title&gt;Neuro-Behavioral Drift | Cognitive Strain Monitor&lt;/title&gt;\n    &lt;!-- Google Fonts --&gt;\n    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;\n    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""&gt;\n    &lt;link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;amp;family=Inter:wght@300;400;500;600;700&amp;amp;display=swap" rel="stylesheet"&gt;\n  &lt;style type="text/css" data-vite-dev-id="/home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/frontend/src/index.css"&gt;*, ::before, ::after {\n..." class="lucide lucide-bell h-5 w-5"&gt;&lt;path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"&gt;&lt;/path&gt;&lt;path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a class="flex items-center gap-2 bg-slate-900 border border-slate-800/80 rounded-xl px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white hover:border-slate-700 transition-colors" href="/profile"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user h-3.5 w-3.5 text-accentBlue"&gt;&lt;path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"&gt;&lt;/path&gt;&lt;circle cx="12" cy="7" r="4"&gt;&lt;/circle&gt;&lt;/svg&gt;&lt;span&gt;Test User&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;main class="flex-grow w-full"&gt;&lt;div class="flex justify-center items-center h-64 text-slate-400"&gt;Loading Profile...&lt;/div&gt;&lt;/main&gt;&lt;footer class="border-t border-slate-900 bg-slate-950/20 py-4 text-center text-xs text-slate-600"&gt;&lt;div class="container mx-auto"&gt;© 2026 Neuro-Behavioral Drift Modeling Platform. Local secure processing sandbox active.&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/div&gt;\n    &lt;script type="module" src="/src/main.jsx"&gt;&lt;/script&gt;\n  \n\n&lt;/body&gt;&lt;/html&gt;' = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="89473804dc02ff02337d94e78dd4fb18")&gt;.page_source
+
+tests/test_profile.py:13: AssertionError</failure></testcase><testcase classname="tests.test_profile" name="test_edit_profile" time="5.993" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="11.466" timestamp="2026-06-18T18:41:06.592770" hostname="runnervm7b5n9"><testcase classname="tests.test_registration" name="test_valid_registration" time="4.157" /><testcase classname="tests.test_registration" name="test_registration_existing_user" time="5.379" /><testcase classname="tests.test_registration" name="test_registration_empty_fields" time="1.930" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.37" timestamp="2026-06-18T18:43:23.485267" hostname="runnervm7b5n9"><testcase classname="tests.test_responsive" name="test_responsive_layout" time="3.370" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="3.618" timestamp="2026-06-18T18:43:19.464019" hostname="runnervm7b5n9"><testcase classname="tests.test_routing" name="test_protected_route_redirect" time="0.680" /><testcase classname="tests.test_routing" name="test_unknown_route_redirect" time="2.938" /></testsuite><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.458" timestamp="2026-06-18T18:43:15.612165" hostname="runnervm7b5n9"><testcase classname="tests.test_settings" name="test_model_telemetry_loads" time="3.458" /></testsuite></testsuites>

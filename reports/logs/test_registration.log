@@ -14,4 +14,4 @@ tests/test_registration.py::test_registration_empty_fields PASSED        [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_registration.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_registration.html -
-============================== 3 passed in 13.48s ==============================
+============================== 3 passed in 11.49s ==============================
