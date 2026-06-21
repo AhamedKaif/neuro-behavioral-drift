@@ -350,8 +350,8 @@ tests/test_comprehensive.py::test_performance_cases[TC-PERF-020] PASSED  [100%]
 =================================== FAILURES ===================================
 ____________________ test_authentication_cases[TC-AUTH-010] ____________________
 
-browser = <selenium.webdriver.chrome.webdriver.WebDriver (session="719c0b0fece128163bd108f2f58f2998")>
-login_helper = <function login_helper.<locals>._login at 0x7fad8df41260>
+browser = <selenium.webdriver.chrome.webdriver.WebDriver (session="5229ddecaa0e645137d1241b827cc50b")>
+login_helper = <function login_helper.<locals>._login at 0x7ff779678ea0>
 tc_id = 'TC-AUTH-010'
 
     @pytest.mark.parametrize("tc_id", [f"TC-AUTH-{i:03d}" for i in range(1, 36)])
@@ -380,8 +380,8 @@ tc_id = 'TC-AUTH-010'
 tests/test_comprehensive.py:56: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <selenium.webdriver.support.wait.WebDriverWait (session="719c0b0fece128163bd108f2f58f2998")>
-method = <function url_contains.<locals>._predicate at 0x7fad8df414e0>
+self = <selenium.webdriver.support.wait.WebDriverWait (session="5229ddecaa0e645137d1241b827cc50b")>
+method = <function url_contains.<locals>._predicate at 0x7ff779679120>
 message = ''
 
     def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -> T:
@@ -437,4 +437,4 @@ report saved to: reports/report_test_comprehensive.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_comprehensive.html -
 =========================== short test summary info ============================
 FAILED tests/test_comprehensive.py::test_authentication_cases[TC-AUTH-010] - selenium.common.exceptions.TimeoutException: Message:
-================== 1 failed, 339 passed in 111.01s (0:01:51) ===================
+================== 1 failed, 339 passed in 108.71s (0:01:48) ===================
