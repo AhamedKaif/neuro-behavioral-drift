@@ -351,4 +351,4 @@ tests/test_comprehensive.py::test_performance_cases[TC-PERF-020] PASSED  [100%]
 --------------------------------- JSON report ----------------------------------
 report saved to: reports/report_test_comprehensive.json
 - Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_test_comprehensive.html -
-============================= 340 passed in 0.40s ==============================
+============================= 340 passed in 0.31s ==============================
