@@ -6,7 +6,7 @@ import sys
 sys.path.append(os.path.abspath('.'))
 
 from aggregate_test_reports import aggregate_reports
-from generate_selenium_report import generate_report
+from generate_final_report import generate_report
 
 test_files = [
     "tests/test_comprehensive.py"

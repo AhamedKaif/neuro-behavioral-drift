@@ -115,6 +115,7 @@ jobs:
         python run_tests.py
       env:
         CI: true
+        MOCK_SELENIUM: true
 
     - name: Publish Test Dashboard to Step Summary
       if: always()
@@ -147,8 +148,9 @@ jobs:
         fi
 
         # Backup generated reports so they aren't lost during reset/checkout
-        rm -rf ../reports_backup
+        rm -rf ../reports_backup ../test_reports_backup
         mv reports ../reports_backup
+        if [ -d test-reports ]; then mv test-reports ../test_reports_backup; fi
 
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -162,10 +164,12 @@ jobs:
         git reset --hard "origin/$TARGET_BRANCH"
         
         # Restore the generated reports
-        rm -rf reports
+        rm -rf reports test-reports
         mv ../reports_backup reports
+        if [ -d ../test_reports_backup ]; then mv ../test_reports_backup test-reports; fi
         
         git add reports/
+        if [ -d test-reports ]; then git add test-reports/; fi
         git diff --cached --quiet || git commit -m "Update Selenium test reports [skip ci]"
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
         git push origin HEAD:"$TARGET_BRANCH"
