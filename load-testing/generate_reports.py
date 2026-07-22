@@ -660,6 +660,370 @@ def parse_console_log(log_path):
                 })
     return results
 
+def build_excel_report(xlsx_path, summary_stats, endpoint_stats, df, chart_paths, git_info):
+    import openpyxl
+    from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+    from openpyxl.utils import get_column_letter
+    from openpyxl.chart import LineChart, BarChart, PieChart, Reference
+    import datetime
+    
+    wb = openpyxl.Workbook()
+    # Remove default active sheet to start clean
+    wb.remove(wb.active)
+    
+    # Define styles
+    title_font = Font(name='Segoe UI', size=16, bold=True, color='FFFFFF')
+    header_font = Font(name='Segoe UI', size=11, bold=True, color='FFFFFF')
+    bold_font = Font(name='Segoe UI', size=10, bold=True)
+    regular_font = Font(name='Segoe UI', size=10)
+    
+    title_fill = PatternFill(start_color='1F4E78', end_color='1F4E78', fill_type='solid')
+    header_fill = PatternFill(start_color='2F5597', end_color='2F5597', fill_type='solid')
+    zebra_fill = PatternFill(start_color='F2F4F7', end_color='F2F4F7', fill_type='solid')
+    
+    thin_border = Border(
+        left=Side(style='thin', color='D9D9D9'),
+        right=Side(style='thin', color='D9D9D9'),
+        top=Side(style='thin', color='D9D9D9'),
+        bottom=Side(style='thin', color='D9D9D9')
+    )
+    
+    def style_cell(cell, font=regular_font, fill=None, alignment=None, border=thin_border):
+        if font: cell.font = font
+        if fill: cell.fill = fill
+        if alignment: cell.alignment = alignment
+        if border: cell.border = border
+ 
+    def auto_fit_columns(ws):
+        for col in ws.columns:
+            max_len = 0
+            col_letter = get_column_letter(col[0].column)
+            for cell in col:
+                val_str = str(cell.value or '')
+                if len(val_str) > max_len:
+                    max_len = len(val_str)
+            ws.column_dimensions[col_letter].width = max(max_len + 3, 12)
+ 
+    # 1. Executive Summary
+    ws1 = wb.create_sheet(title="Executive Summary")
+    ws1.merge_cells('A1:B1')
+    ws1['A1'] = "K6 Load Testing Executive Summary"
+    style_cell(ws1['A1'], font=title_font, fill=title_fill, alignment=Alignment(horizontal='center', vertical='center'))
+    ws1.row_dimensions[1].height = 40
+    
+    ws1['A2'] = "Metric"
+    ws1['B2'] = "Value"
+    style_cell(ws1['A2'], font=header_font, fill=header_fill, alignment=Alignment(horizontal='left'))
+    style_cell(ws1['B2'], font=header_font, fill=header_fill, alignment=Alignment(horizontal='left'))
+    
+    exec_data = [
+        ("Test Date", datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
+        ("Repository Name", git_info[1]),
+        ("Commit ID", git_info[0]),
+        ("Workflow Run ID", os.environ.get('GITHUB_RUN_ID', 'N/A')),
+        ("Total APIs Tested", len(endpoint_stats)),
+        ("Total Test Cases", summary_stats['unique_scenarios']),
+        ("Passed", summary_stats['passed_requests']),
+        ("Failed", summary_stats['failed_requests']),
+        ("Success Rate", f"{summary_stats['success_rate']:.2f}%"),
+        ("Average Response Time", f"{summary_stats['avg_latency']:.2f} ms"),
+        ("P90", f"{summary_stats['p90_latency']:.2f} ms"),
+        ("P95", f"{summary_stats['p95_latency']:.2f} ms"),
+        ("P99", f"{summary_stats['p99_latency']:.2f} ms"),
+        ("Maximum Response Time", f"{summary_stats['max_latency']:.2f} ms"),
+        ("Minimum Response Time", f"{summary_stats['min_latency']:.2f} ms"),
+        ("Throughput", f"{summary_stats['total_requests']}"),
+        ("Requests per Second", f"{summary_stats['avg_rps']:.2f}"),
+        ("Error Rate", f"{(100.0 - summary_stats['success_rate']):.2f}%")
+    ]
+    
+    for r_idx, (m, v) in enumerate(exec_data, start=3):
+        ws1.cell(row=r_idx, column=1, value=m)
+        ws1.cell(row=r_idx, column=2, value=v)
+        fill = zebra_fill if r_idx % 2 == 0 else None
+        style_cell(ws1.cell(row=r_idx, column=1), font=bold_font, fill=fill)
+        style_cell(ws1.cell(row=r_idx, column=2), font=regular_font, fill=fill)
+        
+    # Write helper table for Success vs Failure Pie Chart
+    ws1.cell(row=23, column=1, value="Status")
+    ws1.cell(row=23, column=2, value="Count")
+    style_cell(ws1.cell(row=23, column=1), font=header_font, fill=header_fill)
+    style_cell(ws1.cell(row=23, column=2), font=header_font, fill=header_fill)
+    
+    ws1.cell(row=24, column=1, value="Passed")
+    ws1.cell(row=24, column=2, value=summary_stats['passed_requests'])
+    style_cell(ws1.cell(row=24, column=1), font=bold_font)
+    style_cell(ws1.cell(row=24, column=2), font=regular_font)
+    
+    ws1.cell(row=25, column=1, value="Failed")
+    ws1.cell(row=25, column=2, value=summary_stats['failed_requests'])
+    style_cell(ws1.cell(row=25, column=1), font=bold_font)
+    style_cell(ws1.cell(row=25, column=2), font=regular_font)
+    
+    # Write helper table for Latency Distribution Column Chart
+    ws1.cell(row=27, column=1, value="Percentile")
+    ws1.cell(row=27, column=2, value="Latency (ms)")
+    style_cell(ws1.cell(row=27, column=1), font=header_font, fill=header_fill)
+    style_cell(ws1.cell(row=27, column=2), font=header_font, fill=header_fill)
+    
+    percentiles = [
+        ("Min", summary_stats['min_latency']),
+        ("Median", summary_stats['median_latency']),
+        ("P90", summary_stats['p90_latency']),
+        ("P95", summary_stats['p95_latency']),
+        ("P99", summary_stats['p99_latency']),
+        ("Max", summary_stats['max_latency'])
+    ]
+    for idx, (p, val) in enumerate(percentiles):
+        row_num = 28 + idx
+        ws1.cell(row=row_num, column=1, value=p)
+        ws1.cell(row=row_num, column=2, value=val)
+        style_cell(ws1.cell(row=row_num, column=1), font=bold_font)
+        style_cell(ws1.cell(row=row_num, column=2), font=regular_font)
+    
+    auto_fit_columns(ws1)
+ 
+    # 2. Complete Test Results
+    ws2 = wb.create_sheet(title="Complete Test Results")
+    headers2 = [
+        "Test ID", "Scenario Name", "API Endpoint", "HTTP Method", "Concurrent Users",
+        "Iterations", "Request Count", "Status Code", "Result (PASS/FAIL)",
+        "Average Response Time", "Maximum Response Time", "Minimum Response Time",
+        "Latency", "Error Message (if any)"
+    ]
+    for c_idx, h in enumerate(headers2, start=1):
+        cell = ws2.cell(row=1, column=c_idx, value=h)
+        style_cell(cell, font=header_font, fill=header_fill, alignment=Alignment(horizontal='center'))
+    
+    groups = df.groupby(["Test ID", "Scenario Name", "API", "Method"])
+    r_idx = 2
+    for (test_id, scenario_name, api, method), grp in groups:
+        passed_count = len(grp[grp["Result"] == "PASS"])
+        failed_count = len(grp[grp["Result"] == "FAIL"])
+        total_count = len(grp)
+        result = "PASS" if failed_count == 0 else "FAIL"
+        
+        avg_resp = grp["Response Time (ms)"].mean()
+        max_resp = grp["Response Time (ms)"].max()
+        min_resp = grp["Response Time (ms)"].min()
+        
+        status_codes = ",".join(map(str, grp["Status Code"].unique()))
+        error_msgs = ",".join(filter(None, grp["Error Message"].unique()))
+        
+        row_data = [
+            test_id, scenario_name, api, method, grp["VUs"].max(),
+            total_count, total_count, status_codes, result,
+            avg_resp, max_resp, min_resp, avg_resp, error_msgs if error_msgs else "N/A"
+        ]
+        
+        for c_idx, val in enumerate(row_data, start=1):
+            cell = ws2.cell(row=r_idx, column=c_idx, value=val)
+            fill = zebra_fill if r_idx % 2 == 0 else None
+            cell_font = regular_font
+            if headers2[c_idx - 1] == "Result (PASS/FAIL)":
+                if val == "PASS":
+                    cell_font = Font(name='Segoe UI', size=10, bold=True, color='385723')
+                else:
+                    cell_font = Font(name='Segoe UI', size=10, bold=True, color='C00000')
+            style_cell(cell, font=cell_font, fill=fill)
+        r_idx += 1
+        
+    auto_fit_columns(ws2)
+ 
+    # 3. Performance Metrics
+    ws3 = wb.create_sheet(title="Performance Metrics")
+    headers3 = [
+        "API", "HTTP Method", "Average Response Time", "Max Response Time", "Min Response Time",
+        "Throughput", "Requests/sec", "Error %", "Success %"
+    ]
+    for c_idx, h in enumerate(headers3, start=1):
+        cell = ws3.cell(row=1, column=c_idx, value=h)
+        style_cell(cell, font=header_font, fill=header_fill, alignment=Alignment(horizontal='center'))
+        
+    api_groups = df.groupby(["API", "Method"])
+    r_idx = 2
+    for (api, method), grp in api_groups:
+        total = len(grp)
+        passed = len(grp[grp["Result"] == "PASS"])
+        failed = len(grp[grp["Result"] == "FAIL"])
+        
+        success_pct = (passed / total) if total > 0 else 0
+        error_pct = (failed / total) if total > 0 else 0
+        
+        avg_resp = grp["Response Time (ms)"].mean()
+        max_resp = grp["Response Time (ms)"].max()
+        min_resp = grp["Response Time (ms)"].min()
+        
+        api_duration = grp["Relative Time (s)"].max() - grp["Relative Time (s)"].min()
+        api_duration = max(api_duration, 1.0)
+        api_rps = total / api_duration
+        
+        row_data = [
+            api, method, avg_resp, max_resp, min_resp, total, api_rps, error_pct, success_pct
+        ]
+        
+        for c_idx, val in enumerate(row_data, start=1):
+            cell = ws3.cell(row=r_idx, column=c_idx, value=val)
+            fill = zebra_fill if r_idx % 2 == 0 else None
+            style_cell(cell, font=regular_font, fill=fill)
+        r_idx += 1
+        
+    auto_fit_columns(ws3)
+ 
+    # 4. Failed Requests
+    ws4 = wb.create_sheet(title="Failed Requests")
+    headers4 = ["Request", "Error", "Cause", "Resolution", "Final Status"]
+    for c_idx, h in enumerate(headers4, start=1):
+        cell = ws4.cell(row=1, column=c_idx, value=h)
+        style_cell(cell, font=header_font, fill=header_fill, alignment=Alignment(horizontal='center'))
+        
+    failed_df = df[df["Result"] == "FAIL"]
+    r_idx = 2
+    if failed_df.empty:
+        ws4.cell(row=2, column=1, value="No failed requests. All tests passed successfully.")
+        ws4.merge_cells('A2:E2')
+        style_cell(ws4.cell(row=2, column=1), font=Font(name='Segoe UI', size=10, italic=True), alignment=Alignment(horizontal='center'))
+    else:
+        for idx, row in failed_df.iterrows():
+            row_data = [
+                f"{row['Method']} {row['API']} (Test ID: {row['Test ID']})",
+                row["Error Message"],
+                "Server error or timeout",
+                "Check server logs and database locking",
+                row["Status Code"]
+            ]
+            for c_idx, val in enumerate(row_data, start=1):
+                cell = ws4.cell(row=r_idx, column=c_idx, value=val)
+                fill = zebra_fill if r_idx % 2 == 0 else None
+                style_cell(cell, font=regular_font, fill=fill)
+            r_idx += 1
+            
+    auto_fit_columns(ws4)
+ 
+    # 5. Passed Requests
+    ws5 = wb.create_sheet(title="Passed Requests")
+    headers5 = ["Test ID", "Scenario Name", "API Endpoint", "HTTP Method", "Status Code", "Response Time (ms)", "Timestamp"]
+    for c_idx, h in enumerate(headers5, start=1):
+        cell = ws5.cell(row=1, column=c_idx, value=h)
+        style_cell(cell, font=header_font, fill=header_fill, alignment=Alignment(horizontal='center'))
+        
+    passed_df = df[df["Result"] == "PASS"]
+    r_idx = 2
+    for idx, row in passed_df.iterrows():
+        row_data = [
+            row["Test ID"], row["Scenario Name"], row["API"], row["Method"], row["Status Code"], row["Response Time (ms)"], row["Timestamp"]
+        ]
+        for c_idx, val in enumerate(row_data, start=1):
+            cell = ws5.cell(row=r_idx, column=c_idx, value=val)
+            fill = zebra_fill if r_idx % 2 == 0 else None
+            style_cell(cell, font=regular_font, fill=fill)
+        r_idx += 1
+        
+    auto_fit_columns(ws5)
+    
+    # 5.1 Populate Interval Metrics sheet for line charts
+    ws_int = wb.create_sheet(title="Interval Metrics")
+    ws_int.append(["Relative Time (s)", "Requests/sec", "Avg Latency (ms)", "P95 Latency (ms)"])
+    
+    min_time = df["Timestamp"].min()
+    df["Relative Time (s)"] = (df["Timestamp"] - min_time) / 1000.0
+    df["Sec Interval"] = df["Relative Time (s)"].astype(int)
+    
+    throughput_groups = df.groupby("Sec Interval")
+    throughput_records = []
+    for sec, group_df in throughput_groups:
+        lat = group_df["Response Time (ms)"]
+        throughput_records.append({
+            "Relative Time (s)": sec,
+            "Requests/sec": len(group_df),
+            "Avg Latency (ms)": lat.mean(),
+            "P95 Latency (ms)": lat.quantile(0.95)
+        })
+    intervals_df = pd.DataFrame(throughput_records).sort_values("Relative Time (s)")
+    
+    for idx, row in intervals_df.iterrows():
+        ws_int.append([row["Relative Time (s)"], row["Requests/sec"], row["Avg Latency (ms)"], row["P95 Latency (ms)"]])
+    num_intervals = len(intervals_df)
+ 
+    # 6. Charts (Native Excel Charts)
+    ws6 = wb.create_sheet(title="Charts")
+    
+    # 1. Response Time Line Chart
+    chart_resp = LineChart()
+    chart_resp.title = "Response Time Over Time"
+    chart_resp.style = 13
+    chart_resp.y_axis.title = "Latency (ms)"
+    chart_resp.x_axis.title = "Relative Time (s)"
+    data_resp = Reference(ws_int, min_col=3, min_row=1, max_col=4, max_row=num_intervals+1)
+    cats_resp = Reference(ws_int, min_col=1, min_row=2, max_row=num_intervals+1)
+    chart_resp.add_data(data_resp, titles_from_data=True)
+    chart_resp.set_categories(cats_resp)
+    ws6.add_chart(chart_resp, "A2")
+    
+    # 2. Throughput Line Chart
+    chart_thro = LineChart()
+    chart_thro.title = "Throughput (RPS) Over Time"
+    chart_thro.style = 13
+    chart_thro.y_axis.title = "Requests / Second"
+    chart_thro.x_axis.title = "Relative Time (s)"
+    data_thro = Reference(ws_int, min_col=2, min_row=1, max_row=num_intervals+1)
+    cats_thro = Reference(ws_int, min_col=1, min_row=2, max_row=num_intervals+1)
+    chart_thro.add_data(data_thro, titles_from_data=True)
+    chart_thro.set_categories(cats_thro)
+    ws6.add_chart(chart_thro, "I2")
+    
+    # 3. Requests/sec Column Chart (API Endpoint Performance)
+    chart_rps = BarChart()
+    chart_rps.type = "col"
+    chart_rps.style = 10
+    chart_rps.title = "Requests Per Second (RPS) per API"
+    chart_rps.y_axis.title = "RPS"
+    chart_rps.x_axis.title = "API Endpoint"
+    num_apis = len(endpoint_stats)
+    data_rps = Reference(ws3, min_col=7, min_row=1, max_row=num_apis+1)
+    cats_rps = Reference(ws3, min_col=1, min_row=2, max_row=num_apis+1)
+    chart_rps.add_data(data_rps, titles_from_data=True)
+    chart_rps.set_categories(cats_rps)
+    ws6.add_chart(chart_rps, "A18")
+    
+    # 4. Success vs Failure Pie Chart
+    chart_pie = PieChart()
+    chart_pie.title = "Success vs Failure Distribution"
+    data_pie = Reference(ws1, min_col=2, min_row=23, max_row=25)
+    cats_pie = Reference(ws1, min_col=1, min_row=24, max_row=25)
+    chart_pie.add_data(data_pie, titles_from_data=True)
+    chart_pie.set_categories(cats_pie)
+    ws6.add_chart(chart_pie, "I18")
+    
+    # 5. API Comparison Horizontal Bar Chart
+    chart_comp = BarChart()
+    chart_comp.type = "bar"
+    chart_comp.style = 11
+    chart_comp.title = "API Endpoint Average Response Time (ms)"
+    chart_comp.x_axis.title = "API Endpoint"
+    chart_comp.y_axis.title = "Average Latency (ms)"
+    data_comp = Reference(ws3, min_col=3, min_row=1, max_row=num_apis+1)
+    cats_comp = Reference(ws3, min_col=1, min_row=2, max_row=num_apis+1)
+    chart_comp.add_data(data_comp, titles_from_data=True)
+    chart_comp.set_categories(cats_comp)
+    ws6.add_chart(chart_comp, "A34")
+    
+    # 6. Latency Distribution Column Chart
+    chart_dist = BarChart()
+    chart_dist.type = "col"
+    chart_dist.style = 12
+    chart_dist.title = "Latency Distribution Percentiles"
+    chart_dist.y_axis.title = "Response Time (ms)"
+    chart_dist.x_axis.title = "Percentile"
+    data_dist = Reference(ws1, min_col=2, min_row=27, max_row=33)
+    cats_dist = Reference(ws1, min_col=1, min_row=28, max_row=33)
+    chart_dist.add_data(data_dist, titles_from_data=True)
+    chart_dist.set_categories(cats_dist)
+    ws6.add_chart(chart_dist, "I34")
+            
+    wb.save(xlsx_path)
+    print(f"Excel report successfully created at: {xlsx_path}")
+
 def process_reports():
     print("Processing load testing reports...")
     
@@ -1048,6 +1412,10 @@ def process_reports():
     # 10. Build PDF report
     build_pdf_report("load-testing/K6_Load_Test_Report.pdf", summary_stats, endpoint_stats, df, chart_paths, git_info)
     build_pdf_report("load-testing/reports/K6_Load_Test_Report.pdf", summary_stats, endpoint_stats, df, chart_paths, git_info)
+    
+    # 11. Build Excel XLSX report
+    build_excel_report("load-testing/K6_Load_Test_Report.xlsx", summary_stats, endpoint_stats, df, chart_paths, git_info)
+    build_excel_report("load-testing/reports/K6_Load_Test_Report.xlsx", summary_stats, endpoint_stats, df, chart_paths, git_info)
     
     print("All reports generated successfully!")
 
