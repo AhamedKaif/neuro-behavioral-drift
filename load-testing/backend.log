@@ -1,0 +1,838 @@
+Database initialized successfully.
+Starting Flask backend server on port 5000 using Waitress...
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 1
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 13
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 1
+WARNING:waitress.queue:Task queue depth is 2
+WARNING:waitress.queue:Task queue depth is 3
+WARNING:waitress.queue:Task queue depth is 4
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 5
+WARNING:waitress.queue:Task queue depth is 6
+WARNING:waitress.queue:Task queue depth is 7
+WARNING:waitress.queue:Task queue depth is 8
+WARNING:waitress.queue:Task queue depth is 9
+WARNING:waitress.queue:Task queue depth is 10
+WARNING:waitress.queue:Task queue depth is 11
+WARNING:waitress.queue:Task queue depth is 12
+WARNING:waitress.queue:Task queue depth is 13
+WARNING:waitress.queue:Task queue depth is 14
+WARNING:waitress.queue:Task queue depth is 15
+WARNING:waitress.queue:Task queue depth is 16
+WARNING:waitress.queue:Task queue depth is 17
+WARNING:waitress.queue:Task queue depth is 18
+WARNING:waitress.queue:Task queue depth is 19
+WARNING:waitress.queue:Task queue depth is 20
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 23
+WARNING:waitress.queue:Task queue depth is 24
+WARNING:waitress.queue:Task queue depth is 25
+WARNING:waitress.queue:Task queue depth is 26
+WARNING:waitress.queue:Task queue depth is 27
+WARNING:waitress.queue:Task queue depth is 28
+WARNING:waitress.queue:Task queue depth is 29
+WARNING:waitress.queue:Task queue depth is 30
+WARNING:waitress.queue:Task queue depth is 31
+WARNING:waitress.queue:Task queue depth is 32
+WARNING:waitress.queue:Task queue depth is 33
+WARNING:waitress.queue:Task queue depth is 34
+WARNING:waitress.queue:Task queue depth is 35
+WARNING:waitress.queue:Task queue depth is 36
+WARNING:waitress.queue:Task queue depth is 37
+WARNING:waitress.queue:Task queue depth is 38
+WARNING:waitress.queue:Task queue depth is 39
+WARNING:waitress.queue:Task queue depth is 40
+WARNING:waitress.queue:Task queue depth is 41
+WARNING:waitress.queue:Task queue depth is 42
+WARNING:waitress.queue:Task queue depth is 43
+WARNING:waitress.queue:Task queue depth is 44
+WARNING:waitress.queue:Task queue depth is 45
+WARNING:waitress.queue:Task queue depth is 46
+WARNING:waitress.queue:Task queue depth is 47
+WARNING:waitress.queue:Task queue depth is 48
+WARNING:waitress.queue:Task queue depth is 49
+WARNING:waitress.queue:Task queue depth is 50
+WARNING:waitress.queue:Task queue depth is 50
+WARNING:waitress.queue:Task queue depth is 51
+WARNING:waitress.queue:Task queue depth is 52
+WARNING:waitress.queue:Task queue depth is 53
+WARNING:waitress.queue:Task queue depth is 54
+WARNING:waitress.queue:Task queue depth is 55
+WARNING:waitress.queue:Task queue depth is 56
+WARNING:waitress.queue:Task queue depth is 57
+WARNING:waitress.queue:Task queue depth is 58
+WARNING:waitress.queue:Task queue depth is 58
+WARNING:waitress.queue:Task queue depth is 59
+WARNING:waitress.queue:Task queue depth is 59
+WARNING:waitress.queue:Task queue depth is 60
+WARNING:waitress.queue:Task queue depth is 61
+WARNING:waitress.queue:Task queue depth is 60
+WARNING:waitress.queue:Task queue depth is 60
+WARNING:waitress.queue:Task queue depth is 60
+WARNING:waitress.queue:Task queue depth is 61
+WARNING:waitress.queue:Task queue depth is 61
+WARNING:waitress.queue:Task queue depth is 59
+WARNING:waitress.queue:Task queue depth is 58
+WARNING:waitress.queue:Task queue depth is 58
+WARNING:waitress.queue:Task queue depth is 59
+WARNING:waitress.queue:Task queue depth is 60
+WARNING:waitress.queue:Task queue depth is 61
+WARNING:waitress.queue:Task queue depth is 62
+WARNING:waitress.queue:Task queue depth is 63
+WARNING:waitress.queue:Task queue depth is 58
+WARNING:waitress.queue:Task queue depth is 59
+WARNING:waitress.queue:Task queue depth is 58
+WARNING:waitress.queue:Task queue depth is 58
+WARNING:waitress.queue:Task queue depth is 40
+WARNING:waitress.queue:Task queue depth is 41
+WARNING:waitress.queue:Task queue depth is 41
+WARNING:waitress.queue:Task queue depth is 42
+WARNING:waitress.queue:Task queue depth is 42
+WARNING:waitress.queue:Task queue depth is 43
+WARNING:waitress.queue:Task queue depth is 44
+WARNING:waitress.queue:Task queue depth is 44
+WARNING:waitress.queue:Task queue depth is 45
+WARNING:waitress.queue:Task queue depth is 46
+WARNING:waitress.queue:Task queue depth is 47
+WARNING:waitress.queue:Task queue depth is 48
+WARNING:waitress.queue:Task queue depth is 49
+WARNING:waitress.queue:Task queue depth is 50
+WARNING:waitress.queue:Task queue depth is 50
+WARNING:waitress.queue:Task queue depth is 50
+WARNING:waitress.queue:Task queue depth is 50
+WARNING:waitress.queue:Task queue depth is 51
+WARNING:waitress.queue:Task queue depth is 51
+WARNING:waitress.queue:Task queue depth is 52
+WARNING:waitress.queue:Task queue depth is 53
+WARNING:waitress.queue:Task queue depth is 54
+WARNING:waitress.queue:Task queue depth is 54
+WARNING:waitress.queue:Task queue depth is 52
+WARNING:waitress.queue:Task queue depth is 49
+WARNING:waitress.queue:Task queue depth is 50
+WARNING:waitress.queue:Task queue depth is 48
+WARNING:waitress.queue:Task queue depth is 49
+WARNING:waitress.queue:Task queue depth is 50
+WARNING:waitress.queue:Task queue depth is 49
+WARNING:waitress.queue:Task queue depth is 33
+WARNING:waitress.queue:Task queue depth is 34
+WARNING:waitress.queue:Task queue depth is 34
+WARNING:waitress.queue:Task queue depth is 35
+WARNING:waitress.queue:Task queue depth is 36
+WARNING:waitress.queue:Task queue depth is 36
+WARNING:waitress.queue:Task queue depth is 37
+WARNING:waitress.queue:Task queue depth is 38
+WARNING:waitress.queue:Task queue depth is 38
+WARNING:waitress.queue:Task queue depth is 38
+WARNING:waitress.queue:Task queue depth is 38
+WARNING:waitress.queue:Task queue depth is 38
+WARNING:waitress.queue:Task queue depth is 39
+WARNING:waitress.queue:Task queue depth is 38
+WARNING:waitress.queue:Task queue depth is 39
+WARNING:waitress.queue:Task queue depth is 40
+WARNING:waitress.queue:Task queue depth is 41
+WARNING:waitress.queue:Task queue depth is 42
+WARNING:waitress.queue:Task queue depth is 43
+WARNING:waitress.queue:Task queue depth is 44
+WARNING:waitress.queue:Task queue depth is 45
+WARNING:waitress.queue:Task queue depth is 44
+WARNING:waitress.queue:Task queue depth is 42
+WARNING:waitress.queue:Task queue depth is 38
+WARNING:waitress.queue:Task queue depth is 31
+WARNING:waitress.queue:Task queue depth is 23
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 21
+WARNING:waitress.queue:Task queue depth is 22
+WARNING:waitress.queue:Task queue depth is 23
+WARNING:waitress.queue:Task queue depth is 24
+WARNING:waitress.queue:Task queue depth is 25
+WARNING:waitress.queue:Task queue depth is 26
+WARNING:waitress.queue:Task queue depth is 27
+WARNING:waitress.queue:Task queue depth is 26
+WARNING:waitress.queue:Task queue depth is 27
+WARNING:waitress.queue:Task queue depth is 28
+WARNING:waitress.queue:Task queue depth is 29
+WARNING:waitress.queue:Task queue depth is 30
+WARNING:waitress.queue:Task queue depth is 31
+WARNING:waitress.queue:Task queue depth is 32
+WARNING:waitress.queue:Task queue depth is 31
+WARNING:waitress.queue:Task queue depth is 32
+WARNING:waitress.queue:Task queue depth is 33
+WARNING:waitress.queue:Task queue depth is 34
+WARNING:waitress.queue:Task queue depth is 31
+WARNING:waitress.queue:Task queue depth is 32
+WARNING:waitress.queue:Task queue depth is 33
+WARNING:waitress.queue:Task queue depth is 34
+WARNING:waitress.queue:Task queue depth is 29
+WARNING:waitress.queue:Task queue depth is 29
+WARNING:waitress.queue:Task queue depth is 30
+WARNING:waitress.queue:Task queue depth is 31
+WARNING:waitress.queue:Task queue depth is 32
+WARNING:waitress.queue:Task queue depth is 33
+WARNING:waitress.queue:Task queue depth is 34
+WARNING:waitress.queue:Task queue depth is 35
+WARNING:waitress.queue:Task queue depth is 36
+WARNING:waitress.queue:Task queue depth is 37
+WARNING:waitress.queue:Task queue depth is 38
+WARNING:waitress.queue:Task queue depth is 39
+WARNING:waitress.queue:Task queue depth is 40
+WARNING:waitress.queue:Task queue depth is 41
+WARNING:waitress.queue:Task queue depth is 42
+WARNING:waitress.queue:Task queue depth is 42
+WARNING:waitress.queue:Task queue depth is 43
+WARNING:waitress.queue:Task queue depth is 44
+WARNING:waitress.queue:Task queue depth is 45
+WARNING:waitress.queue:Task queue depth is 46
+WARNING:waitress.queue:Task queue depth is 47
+WARNING:waitress.queue:Task queue depth is 48
+WARNING:waitress.queue:Task queue depth is 49
+WARNING:waitress.queue:Task queue depth is 50
+WARNING:waitress.queue:Task queue depth is 51
+WARNING:waitress.queue:Task queue depth is 52
+WARNING:waitress.queue:Task queue depth is 53
+WARNING:waitress.queue:Task queue depth is 54
+WARNING:waitress.queue:Task queue depth is 54
+WARNING:waitress.queue:Task queue depth is 55
+WARNING:waitress.queue:Task queue depth is 56
+WARNING:waitress.queue:Task queue depth is 57
+WARNING:waitress.queue:Task queue depth is 58
+WARNING:waitress.queue:Task queue depth is 59
+WARNING:waitress.queue:Task queue depth is 60
+WARNING:waitress.queue:Task queue depth is 61
+WARNING:waitress.queue:Task queue depth is 62
+WARNING:waitress.queue:Task queue depth is 63
+WARNING:waitress.queue:Task queue depth is 63
+WARNING:waitress.queue:Task queue depth is 64
+WARNING:waitress.queue:Task queue depth is 65
+WARNING:waitress.queue:Task queue depth is 66
+WARNING:waitress.queue:Task queue depth is 67
+WARNING:waitress.queue:Task queue depth is 68
+WARNING:waitress.queue:Task queue depth is 69
+WARNING:waitress.queue:Task queue depth is 69
+WARNING:waitress.queue:Task queue depth is 62
+WARNING:waitress.queue:Task queue depth is 63
+WARNING:waitress.queue:Task queue depth is 63
+WARNING:waitress.queue:Task queue depth is 64
+WARNING:waitress.queue:Task queue depth is 65
+WARNING:waitress.queue:Task queue depth is 66
+WARNING:waitress.queue:Task queue depth is 67
+WARNING:waitress.queue:Task queue depth is 68
+WARNING:waitress.queue:Task queue depth is 69
+WARNING:waitress.queue:Task queue depth is 70
+WARNING:waitress.queue:Task queue depth is 71
+WARNING:waitress.queue:Task queue depth is 71
+WARNING:waitress.queue:Task queue depth is 71
+Model Accuracy: 1.0000
+Model and scaler saved successfully to C:\Users\ADMIN\.gemini\antigravity-ide\scratch\neuro-behavioral-drift\ml-model
+Feature Importances:
+  - break_frequency: 0.2481
+  - screen_time: 0.2151
+  - typing_error_rate: 0.1882
+  - session_duration: 0.1792
+  - typing_speed: 0.1385
+  - mouse_speed: 0.0290
+  - click_frequency: 0.0018

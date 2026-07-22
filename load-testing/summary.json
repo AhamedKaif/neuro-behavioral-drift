@@ -1,0 +1,16 @@
+{
+  "total_requests": 5731,
+  "passed_requests": 5731,
+  "failed_requests": 0,
+  "success_rate": 100.0,
+  "avg_latency": 2408.006979584715,
+  "max_latency": 33139.0,
+  "min_latency": 0.0,
+  "median_latency": 510.0,
+  "p90_latency": 7422.0,
+  "p95_latency": 10235.5,
+  "p99_latency": 20957.099999999962,
+  "total_duration_seconds": 309.068,
+  "avg_rps": 18.542844940272044,
+  "unique_scenarios": 400
+}

@@ -1,0 +1,498 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>K6 Load Testing Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; background-color: #F3F4F6; color: #1F2937; }
+            h1 { color: #1E3A8A; }
+            h2 { color: #0D9488; margin-top: 30px; }
+            .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+            .stats { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; }
+            .card { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 20px; border-radius: 6px; flex: 1; min-width: 200px; }
+            .card h3 { margin: 0 0 10px 0; font-size: 14px; color: #1E40AF; text-transform: uppercase; }
+            .card p { margin: 0; font-size: 24px; font-weight: bold; color: #1E3A8A; }
+            table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+            th, td { border: 1px solid #E5E7EB; padding: 12px; text-align: left; }
+            th { background-color: #F3F4F6; }
+            .chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; margin-top: 20px; }
+            .chart-card { background: #FFF; border: 1px solid #E5E7EB; padding: 15px; border-radius: 6px; text-align: center; }
+            .chart-card img { max-width: 100%; height: auto; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Neuro-Behavioral Drift System — Load Test Summary</h1>
+            <p>Generated on: 2026-07-22 09:03:45</p>
+            
+            <h2>Overall Statistics</h2>
+            <div class="stats">
+                <div class="card"><h3>Total Requests</h3><p>5731</p></div>
+                <div class="card"><h3>Success Rate</h3><p>100.00%</p></div>
+                <div class="card"><h3>Avg Latency</h3><p>2408.01 ms</p></div>
+                <div class="card"><h3>95th Percentile</h3><p>10235.50 ms</p></div>
+                <div class="card"><h3>99th Percentile</h3><p>20957.10 ms</p></div>
+                <div class="card"><h3>Average RPS</h3><p>18.54 req/s</p></div>
+            </div>
+            
+            <h2>API Endpoint Performance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Endpoint</th>
+                        <th>Method</th>
+                        <th>Requests</th>
+                        <th>Passed</th>
+                        <th>Failed</th>
+                        <th>Success %</th>
+                        <th>Avg Latency (ms)</th>
+                        <th>95th Percentile (ms)</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                    <tr>
+                        <td>/api/auth/login</td>
+                        <td>POST</td>
+                        <td>578</td>
+                        <td>578</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>4178.9</td>
+                        <td>10374.5</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/auth/me</td>
+                        <td>GET</td>
+                        <td>454</td>
+                        <td>454</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>475.5</td>
+                        <td>1853.4</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/auth/register</td>
+                        <td>POST</td>
+                        <td>762</td>
+                        <td>762</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>4420.2</td>
+                        <td>16214.7</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/dashboard</td>
+                        <td>GET</td>
+                        <td>578</td>
+                        <td>578</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>1587.9</td>
+                        <td>6083.9</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/metrics</td>
+                        <td>POST</td>
+                        <td>1121</td>
+                        <td>1121</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>3532.9</td>
+                        <td>13774.0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/model/info</td>
+                        <td>GET</td>
+                        <td>295</td>
+                        <td>295</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>349.4</td>
+                        <td>1596.3</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/model/retrain</td>
+                        <td>POST</td>
+                        <td>257</td>
+                        <td>257</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>935.5</td>
+                        <td>3523.4</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications</td>
+                        <td>GET</td>
+                        <td>159</td>
+                        <td>159</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>1335.0</td>
+                        <td>5314.0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10000</td>
+                        <td>DELETE</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>3360.0</td>
+                        <td>10973.4</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10000/read</td>
+                        <td>PUT</td>
+                        <td>15</td>
+                        <td>15</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>3187.6</td>
+                        <td>14535.3</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10001</td>
+                        <td>DELETE</td>
+                        <td>14</td>
+                        <td>14</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2964.5</td>
+                        <td>9921.2</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10001/read</td>
+                        <td>PUT</td>
+                        <td>13</td>
+                        <td>13</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>4206.7</td>
+                        <td>18876.8</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10002</td>
+                        <td>DELETE</td>
+                        <td>16</td>
+                        <td>16</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>1619.7</td>
+                        <td>6369.0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10002/read</td>
+                        <td>PUT</td>
+                        <td>13</td>
+                        <td>13</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2283.8</td>
+                        <td>9141.2</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10003</td>
+                        <td>DELETE</td>
+                        <td>17</td>
+                        <td>17</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>1646.8</td>
+                        <td>5716.0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10003/read</td>
+                        <td>PUT</td>
+                        <td>19</td>
+                        <td>19</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2628.9</td>
+                        <td>10165.8</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10004</td>
+                        <td>DELETE</td>
+                        <td>15</td>
+                        <td>15</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2743.9</td>
+                        <td>11455.0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10004/read</td>
+                        <td>PUT</td>
+                        <td>19</td>
+                        <td>19</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2029.1</td>
+                        <td>7744.8</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10005</td>
+                        <td>DELETE</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>1688.3</td>
+                        <td>6326.2</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10005/read</td>
+                        <td>PUT</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>425.2</td>
+                        <td>1307.3</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10006</td>
+                        <td>DELETE</td>
+                        <td>13</td>
+                        <td>13</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>3534.2</td>
+                        <td>18709.2</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10006/read</td>
+                        <td>PUT</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2361.6</td>
+                        <td>10392.5</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10007</td>
+                        <td>DELETE</td>
+                        <td>17</td>
+                        <td>17</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2733.1</td>
+                        <td>10858.6</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10007/read</td>
+                        <td>PUT</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>709.5</td>
+                        <td>2768.0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10008</td>
+                        <td>DELETE</td>
+                        <td>15</td>
+                        <td>15</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>5119.5</td>
+                        <td>22415.1</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10008/read</td>
+                        <td>PUT</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>3444.8</td>
+                        <td>14786.4</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10009</td>
+                        <td>DELETE</td>
+                        <td>14</td>
+                        <td>14</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2623.3</td>
+                        <td>11043.6</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10009/read</td>
+                        <td>PUT</td>
+                        <td>21</td>
+                        <td>21</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2840.9</td>
+                        <td>13135.0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10010</td>
+                        <td>DELETE</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2005.4</td>
+                        <td>8091.5</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/10010/read</td>
+                        <td>PUT</td>
+                        <td>17</td>
+                        <td>17</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2281.3</td>
+                        <td>11309.6</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/123</td>
+                        <td>DELETE</td>
+                        <td>14</td>
+                        <td>14</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>350.1</td>
+                        <td>1660.6</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/123/read</td>
+                        <td>PUT</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>145.3</td>
+                        <td>533.3</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/9999</td>
+                        <td>DELETE</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2609.2</td>
+                        <td>8735.5</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/9999/read</td>
+                        <td>PUT</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>928.4</td>
+                        <td>2044.5</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/read-all</td>
+                        <td>POST</td>
+                        <td>145</td>
+                        <td>145</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>2821.8</td>
+                        <td>14210.0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/notifications/unread-count</td>
+                        <td>GET</td>
+                        <td>147</td>
+                        <td>147</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>736.0</td>
+                        <td>2764.1</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/profile</td>
+                        <td>GET</td>
+                        <td>194</td>
+                        <td>194</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>1066.1</td>
+                        <td>3834.1</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/profile</td>
+                        <td>PUT</td>
+                        <td>411</td>
+                        <td>411</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>1538.9</td>
+                        <td>8499.0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>/api/profile/account</td>
+                        <td>DELETE</td>
+                        <td>263</td>
+                        <td>263</td>
+                        <td>0</td>
+                        <td>100.0%</td>
+                        <td>518.0</td>
+                        <td>2280.0</td>
+                    </tr>
+        
+                </tbody>
+            </table>
+            
+            <h2>Performance Charts</h2>
+            <div class="chart-grid">
+                <div class="chart-card"><h3>Response Time</h3><img src="charts/response_time.png"/></div>
+                <div class="chart-card"><h3>Throughput (RPS)</h3><img src="charts/throughput.png"/></div>
+                <div class="chart-card"><h3>Active Users</h3><img src="charts/active_users.png"/></div>
+                <div class="chart-card"><h3>Latency percentiles</h3><img src="charts/latency.png"/></div>
+                <div class="chart-card"><h3>API Comparison</h3><img src="charts/api_comparison.png"/></div>
+                <div class="chart-card"><h3>Success vs Failure</h3><img src="charts/success_vs_failure.png"/></div>
+            </div>
+        </div>
+    </body>
+    </html>
+    

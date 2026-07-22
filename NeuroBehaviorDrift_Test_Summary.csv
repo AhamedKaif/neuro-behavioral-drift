@@ -1,0 +1,9 @@
+Metric,Value
+Total Test Cases,36
+Passed,36
+Failed,0
+Pass Percentage,100.00%
+Execution Date,2026-06-13 00:41:27
+Executed By,Automated QA Pipeline (Pytest/Selenium)
+Environment,Localhost (Port 5173 / 5000)
+Browser Used,Google Chrome 126.x

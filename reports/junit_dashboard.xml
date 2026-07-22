@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="17.566" timestamp="2026-06-14T11:11:12.372675" hostname="runnervm1li68"><testcase classname="tests.test_dashboard" name="test_dashboard_loads" time="13.307"><failure message="selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder='Enter username']&quot;}&#10;  (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Stacktrace:&#10;#0 0x5624da87380a &lt;unknown&gt;&#10;#1 0x5624da256289 &lt;unknown&gt;&#10;#2 0x5624da2aa9b4 &lt;unknown&gt;&#10;#3 0x5624da2aac01 &lt;unknown&gt;&#10;#4 0x5624da2f5874 &lt;unknown&gt;&#10;#5 0x5624da2f2a4c &lt;unknown&gt;&#10;#6 0x5624da29df7f &lt;unknown&gt;&#10;#7 0x5624da29ed61 &lt;unknown&gt;&#10;#8 0x5624da83a0f7 &lt;unknown&gt;&#10;#9 0x5624da8388bd &lt;unknown&gt;&#10;#10 0x5624da8235a6 &lt;unknown&gt;&#10;#11 0x5624da83949a &lt;unknown&gt;&#10;#12 0x5624da80b560 &lt;unknown&gt;&#10;#13 0x5624da860288 &lt;unknown&gt;&#10;#14 0x5624da860425 &lt;unknown&gt;&#10;#15 0x5624da87238e &lt;unknown&gt;&#10;#16 0x7f419d69caa4 &lt;unknown&gt;&#10;#17 0x7f419d729c6c &lt;unknown&gt;">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="3a57061da7ea14ed873874337d9a95e3")&gt;
+login_helper = &lt;function login_helper.&lt;locals&gt;._login at 0x7fca0d6a9da0&gt;
+
+    def test_dashboard_loads(browser, login_helper):
+        """Verify that the dashboard main elements render correctly."""
+&gt;       login_helper()
+
+tests/test_dashboard.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/conftest.py:87: in _login
+    username_input = browser.find_element("xpath", "//input[@placeholder='Enter username']")
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:868: in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:468: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fca0d2ea090&gt;
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...\\n#15 0x5624da87238e \\u003Cunknown&gt;\\n#16 0x7f419d69caa4 \\u003Cunknown&gt;\\n#17 0x7f419d729c6c \\u003Cunknown&gt;\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Enter username']"}
+E         (Session info: chrome=149.0.7827.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+E       Stacktrace:
+E       #0 0x5624da87380a &lt;unknown&gt;
+E       #1 0x5624da256289 &lt;unknown&gt;
+E       #2 0x5624da2aa9b4 &lt;unknown&gt;
+E       #3 0x5624da2aac01 &lt;unknown&gt;
+E       #4 0x5624da2f5874 &lt;unknown&gt;
+E       #5 0x5624da2f2a4c &lt;unknown&gt;
+E       #6 0x5624da29df7f &lt;unknown&gt;
+E       #7 0x5624da29ed61 &lt;unknown&gt;
+E       #8 0x5624da83a0f7 &lt;unknown&gt;
+E       #9 0x5624da8388bd &lt;unknown&gt;
+E       #10 0x5624da8235a6 &lt;unknown&gt;
+E       #11 0x5624da83949a &lt;unknown&gt;
+E       #12 0x5624da80b560 &lt;unknown&gt;
+E       #13 0x5624da860288 &lt;unknown&gt;
+E       #14 0x5624da860425 &lt;unknown&gt;
+E       #15 0x5624da87238e &lt;unknown&gt;
+E       #16 0x7f419d69caa4 &lt;unknown&gt;
+E       #17 0x7f419d729c6c &lt;unknown&gt;
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchElementException</failure></testcase><testcase classname="tests.test_dashboard" name="test_user_profile_display" time="1.160" /><testcase classname="tests.test_dashboard" name="test_dashboard_stats_exist" time="1.106" /><testcase classname="tests.test_dashboard" name="test_retrain_model_button" time="1.728" /></testsuite></testsuites>

@@ -1,0 +1,6383 @@
+[
+  {
+    "id": "TC-001",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Designer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 0",
+      "username": "user_reg_0_7347",
+      "email": "user_reg_0_7347@test.com",
+      "password": "ValidPassword123!",
+      "age": 58,
+      "gender": "Female",
+      "occupation": "Designer",
+      "institution": "MIT",
+      "department": "Computer Science",
+      "academic_year": "N/A",
+      "working_hours": 9.6,
+      "avg_screen_time": 7.2,
+      "avg_sleep_hours": 6.0,
+      "preferred_work_time": "Flexible",
+      "stress_level": 7
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-002",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Designer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 1",
+      "username": "user_reg_1_1487",
+      "email": "user_reg_1_1487@test.com",
+      "password": "ValidPassword123!",
+      "age": 24,
+      "gender": "Male",
+      "occupation": "Designer",
+      "institution": "UC Berkeley",
+      "department": "Physics",
+      "academic_year": "3rd Year",
+      "working_hours": 7.6,
+      "avg_screen_time": 4.0,
+      "avg_sleep_hours": 8.1,
+      "preferred_work_time": "Flexible",
+      "stress_level": 1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-003",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Student",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 2",
+      "username": "user_reg_2_8498",
+      "email": "user_reg_2_8498@test.com",
+      "password": "ValidPassword123!",
+      "age": 44,
+      "gender": "Female",
+      "occupation": "Student",
+      "institution": "Stanford",
+      "department": "Physics",
+      "academic_year": "N/A",
+      "working_hours": 5.9,
+      "avg_screen_time": 3.3,
+      "avg_sleep_hours": 8.9,
+      "preferred_work_time": "Morning",
+      "stress_level": 5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-004",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Developer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 3",
+      "username": "user_reg_3_6295",
+      "email": "user_reg_3_6295@test.com",
+      "password": "ValidPassword123!",
+      "age": 63,
+      "gender": "Non-binary",
+      "occupation": "Developer",
+      "institution": "Stanford",
+      "department": "Computer Science",
+      "academic_year": "3rd Year",
+      "working_hours": 6.1,
+      "avg_screen_time": 9.1,
+      "avg_sleep_hours": 7.6,
+      "preferred_work_time": "Afternoon",
+      "stress_level": 2
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-005",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Engineer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 4",
+      "username": "user_reg_4_3711",
+      "email": "user_reg_4_3711@test.com",
+      "password": "ValidPassword123!",
+      "age": 61,
+      "gender": "Non-binary",
+      "occupation": "Engineer",
+      "institution": "Cambridge",
+      "department": "Neuroscience",
+      "academic_year": "3rd Year",
+      "working_hours": 6.7,
+      "avg_screen_time": 9.5,
+      "avg_sleep_hours": 5.6,
+      "preferred_work_time": "Morning",
+      "stress_level": 6
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-006",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Developer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 5",
+      "username": "user_reg_5_9331",
+      "email": "user_reg_5_9331@test.com",
+      "password": "ValidPassword123!",
+      "age": 28,
+      "gender": "Prefer not to say",
+      "occupation": "Developer",
+      "institution": "Cambridge",
+      "department": "Computer Science",
+      "academic_year": "3rd Year",
+      "working_hours": 10.4,
+      "avg_screen_time": 6.0,
+      "avg_sleep_hours": 6.1,
+      "preferred_work_time": "Night",
+      "stress_level": 2
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-007",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Student",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 6",
+      "username": "user_reg_6_9760",
+      "email": "user_reg_6_9760@test.com",
+      "password": "ValidPassword123!",
+      "age": 41,
+      "gender": "Non-binary",
+      "occupation": "Student",
+      "institution": "MIT",
+      "department": "Biology",
+      "academic_year": "3rd Year",
+      "working_hours": 7.4,
+      "avg_screen_time": 4.2,
+      "avg_sleep_hours": 7.9,
+      "preferred_work_time": "Morning",
+      "stress_level": 1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-008",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Designer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 7",
+      "username": "user_reg_7_8875",
+      "email": "user_reg_7_8875@test.com",
+      "password": "ValidPassword123!",
+      "age": 19,
+      "gender": "Prefer not to say",
+      "occupation": "Designer",
+      "institution": "Cambridge",
+      "department": "Neuroscience",
+      "academic_year": "4th Year",
+      "working_hours": 8.6,
+      "avg_screen_time": 9.7,
+      "avg_sleep_hours": 7.2,
+      "preferred_work_time": "Morning",
+      "stress_level": 1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-009",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Engineer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 8",
+      "username": "user_reg_8_1716",
+      "email": "user_reg_8_1716@test.com",
+      "password": "ValidPassword123!",
+      "age": 44,
+      "gender": "Female",
+      "occupation": "Engineer",
+      "institution": "UC Berkeley",
+      "department": "Biology",
+      "academic_year": "4th Year",
+      "working_hours": 6.9,
+      "avg_screen_time": 2.6,
+      "avg_sleep_hours": 6.9,
+      "preferred_work_time": "Morning",
+      "stress_level": 3
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-010",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Designer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 9",
+      "username": "user_reg_9_8971",
+      "email": "user_reg_9_8971@test.com",
+      "password": "ValidPassword123!",
+      "age": 49,
+      "gender": "Non-binary",
+      "occupation": "Designer",
+      "institution": "Cambridge",
+      "department": "Physics",
+      "academic_year": "2nd Year",
+      "working_hours": 4.5,
+      "avg_screen_time": 2.0,
+      "avg_sleep_hours": 8.5,
+      "preferred_work_time": "Flexible",
+      "stress_level": 2
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-011",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Researcher",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 10",
+      "username": "user_reg_10_5538",
+      "email": "user_reg_10_5538@test.com",
+      "password": "ValidPassword123!",
+      "age": 26,
+      "gender": "Non-binary",
+      "occupation": "Researcher",
+      "institution": "Stanford",
+      "department": "Physics",
+      "academic_year": "4th Year",
+      "working_hours": 9.4,
+      "avg_screen_time": 5.8,
+      "avg_sleep_hours": 6.7,
+      "preferred_work_time": "Night",
+      "stress_level": 8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-012",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Designer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 11",
+      "username": "user_reg_11_4782",
+      "email": "user_reg_11_4782@test.com",
+      "password": "ValidPassword123!",
+      "age": 56,
+      "gender": "Prefer not to say",
+      "occupation": "Designer",
+      "institution": "Cambridge",
+      "department": "Computer Science",
+      "academic_year": "1st Year",
+      "working_hours": 11.4,
+      "avg_screen_time": 6.4,
+      "avg_sleep_hours": 6.5,
+      "preferred_work_time": "Flexible",
+      "stress_level": 1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-013",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Designer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 12",
+      "username": "user_reg_12_5782",
+      "email": "user_reg_12_5782@test.com",
+      "password": "ValidPassword123!",
+      "age": 59,
+      "gender": "Female",
+      "occupation": "Designer",
+      "institution": "Harvard",
+      "department": "Computer Science",
+      "academic_year": "2nd Year",
+      "working_hours": 8.0,
+      "avg_screen_time": 7.4,
+      "avg_sleep_hours": 7.3,
+      "preferred_work_time": "Morning",
+      "stress_level": 4
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-014",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Manager",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 13",
+      "username": "user_reg_13_1538",
+      "email": "user_reg_13_1538@test.com",
+      "password": "ValidPassword123!",
+      "age": 28,
+      "gender": "Male",
+      "occupation": "Manager",
+      "institution": "Harvard",
+      "department": "Neuroscience",
+      "academic_year": "2nd Year",
+      "working_hours": 7.1,
+      "avg_screen_time": 4.6,
+      "avg_sleep_hours": 5.7,
+      "preferred_work_time": "Afternoon",
+      "stress_level": 10
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-015",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Student",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 14",
+      "username": "user_reg_14_9495",
+      "email": "user_reg_14_9495@test.com",
+      "password": "ValidPassword123!",
+      "age": 35,
+      "gender": "Non-binary",
+      "occupation": "Student",
+      "institution": "Stanford",
+      "department": "Computer Science",
+      "academic_year": "N/A",
+      "working_hours": 4.1,
+      "avg_screen_time": 3.3,
+      "avg_sleep_hours": 6.5,
+      "preferred_work_time": "Afternoon",
+      "stress_level": 5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-016",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Researcher",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 15",
+      "username": "user_reg_15_3254",
+      "email": "user_reg_15_3254@test.com",
+      "password": "ValidPassword123!",
+      "age": 61,
+      "gender": "Non-binary",
+      "occupation": "Researcher",
+      "institution": "Stanford",
+      "department": "Computer Science",
+      "academic_year": "2nd Year",
+      "working_hours": 8.5,
+      "avg_screen_time": 9.0,
+      "avg_sleep_hours": 5.4,
+      "preferred_work_time": "Afternoon",
+      "stress_level": 10
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-017",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Manager",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 16",
+      "username": "user_reg_16_6671",
+      "email": "user_reg_16_6671@test.com",
+      "password": "ValidPassword123!",
+      "age": 30,
+      "gender": "Prefer not to say",
+      "occupation": "Manager",
+      "institution": "Oxford",
+      "department": "Neuroscience",
+      "academic_year": "2nd Year",
+      "working_hours": 12.0,
+      "avg_screen_time": 2.1,
+      "avg_sleep_hours": 8.3,
+      "preferred_work_time": "Morning",
+      "stress_level": 5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-018",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Developer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 17",
+      "username": "user_reg_17_1583",
+      "email": "user_reg_17_1583@test.com",
+      "password": "ValidPassword123!",
+      "age": 25,
+      "gender": "Male",
+      "occupation": "Developer",
+      "institution": "UC Berkeley",
+      "department": "Psychology",
+      "academic_year": "3rd Year",
+      "working_hours": 5.9,
+      "avg_screen_time": 5.2,
+      "avg_sleep_hours": 7.9,
+      "preferred_work_time": "Flexible",
+      "stress_level": 7
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-019",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Developer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 18",
+      "username": "user_reg_18_5622",
+      "email": "user_reg_18_5622@test.com",
+      "password": "ValidPassword123!",
+      "age": 18,
+      "gender": "Female",
+      "occupation": "Developer",
+      "institution": "Oxford",
+      "department": "Biology",
+      "academic_year": "2nd Year",
+      "working_hours": 4.4,
+      "avg_screen_time": 9.9,
+      "avg_sleep_hours": 8.1,
+      "preferred_work_time": "Afternoon",
+      "stress_level": 10
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-020",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Engineer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 19",
+      "username": "user_reg_19_9889",
+      "email": "user_reg_19_9889@test.com",
+      "password": "ValidPassword123!",
+      "age": 30,
+      "gender": "Non-binary",
+      "occupation": "Engineer",
+      "institution": "Stanford",
+      "department": "Biology",
+      "academic_year": "N/A",
+      "working_hours": 8.4,
+      "avg_screen_time": 2.4,
+      "avg_sleep_hours": 9.0,
+      "preferred_work_time": "Night",
+      "stress_level": 10
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-021",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Student",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 20",
+      "username": "user_reg_20_5401",
+      "email": "user_reg_20_5401@test.com",
+      "password": "ValidPassword123!",
+      "age": 52,
+      "gender": "Prefer not to say",
+      "occupation": "Student",
+      "institution": "UC Berkeley",
+      "department": "Neuroscience",
+      "academic_year": "3rd Year",
+      "working_hours": 7.1,
+      "avg_screen_time": 5.8,
+      "avg_sleep_hours": 6.0,
+      "preferred_work_time": "Afternoon",
+      "stress_level": 4
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-022",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Researcher",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 21",
+      "username": "user_reg_21_9819",
+      "email": "user_reg_21_9819@test.com",
+      "password": "ValidPassword123!",
+      "age": 42,
+      "gender": "Female",
+      "occupation": "Researcher",
+      "institution": "UC Berkeley",
+      "department": "Biology",
+      "academic_year": "1st Year",
+      "working_hours": 7.5,
+      "avg_screen_time": 9.7,
+      "avg_sleep_hours": 6.8,
+      "preferred_work_time": "Flexible",
+      "stress_level": 8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-023",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Developer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 22",
+      "username": "user_reg_22_5491",
+      "email": "user_reg_22_5491@test.com",
+      "password": "ValidPassword123!",
+      "age": 55,
+      "gender": "Non-binary",
+      "occupation": "Developer",
+      "institution": "Stanford",
+      "department": "Psychology",
+      "academic_year": "4th Year",
+      "working_hours": 4.2,
+      "avg_screen_time": 5.8,
+      "avg_sleep_hours": 8.2,
+      "preferred_work_time": "Flexible",
+      "stress_level": 8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-024",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Developer",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 23",
+      "username": "user_reg_23_5443",
+      "email": "user_reg_23_5443@test.com",
+      "password": "ValidPassword123!",
+      "age": 62,
+      "gender": "Prefer not to say",
+      "occupation": "Developer",
+      "institution": "MIT",
+      "department": "Psychology",
+      "academic_year": "2nd Year",
+      "working_hours": 10.7,
+      "avg_screen_time": 2.1,
+      "avg_sleep_hours": 8.5,
+      "preferred_work_time": "Night",
+      "stress_level": 1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-025",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Valid Registration - Student",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Reg User 24",
+      "username": "user_reg_24_2323",
+      "email": "user_reg_24_2323@test.com",
+      "password": "ValidPassword123!",
+      "age": 21,
+      "gender": "Male",
+      "occupation": "Student",
+      "institution": "Stanford",
+      "department": "Psychology",
+      "academic_year": "N/A",
+      "working_hours": 7.3,
+      "avg_screen_time": 4.4,
+      "avg_sleep_hours": 7.1,
+      "preferred_work_time": "Flexible",
+      "stress_level": 7
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-026",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Missing Username",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "No Username",
+      "email": "nousername@test.com",
+      "password": "pass"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-027",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Missing Password",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "No Password",
+      "username": "nopass",
+      "email": "nopass@test.com"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-028",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Missing Email",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "No Email",
+      "username": "noemail",
+      "password": "pass"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-029",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Missing Full Name",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "username": "nofullname",
+      "email": "nofullname@test.com",
+      "password": "pass"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-030",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Age Boundary (Underage)",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Underage",
+      "username": "underage_user",
+      "email": "underage@test.com",
+      "password": "pass",
+      "age": 5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-031",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Stress Level Boundary (Low)",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Stress Low",
+      "username": "stress_low_user",
+      "email": "stress_low@test.com",
+      "password": "pass",
+      "stress_level": 1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-032",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Stress Level Boundary (High)",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Stress High",
+      "username": "stress_high_user",
+      "email": "stress_high@test.com",
+      "password": "pass",
+      "stress_level": 10
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-033",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Stress Level (Too High)",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Stress Invalid",
+      "username": "stress_inv_user",
+      "email": "stress_inv@test.com",
+      "password": "pass",
+      "stress_level": 11
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-034",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Stress Level (Too Low)",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Stress Invalid 2",
+      "username": "stress_inv_user2",
+      "email": "stress_inv2@test.com",
+      "password": "pass",
+      "stress_level": 0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-035",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 0",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_0",
+      "email": "bad_type_0@test.com",
+      "password": "pass",
+      "stress_level": "very stressed",
+      "age": null
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-036",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 1",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_1",
+      "email": "bad_type_1@test.com",
+      "password": "pass",
+      "stress_level": [
+        1,
+        2
+      ],
+      "age": "twenty"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-037",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 2",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_2",
+      "email": "bad_type_2@test.com",
+      "password": "pass",
+      "stress_level": "very stressed",
+      "age": null
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-038",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 3",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_3",
+      "email": "bad_type_3@test.com",
+      "password": "pass",
+      "stress_level": [
+        1,
+        2
+      ],
+      "age": "twenty"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-039",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 4",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_4",
+      "email": "bad_type_4@test.com",
+      "password": "pass",
+      "stress_level": "very stressed",
+      "age": null
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-040",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 5",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_5",
+      "email": "bad_type_5@test.com",
+      "password": "pass",
+      "stress_level": [
+        1,
+        2
+      ],
+      "age": "twenty"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-041",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 6",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_6",
+      "email": "bad_type_6@test.com",
+      "password": "pass",
+      "stress_level": "very stressed",
+      "age": null
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-042",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 7",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_7",
+      "email": "bad_type_7@test.com",
+      "password": "pass",
+      "stress_level": [
+        1,
+        2
+      ],
+      "age": "twenty"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-043",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 8",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_8",
+      "email": "bad_type_8@test.com",
+      "password": "pass",
+      "stress_level": "very stressed",
+      "age": null
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-044",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 9",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_9",
+      "email": "bad_type_9@test.com",
+      "password": "pass",
+      "stress_level": [
+        1,
+        2
+      ],
+      "age": "twenty"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-045",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 10",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_10",
+      "email": "bad_type_10@test.com",
+      "password": "pass",
+      "stress_level": "very stressed",
+      "age": null
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-046",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 11",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_11",
+      "email": "bad_type_11@test.com",
+      "password": "pass",
+      "stress_level": [
+        1,
+        2
+      ],
+      "age": "twenty"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-047",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 12",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_12",
+      "email": "bad_type_12@test.com",
+      "password": "pass",
+      "stress_level": "very stressed",
+      "age": null
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-048",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 13",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_13",
+      "email": "bad_type_13@test.com",
+      "password": "pass",
+      "stress_level": [
+        1,
+        2
+      ],
+      "age": "twenty"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-049",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 14",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_14",
+      "email": "bad_type_14@test.com",
+      "password": "pass",
+      "stress_level": "very stressed",
+      "age": null
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-050",
+    "api": "/api/auth/register",
+    "method": "POST",
+    "name": "Registration - Invalid Data Type 15",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Bad Type",
+      "username": "bad_type_15",
+      "email": "bad_type_15@test.com",
+      "password": "pass",
+      "stress_level": [
+        1,
+        2
+      ],
+      "age": "twenty"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-051",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_0",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-052",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_1",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-053",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_2",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-054",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_3",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-055",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_4",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-056",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_5",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-057",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_6",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-058",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_7",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-059",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_8",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-060",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_9",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-061",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 10",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_10",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-062",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 11",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_11",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-063",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 12",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_12",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-064",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 13",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_13",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-065",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Valid Login - Case 14",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_14",
+      "password": "ValidPassword123!"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-066",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 0",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_0",
+      "password": "wrongpassword_0"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-067",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 1",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_1",
+      "password": "wrongpassword_1"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-068",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 2",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_2",
+      "password": "wrongpassword_2"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-069",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 3",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_3",
+      "password": "wrongpassword_3"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-070",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 4",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_4",
+      "password": "wrongpassword_4"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-071",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 5",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_5",
+      "password": "wrongpassword_5"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-072",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 6",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_6",
+      "password": "wrongpassword_6"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-073",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 7",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_7",
+      "password": "wrongpassword_7"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-074",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 8",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_8",
+      "password": "wrongpassword_8"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-075",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Wrong Password 9",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user_login_9",
+      "password": "wrongpassword_9"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-076",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 0",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_0_9939",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-077",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 1",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_1_5829",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-078",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 2",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_2_2677",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-079",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 3",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_3_8898",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-080",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 4",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_4_3197",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-081",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 5",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_5_4285",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-082",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 6",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_6_5858",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-083",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 7",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_7_8918",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-084",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 8",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_8_2557",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-085",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Invalid Login - Nonexistent User 9",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "nonexistent_9_6561",
+      "password": "some_password"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-086",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Login - Empty Username",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "username": "",
+      "password": "pwd"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-087",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Login - Empty Password",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {
+      "username": "user",
+      "password": ""
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-088",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Login - Missing Fields",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": false,
+    "payload": {},
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-089",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Login - SQL Injection Attempt",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "' OR '1'='1",
+      "password": "pwd"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-090",
+    "api": "/api/auth/login",
+    "method": "POST",
+    "name": "Login - Special Characters in Username",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "username": "user!@#$%",
+      "password": "pwd"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-091",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-092",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-093",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-094",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-095",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-096",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-097",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-098",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-099",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-100",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Valid Token 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-101",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-102",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Expired Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGl0eSI6IjEiLCJleHAiOjE2MDAwMDAwMDB9.invalid"
+    }
+  },
+  {
+    "id": "TC-103",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Malformed Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer malformed_token_string"
+    }
+  },
+  {
+    "id": "TC-104",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Wrong Schema",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Basic YWRtaW46YWRtaW4="
+    }
+  },
+  {
+    "id": "TC-105",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 0",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_0"
+    }
+  },
+  {
+    "id": "TC-106",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 1",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_1"
+    }
+  },
+  {
+    "id": "TC-107",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 2",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_2"
+    }
+  },
+  {
+    "id": "TC-108",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 3",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_3"
+    }
+  },
+  {
+    "id": "TC-109",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 4",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_4"
+    }
+  },
+  {
+    "id": "TC-110",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 5",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_5"
+    }
+  },
+  {
+    "id": "TC-111",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 6",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_6"
+    }
+  },
+  {
+    "id": "TC-112",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 7",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_7"
+    }
+  },
+  {
+    "id": "TC-113",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 8",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_8"
+    }
+  },
+  {
+    "id": "TC-114",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 9",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_9"
+    }
+  },
+  {
+    "id": "TC-115",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 10",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_10"
+    }
+  },
+  {
+    "id": "TC-116",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 11",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_11"
+    }
+  },
+  {
+    "id": "TC-117",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 12",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_12"
+    }
+  },
+  {
+    "id": "TC-118",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 13",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_13"
+    }
+  },
+  {
+    "id": "TC-119",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 14",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_14"
+    }
+  },
+  {
+    "id": "TC-120",
+    "api": "/api/auth/me",
+    "method": "GET",
+    "name": "Get Current User - Unauthorized Probe 15",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_token_15"
+    }
+  },
+  {
+    "id": "TC-121",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-122",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-123",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-124",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-125",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-126",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-127",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-128",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-129",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-130",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Case 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-131",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-132",
+    "api": "/api/profile",
+    "method": "GET",
+    "name": "Get Profile - Bad Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad"
+    }
+  },
+  {
+    "id": "TC-133",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 0",
+      "age": 20,
+      "working_hours": 6.6,
+      "stress_level": 8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-134",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 1",
+      "age": 46,
+      "working_hours": 9.3,
+      "stress_level": 6
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-135",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 2",
+      "age": 46,
+      "working_hours": 5.1,
+      "stress_level": 9
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-136",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 3",
+      "age": 42,
+      "working_hours": 7.4,
+      "stress_level": 3
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-137",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 4",
+      "age": 50,
+      "working_hours": 6.3,
+      "stress_level": 9
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-138",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 5",
+      "age": 48,
+      "working_hours": 9.0,
+      "stress_level": 4
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-139",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 6",
+      "age": 23,
+      "working_hours": 8.0,
+      "stress_level": 8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-140",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 7",
+      "age": 44,
+      "working_hours": 7.6,
+      "stress_level": 2
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-141",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 8",
+      "age": 31,
+      "working_hours": 7.7,
+      "stress_level": 2
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-142",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 9",
+      "age": 47,
+      "working_hours": 8.1,
+      "stress_level": 9
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-143",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 10",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 10",
+      "age": 28,
+      "working_hours": 7.2,
+      "stress_level": 5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-144",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 11",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 11",
+      "age": 40,
+      "working_hours": 7.1,
+      "stress_level": 5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-145",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 12",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 12",
+      "age": 24,
+      "working_hours": 6.4,
+      "stress_level": 4
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-146",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 13",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 13",
+      "age": 31,
+      "working_hours": 8.2,
+      "stress_level": 4
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-147",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Valid fields 14",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {
+      "full_name": "Updated Name 14",
+      "age": 35,
+      "working_hours": 6.4,
+      "stress_level": 4
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-148",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Invalid Age (Too High)",
+    "category": "boundary",
+    "expected_status": 400,
+    "requires_auth": true,
+    "payload": {
+      "age": 150
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-149",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Invalid Age (Negative)",
+    "category": "boundary",
+    "expected_status": 400,
+    "requires_auth": true,
+    "payload": {
+      "age": -5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-150",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Invalid Stress Level (Too High)",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": true,
+    "payload": {
+      "stress_level": 12
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-151",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Invalid Stress Level (Too Low)",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": true,
+    "payload": {
+      "stress_level": 0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-152",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Invalid working hours type",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": true,
+    "payload": {
+      "working_hours": "ten"
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-153",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - No payload",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": {},
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-154",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Unauthenticated 0",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Hack"
+    },
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_0"
+    }
+  },
+  {
+    "id": "TC-155",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Unauthenticated 1",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Hack"
+    },
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_1"
+    }
+  },
+  {
+    "id": "TC-156",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Unauthenticated 2",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Hack"
+    },
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_2"
+    }
+  },
+  {
+    "id": "TC-157",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Unauthenticated 3",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Hack"
+    },
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_3"
+    }
+  },
+  {
+    "id": "TC-158",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Unauthenticated 4",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Hack"
+    },
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_4"
+    }
+  },
+  {
+    "id": "TC-159",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Unauthenticated 5",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Hack"
+    },
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_5"
+    }
+  },
+  {
+    "id": "TC-160",
+    "api": "/api/profile",
+    "method": "PUT",
+    "name": "Update Profile - Unauthenticated 6",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "full_name": "Hack"
+    },
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer fake_6"
+    }
+  },
+  {
+    "id": "TC-161",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 0",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_0"
+    }
+  },
+  {
+    "id": "TC-162",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 1",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_1"
+    }
+  },
+  {
+    "id": "TC-163",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 2",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_2"
+    }
+  },
+  {
+    "id": "TC-164",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 3",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_3"
+    }
+  },
+  {
+    "id": "TC-165",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 4",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_4"
+    }
+  },
+  {
+    "id": "TC-166",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 5",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_5"
+    }
+  },
+  {
+    "id": "TC-167",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 6",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_6"
+    }
+  },
+  {
+    "id": "TC-168",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 7",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_7"
+    }
+  },
+  {
+    "id": "TC-169",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 8",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_8"
+    }
+  },
+  {
+    "id": "TC-170",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 9",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_9"
+    }
+  },
+  {
+    "id": "TC-171",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 10",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_10"
+    }
+  },
+  {
+    "id": "TC-172",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 11",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_11"
+    }
+  },
+  {
+    "id": "TC-173",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 12",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_12"
+    }
+  },
+  {
+    "id": "TC-174",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 13",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_13"
+    }
+  },
+  {
+    "id": "TC-175",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 14",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_14"
+    }
+  },
+  {
+    "id": "TC-176",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 15",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_15"
+    }
+  },
+  {
+    "id": "TC-177",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Unauthenticated 16",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer bad_token_16"
+    }
+  },
+  {
+    "id": "TC-178",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-179",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Valid Case 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-180",
+    "api": "/api/profile/account",
+    "method": "DELETE",
+    "name": "Delete Account - Valid Case 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-181",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity INFO 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "INFO"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-182",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity MEDIUM 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "MEDIUM"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-183",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity MEDIUM 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "MEDIUM"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-184",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity ALL 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "ALL"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-185",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity MEDIUM 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "MEDIUM"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-186",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity MEDIUM 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "MEDIUM"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-187",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity INFO 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "INFO"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-188",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity HIGH 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "HIGH"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-189",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity MEDIUM 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "MEDIUM"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-190",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Severity HIGH 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "HIGH"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-191",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - Invalid Severity",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": {
+      "severity": "INVALID"
+    },
+    "headers": null
+  },
+  {
+    "id": "TC-192",
+    "api": "/api/notifications",
+    "method": "GET",
+    "name": "Get Notifications - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-193",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-194",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-195",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-196",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-197",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-198",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-199",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-200",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-201",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-202",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - Case 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-203",
+    "api": "/api/notifications/unread-count",
+    "method": "GET",
+    "name": "Get Unread Count - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-204",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-205",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-206",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-207",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-208",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-209",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-210",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-211",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-212",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-213",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - Case 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-214",
+    "api": "/api/notifications/read-all",
+    "method": "POST",
+    "name": "Mark All Notifications Read - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-215",
+    "api": "/api/notifications/9999/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 0",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-216",
+    "api": "/api/notifications/10000/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 1",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-217",
+    "api": "/api/notifications/10001/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 2",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-218",
+    "api": "/api/notifications/10002/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 3",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-219",
+    "api": "/api/notifications/10003/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 4",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-220",
+    "api": "/api/notifications/10004/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 5",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-221",
+    "api": "/api/notifications/10005/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 6",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-222",
+    "api": "/api/notifications/10006/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 7",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-223",
+    "api": "/api/notifications/10007/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 8",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-224",
+    "api": "/api/notifications/10008/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 9",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-225",
+    "api": "/api/notifications/10009/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 10",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-226",
+    "api": "/api/notifications/10010/read",
+    "method": "PUT",
+    "name": "Mark Read - Nonexistent ID 11",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-227",
+    "api": "/api/notifications/123/read",
+    "method": "PUT",
+    "name": "Mark Read - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-228",
+    "api": "/api/notifications/9999",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 0",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-229",
+    "api": "/api/notifications/10000",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 1",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-230",
+    "api": "/api/notifications/10001",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 2",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-231",
+    "api": "/api/notifications/10002",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 3",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-232",
+    "api": "/api/notifications/10003",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 4",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-233",
+    "api": "/api/notifications/10004",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 5",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-234",
+    "api": "/api/notifications/10005",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 6",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-235",
+    "api": "/api/notifications/10006",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 7",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-236",
+    "api": "/api/notifications/10007",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 8",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-237",
+    "api": "/api/notifications/10008",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 9",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-238",
+    "api": "/api/notifications/10009",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 10",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-239",
+    "api": "/api/notifications/10010",
+    "method": "DELETE",
+    "name": "Delete Notification - Nonexistent ID 11",
+    "category": "negative",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-240",
+    "api": "/api/notifications/123",
+    "method": "DELETE",
+    "name": "Delete Notification - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-241",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 0",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 85.0,
+      "typing_speed": 264.3,
+      "typing_error_rate": 0.013,
+      "session_duration": 17.6,
+      "click_frequency": 25.7,
+      "break_frequency": 1.62,
+      "mouse_speed": 464.7
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-242",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 1",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 175.5,
+      "typing_speed": 263.7,
+      "typing_error_rate": 0.012,
+      "session_duration": 24.8,
+      "click_frequency": 33.8,
+      "break_frequency": 2.26,
+      "mouse_speed": 378.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-243",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 2",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 72.7,
+      "typing_speed": 288.3,
+      "typing_error_rate": 0.044,
+      "session_duration": 17.1,
+      "click_frequency": 35.6,
+      "break_frequency": 3.17,
+      "mouse_speed": 425.6
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-244",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 3",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 135.8,
+      "typing_speed": 217.2,
+      "typing_error_rate": 0.039,
+      "session_duration": 24.0,
+      "click_frequency": 25.9,
+      "break_frequency": 3.41,
+      "mouse_speed": 437.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-245",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 4",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 64.4,
+      "typing_speed": 267.1,
+      "typing_error_rate": 0.033,
+      "session_duration": 23.5,
+      "click_frequency": 22.8,
+      "break_frequency": 3.27,
+      "mouse_speed": 445.8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-246",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 5",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 145.3,
+      "typing_speed": 231.8,
+      "typing_error_rate": 0.019,
+      "session_duration": 43.4,
+      "click_frequency": 20.4,
+      "break_frequency": 1.62,
+      "mouse_speed": 424.9
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-247",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 6",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 121.7,
+      "typing_speed": 297.6,
+      "typing_error_rate": 0.039,
+      "session_duration": 43.5,
+      "click_frequency": 22.4,
+      "break_frequency": 3.09,
+      "mouse_speed": 487.8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-248",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 7",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 89.8,
+      "typing_speed": 225.6,
+      "typing_error_rate": 0.034,
+      "session_duration": 25.2,
+      "click_frequency": 37.1,
+      "break_frequency": 1.9,
+      "mouse_speed": 402.6
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-249",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 8",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 131.9,
+      "typing_speed": 215.6,
+      "typing_error_rate": 0.049,
+      "session_duration": 24.5,
+      "click_frequency": 35.8,
+      "break_frequency": 1.7,
+      "mouse_speed": 352.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-250",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 9",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 123.6,
+      "typing_speed": 220.6,
+      "typing_error_rate": 0.02,
+      "session_duration": 36.6,
+      "click_frequency": 34.6,
+      "break_frequency": 3.15,
+      "mouse_speed": 475.5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-251",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 10",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 109.7,
+      "typing_speed": 258.8,
+      "typing_error_rate": 0.034,
+      "session_duration": 18.0,
+      "click_frequency": 26.2,
+      "break_frequency": 2.1,
+      "mouse_speed": 473.2
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-252",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 11",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 89.7,
+      "typing_speed": 239.1,
+      "typing_error_rate": 0.021,
+      "session_duration": 23.7,
+      "click_frequency": 25.4,
+      "break_frequency": 1.83,
+      "mouse_speed": 404.9
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-253",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 12",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 163.8,
+      "typing_speed": 250.4,
+      "typing_error_rate": 0.017,
+      "session_duration": 44.6,
+      "click_frequency": 36.7,
+      "break_frequency": 2.75,
+      "mouse_speed": 327.2
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-254",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 13",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 73.5,
+      "typing_speed": 296.3,
+      "typing_error_rate": 0.023,
+      "session_duration": 40.9,
+      "click_frequency": 30.7,
+      "break_frequency": 2.87,
+      "mouse_speed": 388.1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-255",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 14",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 171.2,
+      "typing_speed": 268.7,
+      "typing_error_rate": 0.04,
+      "session_duration": 38.5,
+      "click_frequency": 31.7,
+      "break_frequency": 2.22,
+      "mouse_speed": 402.1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-256",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 15",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 106.3,
+      "typing_speed": 235.7,
+      "typing_error_rate": 0.019,
+      "session_duration": 19.1,
+      "click_frequency": 25.4,
+      "break_frequency": 3.02,
+      "mouse_speed": 382.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-257",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 16",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 164.4,
+      "typing_speed": 255.0,
+      "typing_error_rate": 0.017,
+      "session_duration": 28.4,
+      "click_frequency": 32.0,
+      "break_frequency": 2.93,
+      "mouse_speed": 319.7
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-258",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 17",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 99.2,
+      "typing_speed": 210.9,
+      "typing_error_rate": 0.014,
+      "session_duration": 38.4,
+      "click_frequency": 21.1,
+      "break_frequency": 3.01,
+      "mouse_speed": 399.1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-259",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 18",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 75.3,
+      "typing_speed": 236.1,
+      "typing_error_rate": 0.039,
+      "session_duration": 20.1,
+      "click_frequency": 26.1,
+      "break_frequency": 3.36,
+      "mouse_speed": 401.6
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-260",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 19",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 146.8,
+      "typing_speed": 207.3,
+      "typing_error_rate": 0.033,
+      "session_duration": 17.9,
+      "click_frequency": 26.4,
+      "break_frequency": 2.33,
+      "mouse_speed": 427.1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-261",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 20",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 167.1,
+      "typing_speed": 224.0,
+      "typing_error_rate": 0.039,
+      "session_duration": 21.1,
+      "click_frequency": 24.3,
+      "break_frequency": 1.98,
+      "mouse_speed": 330.6
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-262",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 21",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 157.3,
+      "typing_speed": 223.5,
+      "typing_error_rate": 0.015,
+      "session_duration": 32.8,
+      "click_frequency": 26.8,
+      "break_frequency": 3.09,
+      "mouse_speed": 357.1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-263",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 22",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 169.2,
+      "typing_speed": 251.8,
+      "typing_error_rate": 0.016,
+      "session_duration": 34.4,
+      "click_frequency": 36.1,
+      "break_frequency": 1.89,
+      "mouse_speed": 444.3
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-264",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 23",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 167.1,
+      "typing_speed": 233.4,
+      "typing_error_rate": 0.019,
+      "session_duration": 40.9,
+      "click_frequency": 35.8,
+      "break_frequency": 3.29,
+      "mouse_speed": 371.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-265",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Normal 24",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 96.9,
+      "typing_speed": 262.0,
+      "typing_error_rate": 0.043,
+      "session_duration": 38.7,
+      "click_frequency": 20.6,
+      "break_frequency": 2.33,
+      "mouse_speed": 430.9
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-266",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 0",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 421.4,
+      "typing_speed": 89.8,
+      "typing_error_rate": 0.215,
+      "session_duration": 172.6,
+      "click_frequency": 12.0,
+      "break_frequency": 0.1,
+      "mouse_speed": 51.3
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-267",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 1",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 611.4,
+      "typing_speed": 94.8,
+      "typing_error_rate": 0.176,
+      "session_duration": 121.6,
+      "click_frequency": 6.6,
+      "break_frequency": 0.06,
+      "mouse_speed": 63.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-268",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 2",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 592.5,
+      "typing_speed": 82.4,
+      "typing_error_rate": 0.283,
+      "session_duration": 177.5,
+      "click_frequency": 5.9,
+      "break_frequency": 0.15,
+      "mouse_speed": 10.6
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-269",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 3",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 567.6,
+      "typing_speed": 63.8,
+      "typing_error_rate": 0.257,
+      "session_duration": 124.4,
+      "click_frequency": 7.6,
+      "break_frequency": 0.1,
+      "mouse_speed": 84.7
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-270",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 4",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 461.3,
+      "typing_speed": 97.9,
+      "typing_error_rate": 0.299,
+      "session_duration": 131.6,
+      "click_frequency": 11.0,
+      "break_frequency": 0.26,
+      "mouse_speed": 87.6
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-271",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 5",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 416.3,
+      "typing_speed": 61.8,
+      "typing_error_rate": 0.265,
+      "session_duration": 125.2,
+      "click_frequency": 7.4,
+      "break_frequency": 0.33,
+      "mouse_speed": 47.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-272",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 6",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 502.8,
+      "typing_speed": 76.3,
+      "typing_error_rate": 0.229,
+      "session_duration": 132.4,
+      "click_frequency": 13.1,
+      "break_frequency": 0.28,
+      "mouse_speed": 77.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-273",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 7",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 574.1,
+      "typing_speed": 69.3,
+      "typing_error_rate": 0.212,
+      "session_duration": 176.3,
+      "click_frequency": 12.7,
+      "break_frequency": 0.13,
+      "mouse_speed": 73.1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-274",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 8",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 547.0,
+      "typing_speed": 105.8,
+      "typing_error_rate": 0.224,
+      "session_duration": 150.8,
+      "click_frequency": 13.7,
+      "break_frequency": 0.16,
+      "mouse_speed": 60.8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-275",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 9",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 619.1,
+      "typing_speed": 94.1,
+      "typing_error_rate": 0.2,
+      "session_duration": 133.7,
+      "click_frequency": 5.2,
+      "break_frequency": 0.39,
+      "mouse_speed": 103.1
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-276",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 10",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 618.1,
+      "typing_speed": 98.3,
+      "typing_error_rate": 0.226,
+      "session_duration": 104.2,
+      "click_frequency": 11.3,
+      "break_frequency": 0.14,
+      "mouse_speed": 39.5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-277",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 11",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 425.7,
+      "typing_speed": 87.0,
+      "typing_error_rate": 0.294,
+      "session_duration": 154.2,
+      "click_frequency": 9.4,
+      "break_frequency": 0.34,
+      "mouse_speed": 46.9
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-278",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 12",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 530.2,
+      "typing_speed": 78.4,
+      "typing_error_rate": 0.275,
+      "session_duration": 166.8,
+      "click_frequency": 10.0,
+      "break_frequency": 0.24,
+      "mouse_speed": 79.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-279",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 13",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 544.3,
+      "typing_speed": 89.7,
+      "typing_error_rate": 0.283,
+      "session_duration": 168.3,
+      "click_frequency": 6.6,
+      "break_frequency": 0.26,
+      "mouse_speed": 99.8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-280",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 14",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 455.4,
+      "typing_speed": 73.2,
+      "typing_error_rate": 0.194,
+      "session_duration": 138.3,
+      "click_frequency": 7.7,
+      "break_frequency": 0.3,
+      "mouse_speed": 63.3
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-281",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 15",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 500.2,
+      "typing_speed": 87.6,
+      "typing_error_rate": 0.173,
+      "session_duration": 147.1,
+      "click_frequency": 5.6,
+      "break_frequency": 0.23,
+      "mouse_speed": 76.4
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-282",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 16",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 620.8,
+      "typing_speed": 67.0,
+      "typing_error_rate": 0.231,
+      "session_duration": 141.2,
+      "click_frequency": 6.9,
+      "break_frequency": 0.3,
+      "mouse_speed": 37.8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-283",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 17",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 663.2,
+      "typing_speed": 86.6,
+      "typing_error_rate": 0.284,
+      "session_duration": 146.9,
+      "click_frequency": 10.2,
+      "break_frequency": 0.34,
+      "mouse_speed": 13.7
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-284",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 18",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 565.9,
+      "typing_speed": 98.5,
+      "typing_error_rate": 0.266,
+      "session_duration": 108.2,
+      "click_frequency": 14.4,
+      "break_frequency": 0.26,
+      "mouse_speed": 58.8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-285",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 19",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 509.7,
+      "typing_speed": 84.2,
+      "typing_error_rate": 0.199,
+      "session_duration": 146.4,
+      "click_frequency": 14.3,
+      "break_frequency": 0.28,
+      "mouse_speed": 76.6
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-286",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 20",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 646.0,
+      "typing_speed": 72.5,
+      "typing_error_rate": 0.181,
+      "session_duration": 103.1,
+      "click_frequency": 11.9,
+      "break_frequency": 0.3,
+      "mouse_speed": 95.5
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-287",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 21",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 475.9,
+      "typing_speed": 95.0,
+      "typing_error_rate": 0.265,
+      "session_duration": 128.7,
+      "click_frequency": 11.8,
+      "break_frequency": 0.31,
+      "mouse_speed": 50.4
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-288",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 22",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 401.3,
+      "typing_speed": 79.5,
+      "typing_error_rate": 0.152,
+      "session_duration": 138.7,
+      "click_frequency": 12.6,
+      "break_frequency": 0.37,
+      "mouse_speed": 18.8
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-289",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 23",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 669.6,
+      "typing_speed": 77.9,
+      "typing_error_rate": 0.229,
+      "session_duration": 160.5,
+      "click_frequency": 5.6,
+      "break_frequency": 0.18,
+      "mouse_speed": 37.3
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-290",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Fatigued 24",
+    "category": "positive",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 412.7,
+      "typing_speed": 98.6,
+      "typing_error_rate": 0.183,
+      "session_duration": 148.7,
+      "click_frequency": 10.6,
+      "break_frequency": 0.19,
+      "mouse_speed": 70.3
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-291",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Boundary (Zero metrics)",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 0.0,
+      "typing_speed": 0.0,
+      "typing_error_rate": 0.0,
+      "session_duration": 0.0,
+      "click_frequency": 0.0,
+      "break_frequency": 0.0,
+      "mouse_speed": 0.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-292",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Boundary (Very high values)",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": 1440.0,
+      "typing_speed": 1000.0,
+      "typing_error_rate": 1.0,
+      "session_duration": 1440.0,
+      "click_frequency": 500.0,
+      "break_frequency": 10.0,
+      "mouse_speed": 5000.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-293",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Missing Screen Time",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": true,
+    "payload": {
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-294",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Non-numeric Value",
+    "category": "negative",
+    "expected_status": 400,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": "two hours",
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-295",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": {
+      "screen_time": 100.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-296",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 0",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -10.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-297",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 1",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -11.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-298",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 2",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -12.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-299",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 3",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -13.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-300",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 4",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -14.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-301",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 5",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -15.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-302",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 6",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -16.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-303",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 7",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -17.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-304",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 8",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -18.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-305",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 9",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -19.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-306",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 10",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -20.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-307",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 11",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -21.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-308",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 12",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -22.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-309",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 13",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -23.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-310",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 14",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -24.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-311",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 15",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -25.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-312",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 16",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -26.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-313",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 17",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -27.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-314",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 18",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -28.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-315",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 19",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -29.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-316",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 20",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -30.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-317",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 21",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -31.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-318",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 22",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -32.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-319",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 23",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -33.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-320",
+    "api": "/api/metrics",
+    "method": "POST",
+    "name": "Ingest Metrics - Negative Values 24",
+    "category": "boundary",
+    "expected_status": 201,
+    "requires_auth": true,
+    "payload": {
+      "screen_time": -34.0,
+      "typing_speed": 200.0,
+      "typing_error_rate": 0.02,
+      "session_duration": 30.0,
+      "click_frequency": 25.0,
+      "break_frequency": 2.0,
+      "mouse_speed": 400.0
+    },
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-321",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-322",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-323",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-324",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-325",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-326",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-327",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-328",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-329",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-330",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-331",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 10",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-332",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 11",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-333",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 12",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-334",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 13",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-335",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 14",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-336",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 15",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-337",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 16",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-338",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 17",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-339",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 18",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-340",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 19",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-341",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 20",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-342",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 21",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-343",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 22",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-344",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 23",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-345",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 24",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-346",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 25",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-347",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 26",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-348",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 27",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-349",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 28",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-350",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Valid Token 29",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-351",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-352",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Unauthorized Probe 0",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_0"
+    }
+  },
+  {
+    "id": "TC-353",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Unauthorized Probe 1",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_1"
+    }
+  },
+  {
+    "id": "TC-354",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Unauthorized Probe 2",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_2"
+    }
+  },
+  {
+    "id": "TC-355",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Unauthorized Probe 3",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_3"
+    }
+  },
+  {
+    "id": "TC-356",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Unauthorized Probe 4",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_4"
+    }
+  },
+  {
+    "id": "TC-357",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Unauthorized Probe 5",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_5"
+    }
+  },
+  {
+    "id": "TC-358",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Unauthorized Probe 6",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_6"
+    }
+  },
+  {
+    "id": "TC-359",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Unauthorized Probe 7",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_7"
+    }
+  },
+  {
+    "id": "TC-360",
+    "api": "/api/dashboard",
+    "method": "GET",
+    "name": "Get Dashboard - Unauthorized Probe 8",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_8"
+    }
+  },
+  {
+    "id": "TC-361",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-362",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-363",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-364",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-365",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-366",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-367",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-368",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-369",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-370",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-371",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 10",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-372",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 11",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-373",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 12",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-374",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 13",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-375",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Valid Token 14",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-376",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-377",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Unauthorized Probe 0",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_0"
+    }
+  },
+  {
+    "id": "TC-378",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Unauthorized Probe 1",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_1"
+    }
+  },
+  {
+    "id": "TC-379",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Unauthorized Probe 2",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_2"
+    }
+  },
+  {
+    "id": "TC-380",
+    "api": "/api/model/info",
+    "method": "GET",
+    "name": "Get Model Info - Unauthorized Probe 3",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_3"
+    }
+  },
+  {
+    "id": "TC-381",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 0",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-382",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 1",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-383",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 2",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-384",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 3",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-385",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 4",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-386",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 5",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-387",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 6",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-388",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 7",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-389",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 8",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-390",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 9",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-391",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 10",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-392",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 11",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-393",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 12",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-394",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 13",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-395",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Valid Token 14",
+    "category": "positive",
+    "expected_status": 200,
+    "requires_auth": true,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-396",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - No Token",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": null
+  },
+  {
+    "id": "TC-397",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Unauthorized Probe 0",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_0"
+    }
+  },
+  {
+    "id": "TC-398",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Unauthorized Probe 1",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_1"
+    }
+  },
+  {
+    "id": "TC-399",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Unauthorized Probe 2",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_2"
+    }
+  },
+  {
+    "id": "TC-400",
+    "api": "/api/model/retrain",
+    "method": "POST",
+    "name": "Force Model Retrain - Unauthorized Probe 3",
+    "category": "negative",
+    "expected_status": 401,
+    "requires_auth": false,
+    "payload": null,
+    "params": null,
+    "headers": {
+      "Authorization": "Bearer token_3"
+    }
+  }
+]

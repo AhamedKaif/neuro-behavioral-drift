@@ -1,0 +1,88 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.2.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.11.15/x64/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'Linux-6.17.0-1018-azure-x86_64-with-glibc2.39', 'Packages': {'pytest': '8.2.2', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'metadata': '3.1.1', 'html': '4.2.0'}, 'CI': 'true', 'JAVA_HOME': '/usr/lib/jvm/temurin-17-jdk-amd64'}
+rootdir: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift
+plugins: json-report-1.5.0, metadata-3.1.1, html-4.2.0
+collecting ... collected 2 items
+
+tests/test_routing.py::test_protected_route_redirect PASSED              [ 50%]
+tests/test_routing.py::test_unknown_route_redirect FAILED                [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_unknown_route_redirect __________________________
+
+browser = <selenium.webdriver.chrome.webdriver.WebDriver (session="db3db84e4b5da9f8d09e81abf2c9a7ef")>
+login_helper = <function login_helper.<locals>._login at 0x7f7754a88680>
+
+    def test_unknown_route_redirect(browser, login_helper):
+        """Verify that an unknown route handles fallback."""
+        login_helper()
+    
+        # Go to an invalid route
+        browser.get("http://127.0.0.1:5173/this-route-does-not-exist")
+    
+        # It should fallback to dashboard because user is logged in
+>       WebDriverWait(browser, 5).until(EC.url_contains("dashboard"))
+
+tests/test_routing.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="db3db84e4b5da9f8d09e81abf2c9a7ef")>
+method = <function url_contains.<locals>._predicate at 0x7f7754ac0ae0>
+message = ''
+
+    def until(self, method: Callable[[D], Literal[False] | T], message: str = "") -> T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Args:
+            method: A callable object that takes a WebDriver instance as an
+                argument.
+            message: Optional message for TimeoutException.
+    
+        Returns:
+            The result of the last call to `method`.
+    
+        Raises:
+            TimeoutException: If 'method' does not return a truthy value within
+                the WebDriverWait object's timeout.
+    
+        Example:
+            >>> from selenium.webdriver.common.by import By
+            >>> from selenium.webdriver.support.ui import WebDriverWait
+            >>> from selenium.webdriver.support import expected_conditions as EC
+            >>>
+            >>> # Wait until an element is visible on the page
+            >>> wait = WebDriverWait(driver, 10)
+            >>> element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+            >>> print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() > end_time:
+                break
+            time.sleep(self._poll)
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/selenium/webdriver/support/wait.py:121: TimeoutException
+- generated xml file: /home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/junit_routing.xml -
+--------------------------------- JSON report ----------------------------------
+report saved to: reports/report_routing.json
+- Generated html report: file:///home/runner/work/neuro-behavioral-drift/neuro-behavioral-drift/reports/report_routing.html -
+=========================== short test summary info ============================
+FAILED tests/test_routing.py::test_unknown_route_redirect - selenium.common.exceptions.TimeoutException: Message:
+========================= 1 failed, 1 passed in 8.96s ==========================

@@ -1,0 +1,6 @@
+Test Case ID,Navigation Path,Expected Behavior,Actual Behavior,Status
+NAV01,Menu -> Dashboard,Load Dashboard UI,Loaded Dashboard,Pass
+NAV02,Menu -> Profile,Load Profile UI,Loaded Profile,Pass
+NAV03,Menu -> Notifications,Load Notification Center,Loaded Notifications,Pass
+NAV04,Menu -> Logout,Destroy Session & Go to Login,Logged out properly,Pass
+NAV05,Direct URL -> Protected Route,Redirect to Login if no JWT,Redirected properly,Pass
