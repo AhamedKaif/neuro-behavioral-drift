@@ -3,6 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from db import get_db_connection
 import sqlite3
+from firebase_sync import sync_to_firebase, sync_from_firebase
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -86,6 +87,26 @@ def register():
         )
         conn.commit()
         
+        user_data = {
+            "full_name": full_name,
+            "email": email,
+            "password_hash": password_hash
+        }
+        profile_data = {
+            "age": age,
+            "gender": gender,
+            "occupation": occupation,
+            "institution": institution,
+            "department": department,
+            "academic_year": academic_year,
+            "working_hours": working_hours,
+            "avg_screen_time": avg_screen_time,
+            "avg_sleep_hours": avg_sleep_hours,
+            "preferred_work_time": preferred_work_time,
+            "stress_level": stress_level
+        }
+        sync_to_firebase(username, user_data, profile_data)
+        
         # Auto-login after registration by creating access token
         access_token = create_access_token(identity=str(user_id))
         return jsonify({
@@ -117,6 +138,12 @@ def login():
     user = conn.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
     conn.close()
     
+    if user is None:
+        if sync_from_firebase(username):
+            conn = get_db_connection()
+            user = conn.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
+            conn.close()
+            
     if user is None or not check_password_hash(user['password_hash'], password):
         return jsonify({"error": "Invalid username or password"}), 401
         
