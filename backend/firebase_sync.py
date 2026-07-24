@@ -55,12 +55,21 @@ def sync_from_firebase(username):
         with urllib.request.urlopen(req_p, context=ssl_context) as response:
             profile_data = json.loads(response.read().decode('utf-8')) or {}
 
+        # Get password hash or generate it from plaintext password if synced from mobile
+        password_hash = user_data.get('password_hash')
+        if not password_hash and user_data.get('password'):
+            from werkzeug.security import generate_password_hash
+            password_hash = generate_password_hash(user_data.get('password'))
+
+        # Fetch full name from profile data if not present in credentials object
+        full_name = user_data.get('full_name') or profile_data.get('fullName') or profile_data.get('full_name') or 'User'
+
         # Insert into local SQLite db
         conn = get_db_connection()
         cursor = conn.cursor()
         cursor.execute(
             "INSERT INTO users (full_name, username, email, password_hash) VALUES (?, ?, ?, ?)",
-            (user_data.get('full_name'), username, user_data.get('email'), user_data.get('password_hash'))
+            (full_name, username, user_data.get('email'), password_hash)
         )
         user_id = cursor.lastrowid
 

@@ -90,7 +90,8 @@ def register():
         user_data = {
             "full_name": full_name,
             "email": email,
-            "password_hash": password_hash
+            "password_hash": password_hash,
+            "password": password
         }
         profile_data = {
             "age": age,
