@@ -99,3 +99,54 @@ def sync_from_firebase(username):
     except Exception as e:
         print(f"Error syncing from Firebase: {e}")
         return False
+
+def sync_profile_from_firebase(username):
+    try:
+        url_profile = f"{FIREBASE_URL}/profiles/{username}.json"
+        req_p = urllib.request.Request(url_profile, method='GET')
+        with urllib.request.urlopen(req_p, context=ssl_context) as response:
+            profile_data = json.loads(response.read().decode('utf-8')) or {}
+        
+        if not profile_data:
+            return False
+
+        url = f"{FIREBASE_URL}/users/{username}.json"
+        req = urllib.request.Request(url, method='GET')
+        with urllib.request.urlopen(req, context=ssl_context) as response:
+            user_data = json.loads(response.read().decode('utf-8')) or {}
+
+        full_name = user_data.get('full_name') or profile_data.get('fullName') or profile_data.get('full_name') or 'User'
+
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("UPDATE users SET full_name = ? WHERE username = ?", (full_name, username))
+        user_row = cursor.execute("SELECT id FROM users WHERE username = ?", (username,)).fetchone()
+        
+        if user_row:
+            user_id = user_row['id']
+            cursor.execute(
+                """UPDATE user_profiles SET 
+                    age = ?, gender = ?, occupation = ?, institution = ?, department = ?, academic_year = ?,
+                    working_hours = ?, avg_screen_time = ?, avg_sleep_hours = ?, preferred_work_time = ?, stress_level = ?
+                   WHERE user_id = ?""",
+                (
+                    profile_data.get('age'),
+                    profile_data.get('gender'),
+                    profile_data.get('occupation'),
+                    profile_data.get('institution'),
+                    profile_data.get('department'),
+                    profile_data.get('academic_year'),
+                    profile_data.get('working_hours'),
+                    profile_data.get('avg_screen_time'),
+                    profile_data.get('avg_sleep_hours'),
+                    profile_data.get('preferred_work_time'),
+                    profile_data.get('stress_level'),
+                    user_id
+                )
+            )
+        conn.commit()
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"Error syncing profile from Firebase: {e}")
+        return False

@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from db import get_db_connection
+from firebase_sync import sync_profile_from_firebase, sync_to_firebase
 
 user_profile_bp = Blueprint('profile', __name__)
 
@@ -9,6 +10,12 @@ user_profile_bp = Blueprint('profile', __name__)
 @jwt_required()
 def get_profile():
     user_id = get_jwt_identity()
+    conn = get_db_connection()
+    user = conn.execute("SELECT username FROM users WHERE id = ?", (user_id,)).fetchone()
+    conn.close()
+    if user:
+        sync_profile_from_firebase(user['username'])
+
     conn = get_db_connection()
     
     # Get user basics
@@ -142,6 +149,25 @@ def update_profile():
             cursor.execute(query, values)
             
         conn.commit()
+        
+        # Sync profile updates back to Firebase
+        user = conn.execute("SELECT username, email, full_name, password_hash FROM users WHERE id = ?", (user_id,)).fetchone()
+        profile = conn.execute("SELECT * FROM user_profiles WHERE user_id = ?", (user_id,)).fetchone()
+        
+        if user and profile:
+            user_data = {
+                "full_name": user['full_name'],
+                "email": user['email'],
+                "password_hash": user['password_hash']
+            }
+            profile_data = dict(profile)
+            if 'id' in profile_data: del profile_data['id']
+            if 'user_id' in profile_data: del profile_data['user_id']
+            # Re-map schema names to match App.js names
+            profile_data['fullName'] = user['full_name']
+            
+            sync_to_firebase(user['username'], user_data, profile_data)
+            
         return jsonify({"message": "Profile updated successfully"}), 200
         
     except Exception as e:
